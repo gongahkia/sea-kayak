@@ -5,8 +5,6 @@ import { motion } from "framer-motion"
 import "./globals.css"
 
 export default function Home() {
-  const [isHovering, setIsHovering] = useState<string | null>(null)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [routes, setRoutes] = useState<string[]>([])
   const [randomUrl, setRandomUrl] = useState("#")
   const infoSectionRef = useRef<HTMLDivElement>(null)
@@ -16,9 +14,9 @@ export default function Home() {
     fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
       .then(response => response.json())
       .then(data => {
-        // Handle both array formats: array of strings or array of objects
+        type RouteItem = { url: string }
         const routesArray = Array.isArray(data) ? 
-          (typeof data[0] === 'string' ? data : data.map((item: any) => item.url)) : []
+          (typeof data[0] === 'string' ? data : data.map((item: RouteItem) => item.url)) : []
         setRoutes(routesArray)
         if (routesArray.length > 0) {
           setRandomUrl(routesArray[Math.floor(Math.random() * routesArray.length)])
