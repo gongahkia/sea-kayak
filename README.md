@@ -1,3 +1,5 @@
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/sea-kayak)
+
 # `Sea Kayak`
 
 A Web App that serves you one piece of Singaporean Legal News a day.
