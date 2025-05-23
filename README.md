@@ -1,6 +1,6 @@
 # `Sea Kayak`
 
-A Web App that serves you one piece of legal news a day.
+A Web App that serves you one piece of Singaporean Legal News a day.
 
 ## Rationale
 
