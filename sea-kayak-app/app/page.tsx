@@ -24,12 +24,7 @@ export default function Home() {
       })
       .catch(console.error)
 
-    // Mouse tracking
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-
-    // Wheel scrolling
+    // Wheel scrolling only
     const handleWheel = (e: WheelEvent) => {
       if (e.deltaY > 0) {
         infoSectionRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -38,20 +33,14 @@ export default function Home() {
       }
     }
 
-    window.addEventListener("mousemove", handleMouseMove)
     window.addEventListener("wheel", handleWheel)
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove)
-      window.removeEventListener("wheel", handleWheel)
-    }
+    return () => window.removeEventListener("wheel", handleWheel)
   }, [])
 
   const handleHover = () => {
     if (routes.length > 0) {
       setRandomUrl(routes[Math.floor(Math.random() * routes.length)])
     }
-    setIsHovering("paddle")
   }
 
   const scrollToInfo = () => {
@@ -78,7 +67,7 @@ export default function Home() {
                 whileTap={{ x: 0, y: 0 }}
                 animate={{ x: -8, y: -8 }}
                 onMouseEnter={handleHover}
-                onMouseLeave={() => setIsHovering(null)}
+                onMouseLeave={() => {}}
               >
                 <div className="absolute inset-0 flex items-center justify-center z-10">PADDLE THE OCEAN</div>
               </motion.div>
@@ -95,8 +84,6 @@ export default function Home() {
               whileTap={{ x: 0, y: 0 }}
               animate={{ x: -8, y: -8 }}
               onClick={scrollToInfo}
-              onMouseEnter={() => setIsHovering("info")}
-              onMouseLeave={() => setIsHovering(null)}
             >
               <div className="absolute inset-0 flex items-center justify-center z-10">INFO</div>
             </motion.button>
@@ -110,25 +97,25 @@ export default function Home() {
         ref={infoSectionRef}
         className="h-screen flex flex-col items-center justify-center bg-gradient-to-b from-cyan-200 via-sky-300 to-blue-200 text-sky-900 relative snap-start"
       >
-        <div className="max-w-2xl text-align-left space-y-6">
+        <div className="max-w-2xl text-left space-y-6">
           <p className="text-300 mb-6">
             The internet was supposed to make our lives easier.
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             Yet, there is just too much noise out there these days.
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             Navigating the modern web for <i>timely</i> legal news has 
-            <br></br>
+            <br />
             become an unnecessarily daunting task.
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             This site is my attempt to restore some sanity to the web.
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             Have a good time out there, Sea Kayaker.
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             ~ <a href="https://gabrielongzm.com" className="text-indigo-500 hover:underline">Gabriel</a>
           </p>
         </div>
