@@ -76,6 +76,21 @@ export default function Home() {
 
           <div className="neobrutalist-button-container w-[120px] md:w-[140px]">
             <motion.button
+              id="ADD AN ISLAND"
+              className="neobrutalist-button w-full h-14 md:h-16 bg-white text-black border-4 border-black rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer"
+              initial={{ x: -6, y: -6 }}
+              whileHover={{ x: -3, y: -3 }}
+              whileTap={{ x: 0, y: 0 }}
+              animate={{ x: -6, y: -6 }}
+              onClick={() => window.open("https://github.com/gongahkia/sea-kayak/issues", "_blank")}
+            >
+              <div className="absolute inset-0 flex items-center justify-center z-10">INFO</div>
+            </motion.button>
+            <div className="neobrutalist-button-shadow"></div>
+          </div>
+
+          <div className="neobrutalist-button-container w-[120px] md:w-[140px]">
+            <motion.button
               id="info"
               className="neobrutalist-button w-full h-14 md:h-16 bg-white text-black border-4 border-black rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer"
               initial={{ x: -6, y: -6 }}
