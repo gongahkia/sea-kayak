@@ -1,0 +1,42 @@
+name: Collate links
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:  
+
+jobs:
+  scrape-to-local:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright Browsers
+        run: playwright install --with-deps chromium
+
+      - name: Run Scraper Scripts
+        working-directory: ./src
+        run: |
+            echo "Running orchestration script."
+            python main.py
+            echo "Finished running orchestration script."
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add sea-kayak/data/routes.json
+          git commit -m "Updated routes.json"
+          git push
