@@ -23,10 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install Playwright Browsers
-        run: playwright install --with-deps chromium
+      # - name: Install Playwright Browsers
+      #   run: playwright install --with-deps chromium
 
-      - name: Run Scraper Scripts
+      - name: Run Orchestration Script
         working-directory: ./src
         run: |
             echo "Running orchestration script."
