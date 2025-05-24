@@ -5,6 +5,7 @@ import requests
 
 # ----- helper functions -----
 
+
 def extract_urls(url):
     try:
         response = requests.get(url)
@@ -12,7 +13,7 @@ def extract_urls(url):
         content = response.text
         url_pattern = r'https?://[\w\-\.\~:/\?#\[\]@!\$&"\'\(\)\*\+,;=%]+'
         urls = re.findall(url_pattern, content)
-        cleaned_urls = [u.rstrip('"\',;:!') for u in urls]
+        cleaned_urls = [u.rstrip("\"',;:!") for u in urls]
         unique_urls = list(set(cleaned_urls))
         return unique_urls
     except Exception as e:
