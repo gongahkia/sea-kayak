@@ -110,7 +110,7 @@ export default function Home() {
             <br /><br />
             Have a good time out there, Sea Kayaker.
             <br /><br />
-            ~ <a href="https://gabrielongzm.com" className="text-indigo-600 md:text-indigo-500 hover:underline font-medium">Gabriel</a>
+            ~ <a href="https://gabrielongzm.com" className="text-indigo-600 md:text-indigo-500 hover:underline font-medium">Gabriel Ong</a>
           </p>
         </div>
 
