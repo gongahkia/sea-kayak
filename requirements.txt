@@ -1,3 +1,4 @@
-feedparser
+bs4
 requests
+feedparser
 pre-commit

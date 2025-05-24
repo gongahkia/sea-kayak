@@ -102,11 +102,9 @@ export default function Home() {
             <br /><br />
             These days, there is just too much noise out there.
             <br /><br />
-            Navigating the modern web for <i>timely</i> legal news has 
-            <br />
-            become an unnecessarily daunting task.
+            Navigating the modern web for <i>timely legal news</i> has become an unnecessarily daunting task.
             <br /><br />
-            This site is my attempt to restore some sanity to the web.
+            <code>Sea Kayak</code> is my attempt to restore some sanity to the web.
             <br /><br />
             Have a good time out there, Sea Kayaker.
             <br /><br />
