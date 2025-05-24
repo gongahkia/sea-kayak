@@ -5,7 +5,6 @@ import requests
 
 # ----- helper functions -----
 
-
 def extract_urls(url):
     try:
         response = requests.get(url)
