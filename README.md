@@ -12,13 +12,17 @@ A Web App that serves you one piece of [Singaporean Legal News](#coverage) a day
 
 ## Rationale
 
-...
+Navigating the Modern Internet feels like trudging through miles of swamp searching for a milligram of gold.  
+
+Judging from [these articles](#other-notes), I'm not the only one who feels this way.
+
+With this frustration nagging at me, I created `Sea Kayak` to make it easier to find ***timely Singaporean Legal News***.
 
 ## Screenshots
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="./1.png" width="48%">
-  <img src="./2.png" width="48%">
+  <img src="./asset/reference/1.png" width="48%">
+  <img src="./asset/reference/2.png" width="48%">
 </div>
 
 ## Usage
@@ -38,7 +42,7 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
 
 ## Coverage
 
-`Sea Kayak` currently [scrapes](./.github/workflows/collate.yml) the below sources [daily](#architecture).
+`Sea Kayak` currently [scrapes](./.github/workflows/collate.yml) the following sources [daily](#architecture).
 
 [**Open an issue**](https://github.com/gongahkia/sea-kayak/issues) to have a source added.
 
@@ -75,6 +79,13 @@ The name `Sea Kayak` is in reference to the [sea kayak](https://en.wikipedia.org
 ## Other notes
 
 `Sea Kayak` takes inspiration from [The Forest](https://theforest.link/) and [HungryHippo](https://github.com/hueyy/HungryHippo).
+
+The below articles also validated my confirmation bias and fuelled me to complete `Sea Kayak`.
+
+* [*The modern web is becoming unusable*](https://news.ycombinator.com/item?id=21848468)
+* [*The internet is unusable now*](https://www.newstatesman.com/thestaggers/2023/06/internet-is-unusable-now-google-technology)
+* [*Why Is the Web So Monotonous?*](https://reasonablypolymorphic.com/blog/monotonous-web/)
+* [*Today’s Internet is Optimized for Noise*](https://medium.com/@sidewire/today-s-internet-is-optimized-for-noise-88e8072ff476)
 
 ## Legal Disclaimer
 
