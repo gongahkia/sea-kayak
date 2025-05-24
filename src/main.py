@@ -33,8 +33,8 @@ if __name__ == "__main__":
         + superfeed.remove_duplicates(
             superfeed.flatten(list(map(unstructured.extract_urls, UNSTRUCT_URL_ARRAY)))
         )
-        + superfeed.remove_duplicates(
-            superfeed.flatten(list(map(local.process_xml, LOCAL_RSS_ARRAY)))
-        )
+        # + superfeed.remove_duplicates(
+        #     superfeed.flatten(list(map(local.process_xml, LOCAL_RSS_ARRAY)))
+        # )
     )
     superfeed.write_urls_to_file(urls, OUTPUT_FILENAME)

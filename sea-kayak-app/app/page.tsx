@@ -96,7 +96,7 @@ export default function Home() {
         ref={infoSectionRef}
         className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-cyan-200 via-sky-300 to-blue-200 text-sky-900 relative snap-start px-4 py-16"
       >
-        <div className="max-w-2xl text-left space-y-4 md:space-y-6 w-full px-4">
+        <div className="max-w-2xl text-center space-y-4 md:space-y-6 w-full px-4">
           <p className="text-base md:text-lg leading-relaxed">
             The internet was supposed to make our lives easier.
             <br /><br />
@@ -124,6 +124,7 @@ export default function Home() {
             >
               here
             </a>
+            .
           </p>
           <p className="mt-2 md:mt-4 text-[0.7rem] md:text-xs">© 2025 Sea Kayak. All rights reserved.</p>
         </div>

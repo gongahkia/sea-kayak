@@ -37,7 +37,7 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
 
 [**Open an issue**](https://github.com/gongahkia/sea-kayak/issues) to have a source added.
 
-### RSS Feeds
+### Remote RSS Feeds
 
 * [singaporelawwatch.sg/Portals/0/RSS/](https://www.singaporelawwatch.sg/Portals/0/RSS/SuperFeed)
     * [singaporelawwatch.sg/Portals/0/RSS/Headlines.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml)
@@ -48,14 +48,10 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
 * [sso.agc.gov.sg/RSS/](https://sso.agc.gov.sg/RSS/NewLegislation.aspx)
 * [mlaw.gov.sg/feed.xml](https://www.mlaw.gov.sg/feed.xml)
 
-### Files
+### Local RSS Feeds
 
 * [lawgazette.com.sg/feed](https://lawgazette.com.sg/feed)
 * [singaporeinternationalarbitration.com/feed](https://singaporeinternationalarbitration.com/feed)
-
-### Newspapers
-
-* []()
 
 ## Architecture
 

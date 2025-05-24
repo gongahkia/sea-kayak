@@ -2,6 +2,7 @@
 
 import os
 import requests
+from yarl import URL
 from bs4 import BeautifulSoup
 
 # ----- helper functions -----
@@ -9,25 +10,27 @@ from bs4 import BeautifulSoup
 
 def process_xml(url_list):
     all_urls = []
+    if isinstance(url_list, str):
+        url_list = [url_list]
     for url in url_list:
+        temp_file = None
         try:
-            response = requests.get(url)
+            if not URL(url).is_absolute():
+                print(f"Skipping invalid URL: {url}")
+                continue
+            response = requests.get(url, timeout=10)
             response.raise_for_status()
-            temp_file = f"temp_{url.split('//')[1].replace('/', '_')}.xml"
+            domain = URL(url).host.replace(".", "_")
+            temp_file = f"temp_{domain}.xml"
             with open(temp_file, "w", encoding="utf-8") as f:
                 f.write(response.text)
             with open(temp_file, "r", encoding="utf-8") as f:
                 soup = BeautifulSoup(f.read(), "xml")
-                urls = (
-                    [link.text for link in soup.find_all("link")]
-                    + [guid.text for guid in soup.find_all("guid")]
-                    + [loc.text for loc in soup.find_all("loc")]
-                )
-                unique_urls = list(set(filter(None, urls)))
-                all_urls.extend(unique_urls)
-            os.remove(temp_file)
+                urls = [link.text for link in soup.find_all("link")]
+                all_urls.extend(urls)
         except Exception as e:
-            print(f"Error processing {url}: {str(e)}")
-            if os.path.exists(temp_file):
+            print(f"Error processing {url}: {type(e).__name__} - {str(e)}")
+        finally:
+            if temp_file and os.path.exists(temp_file):
                 os.remove(temp_file)
     return list(set(all_urls))
