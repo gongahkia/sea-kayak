@@ -16,7 +16,10 @@ A Web App that serves you one piece of [Singaporean Legal News](#coverage) a day
 
 ## Screenshots
 
-...
+<div style="display: flex; justify-content: space-between;">
+  <img src="./1.png" width="48%">
+  <img src="./2.png" width="48%">
+</div>
 
 ## Usage
 
