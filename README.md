@@ -4,7 +4,7 @@
 
 # `Sea Kayak`
 
-A Web App that serves you one piece of Singaporean Legal News a day.
+A Web App that serves you one piece of [Singaporean Legal News](#coverage) a day.
 
 <div align="center">
     <img src="./asset/logo/sea-kayak.png">
@@ -31,19 +31,35 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
 * *Backend*: [Python](https://www.python.org/), [Github Actions](https://github.com/features/actions)
 * *Package*: [Docker](https://www.docker.com/)
 
+## Coverage
+
+`Sea Kayak` currently [scrapes](./.github/workflows/collate.yml) the below sources [daily](#architecture).
+
+[**Open an issue**](https://github.com/gongahkia/sea-kayak/issues) to have a source added.
+
+### RSS Feeds
+
+* [singaporelawwatch.sg/Portals/0/RSS/](https://www.singaporelawwatch.sg/Portals/0/RSS/SuperFeed)
+    * [singaporelawwatch.sg/Portals/0/RSS/Headlines.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml)
+    * [singaporelawwatch.sg/Portals/0/RSS/Judgments.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Judgments.xml)
+    * [singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml)
+    * [singaporelawwatch.sg/Portals/0/RSS/Notices.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Notices.xml)
+    * [singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education](https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education)
+* [sso.agc.gov.sg/RSS/](https://sso.agc.gov.sg/RSS/NewLegislation.aspx)
+* [mlaw.gov.sg/feed.xml](https://www.mlaw.gov.sg/feed.xml)
+
+### Files
+
+* [lawgazette.com.sg/feed](https://lawgazette.com.sg/feed)
+* [singaporeinternationalarbitration.com/feed](https://singaporeinternationalarbitration.com/feed)
+
+## Newspapers
+
+* []()
+
 ## Architecture
 
 ![](./asset/reference/architecture.png)
-
-## Coverage
-
-`Sea Kayak` currently [scrapes](./.github/workflows/collate.yml) the following sites [daily](#architecture).
-
-[**Open an issue**](https://github.com/gongahkia/sea-kayak/issues) to have your site added.
-
-* [singaporelawwatch.sg/Portals/0/RSS/SuperFeed](https://www.singaporelawwatch.sg/Portals/0/RSS/SuperFeed)
-* ...
-* ...
 
 ## Issues
 
@@ -57,7 +73,7 @@ The name `Sea Kayak` is in reference to the [sea kayak](https://en.wikipedia.org
 
 ## Other notes
 
-`Sea Kayak` takes great inspiration from [The Forest](https://theforest.link/).
+`Sea Kayak` takes inspiration from [The Forest](https://theforest.link/) and [HungryHippo](https://github.com/hueyy/HungryHippo).
 
 ## Legal Disclaimer
 
