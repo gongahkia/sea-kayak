@@ -1,8 +1,13 @@
+[![](https://img.shields.io/badge/sea_kayak_1.0.0-passing-green)](https://github.com/gongahkia/sea-kayak/releases/tag/1.0.0) 
 ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/sea-kayak)
 
 # `Sea Kayak`
 
 A Web App that serves you one piece of Singaporean Legal News a day.
+
+<div align="center">
+    <img src="./asset/logo/sea-kayak.png">
+</div>
 
 ## Rationale
 
@@ -22,11 +27,13 @@ A Web App that serves you one piece of Singaporean Legal News a day.
 
 ## Stack
 
-...
+* *Frontend*: [React](https://react.dev/), [Next.js](https://nextjs.org/), [Vercel](https://vercel.com/)
+* *Backend*: [Python](https://www.python.org/), [Github Actions](https://github.com/features/actions)
+* *Package*: [Docker](https://www.docker.com/)
 
 ## Architecture
 
-...
+![](./asset/reference/architecture.png)
 
 ## Reference
 

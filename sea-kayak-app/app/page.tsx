@@ -100,7 +100,7 @@ export default function Home() {
           <p className="text-base md:text-lg leading-relaxed">
             The internet was supposed to make our lives easier.
             <br /><br />
-            Yet, there is just too much noise out there these days.
+            These days, there is just too much noise out there.
             <br /><br />
             Navigating the modern web for <i>timely</i> legal news has 
             <br />
