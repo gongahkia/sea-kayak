@@ -1,5 +1,6 @@
 # bs4
 # yarl
+diagrams
 requests
 feedparser
 pre-commit
