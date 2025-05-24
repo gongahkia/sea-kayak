@@ -10,7 +10,6 @@ export default function Home() {
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Fetch routes from GitHub
     fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
       .then(response => response.json())
       .then(data => {
@@ -24,7 +23,6 @@ export default function Home() {
       })
       .catch(console.error)
 
-    // Wheel scrolling only
     const handleWheel = (e: WheelEvent) => {
       if (e.deltaY > 0) {
         infoSectionRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -49,14 +47,13 @@ export default function Home() {
 
    return (
     <div className="min-h-screen overflow-y-auto overflow-x-hidden snap-y snap-mandatory">
-      {/* Main buttons section */}
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-sky-100 via-sky-200 to-cyan-200 text-sky-900 snap-start px-4">
         <div className="flex flex-col items-center gap-4 md:gap-8 relative z-10 w-full max-w-md">
           <a
             href={randomUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full md:w-[400px]"
+            className="block w-full md:w-[500px]"
           >
             <div className="neobrutalist-button-container">
               <motion.div
@@ -73,40 +70,38 @@ export default function Home() {
               <div className="neobrutalist-button-shadow"></div>
             </div>
           </a>
-
-          <div className="neobrutalist-button-container w-[120px] md:w-[140px]">
-            <motion.button
-              id="ADD AN ISLAND"
-              className="neobrutalist-button w-full h-14 md:h-16 bg-white text-black border-4 border-black rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer"
-              initial={{ x: -6, y: -6 }}
-              whileHover={{ x: -3, y: -3 }}
-              whileTap={{ x: 0, y: 0 }}
-              animate={{ x: -6, y: -6 }}
-              onClick={() => window.open("https://github.com/gongahkia/sea-kayak/issues", "_blank")}
-            >
-              <div className="absolute inset-0 flex items-center justify-center z-10">INFO</div>
-            </motion.button>
-            <div className="neobrutalist-button-shadow"></div>
-          </div>
-
-          <div className="neobrutalist-button-container w-[120px] md:w-[140px]">
-            <motion.button
-              id="info"
-              className="neobrutalist-button w-full h-14 md:h-16 bg-white text-black border-4 border-black rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer"
-              initial={{ x: -6, y: -6 }}
-              whileHover={{ x: -3, y: -3 }}
-              whileTap={{ x: 0, y: 0 }}
-              animate={{ x: -6, y: -6 }}
-              onClick={scrollToInfo}
-            >
-              <div className="absolute inset-0 flex items-center justify-center z-10">INFO</div>
-            </motion.button>
-            <div className="neobrutalist-button-shadow"></div>
+          <div className="flex w-full md:w-[500px] gap-4">
+            <div className="neobrutalist-button-container w-1/2">
+              <motion.button
+                id="island"
+                className="neobrutalist-button w-full h-14 md:h-16 bg-white text-black border-4 border-black rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer"
+                initial={{ x: -6, y: -6 }}
+                whileHover={{ x: -3, y: -3 }}
+                whileTap={{ x: 0, y: 0 }}
+                animate={{ x: -6, y: -6 }}
+                onClick={() => window.open("https://github.com/gongahkia/sea-kayak#coverage", "_blank")}
+              >
+                <div className="absolute inset-0 flex items-center justify-center z-10">ADD AN ISLAND</div>
+              </motion.button>
+              <div className="neobrutalist-button-shadow"></div>
+            </div>
+            <div className="neobrutalist-button-container w-1/2">
+              <motion.button
+                id="info"
+                className="neobrutalist-button w-full h-14 md:h-16 bg-white text-black border-4 border-black rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer"
+                initial={{ x: -6, y: -6 }}
+                whileHover={{ x: -3, y: -3 }}
+                whileTap={{ x: 0, y: 0 }}
+                animate={{ x: -6, y: -6 }}
+                onClick={scrollToInfo}
+              >
+                <div className="absolute inset-0 flex items-center justify-center z-10">INFO</div>
+              </motion.button>
+              <div className="neobrutalist-button-shadow"></div>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Info Section */}
       <section
         ref={infoSectionRef}
         className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-cyan-200 via-sky-300 to-blue-200 text-sky-900 relative snap-start px-4 py-16"
@@ -127,7 +122,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Footer */}
         <div className="absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4">
           <p className="text-xs md:text-sm">
             Source code{" "}

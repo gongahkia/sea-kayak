@@ -25,6 +25,8 @@ A Web App that serves you one piece of [Singaporean Legal News](#coverage) a day
 
 Use the live website [**here**](https://sea-kayak.vercel.app/).
 
+[RSS Feeds](#coverage) are scraped daily at [SGT 12am](#architecture).
+
 > [!IMPORTANT]
 > Read the [legal disclaimer](#legal-disclaimer) before using `Sea Kayak`.
 
