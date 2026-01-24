@@ -1,20 +1,32 @@
 # ----- required imports -----
 
-import re
 import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 
 # ----- helper functions -----
 
 
 def extract_urls(url):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers=headers, timeout=15)
         response.raise_for_status()
-        content = response.text
-        url_pattern = r'https?://[\w\-\.\~:/\?#\[\]@!\$&"\'\(\)\*\+,;=%]+'
-        urls = re.findall(url_pattern, content)
-        cleaned_urls = [u.rstrip("\"',;:!") for u in urls]
-        unique_urls = list(set(cleaned_urls))
-        return unique_urls
-    except Exception as e:
-        return str(e)
+        
+        soup = BeautifulSoup(response.content, "html.parser")
+        urls = []
+        
+        for a_tag in soup.find_all("a", href=True):
+            href = a_tag["href"]
+            # Join relative URLs with base URL
+            absolute_url = urljoin(url, href)
+            # Basic validation to ensure it's a web link
+            if absolute_url.startswith(("http://", "https://")):
+                urls.append(absolute_url)
+                
+        return list(set(urls))
+    except Exception:
+        # Return empty list on failure to avoid breaking flattening logic
+        return []
