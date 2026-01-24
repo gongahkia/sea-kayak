@@ -1,8 +1,12 @@
 # ----- required imports -----
 
+import warnings
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from urllib.parse import urljoin
+
+# Suppress warning when parsing XML with HTML parser (intentional for mixed content)
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 # ----- helper functions -----
 
