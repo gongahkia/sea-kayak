@@ -1,5 +1,4 @@
-# bs4
-# yarl
+beautifulsoup4
 diagrams
 requests
 feedparser
