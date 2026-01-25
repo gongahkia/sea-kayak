@@ -31,7 +31,7 @@ export default function Home() {
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
   const [sgtHour, setSgtHour] = useState(22) // TEMP: forced to 10pm for night preview
-  const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("clear")
+  const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("clear") // TEMP: forced for preview
 
   const isNight = true // TEMP: forced night mode for preview
 
@@ -106,7 +106,7 @@ export default function Home() {
   const subtleLinkClass = isNight
     ? "text-sky-300 hover:underline"
     : "text-indigo-500 hover:underline"
-  const btnBorder = isNight ? "border-sky-400" : "border-black"
+  const btnBorder = isNight ? "border-slate-600" : "border-black"
   const btnText = isNight ? "text-sky-100" : "text-black"
   const btnBg = isNight ? "bg-slate-800" : "bg-white"
   const shadowClass = isNight ? "neobrutalist-button-shadow-night" : "neobrutalist-button-shadow"
