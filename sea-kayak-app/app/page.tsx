@@ -207,7 +207,7 @@ export default function Home() {
           </p>
         </div>
 
-        <BeachScene isNight={isNight} />
+        <BeachScene isNight={isNight} weatherCategory={weatherCategory} />
 
         <div className="absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4 z-10" style={{ textShadow: isNight ? "0 1px 4px rgba(0,0,0,0.6)" : "0 1px 3px rgba(255,255,255,0.7)" }}>
           <p className="text-xs md:text-sm">
