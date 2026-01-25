@@ -233,20 +233,33 @@ export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgro
         }
       }
 
-      // Rain
+      // Rain ripples (top-down droplet impacts)
       if (weather === "rain" || weather === "storm") {
         const isNightish = hour >= 19 || hour < 6.5
-        ctx.strokeStyle = isNightish ? "rgba(180,200,255,0.35)" : "rgba(100,130,200,0.4)"
-        ctx.lineWidth = 1.5
-        for (const drop of drops) {
-          ctx.beginPath()
-          ctx.moveTo(drop.x, drop.y)
-          ctx.lineTo(drop.x + 1.5, drop.y + drop.length)
-          ctx.stroke()
-          drop.y += drop.speed
-          if (drop.y > h) {
-            drop.y = -drop.length
-            drop.x = Math.random() * w
+        ctx.lineWidth = 1
+        for (const r of ripples) {
+          const life = r.radius / r.maxRadius
+          const alpha = r.opacity * (1 - life)
+          if (alpha > 0.01) {
+            ctx.beginPath()
+            ctx.arc(r.x, r.y, r.radius, 0, Math.PI * 2)
+            ctx.strokeStyle = isNightish
+              ? `rgba(180,200,255,${alpha})`
+              : `rgba(255,255,255,${alpha})`
+            ctx.stroke()
+            // Inner dot at impact center for fresh ripples
+            if (life < 0.3) {
+              ctx.beginPath()
+              ctx.arc(r.x, r.y, 1, 0, Math.PI * 2)
+              ctx.fillStyle = isNightish
+                ? `rgba(180,200,255,${alpha * 0.8})`
+                : `rgba(255,255,255,${alpha * 0.8})`
+              ctx.fill()
+            }
+          }
+          r.radius += r.expandSpeed
+          if (r.radius >= r.maxRadius) {
+            Object.assign(r, spawnRipple(w, h))
           }
         }
       }
