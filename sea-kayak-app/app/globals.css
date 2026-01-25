@@ -2,20 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   overflow-x: hidden;
+  background: #0a0f28;
 }
 
 button,
@@ -53,6 +46,17 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
+  z-index: 1;
+  border-radius: 0.5rem;
+}
+
+.neobrutalist-button-shadow-night {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56, 189, 248, 0.35);
   z-index: 1;
   border-radius: 0.5rem;
 }
@@ -138,8 +142,5 @@ body {
 @layer base {
   * {
     @apply border-gray-700;
-  }
-  body {
-    @apply bg-black;
   }
 }
