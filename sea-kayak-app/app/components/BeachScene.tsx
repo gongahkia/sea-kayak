@@ -129,15 +129,15 @@ export default function BeachScene({ isNight, weatherCategory }: BeachSceneProps
       const sandH = h - sandTop
       const mapY = (frac: number) => sandTop + frac * sandH
 
-      // --- Beach umbrellas (top-down) ---
+      // --- Beach umbrellas (top-down) — avoid center-bottom footer zone ---
       const umbrellas = [
-        { x: 0.1, y: 0.1, r: 22, c: "#e74c3c" },
-        { x: 0.35, y: 0.38, r: 26, c: "#3498db" },
-        { x: 0.6, y: 0.12, r: 20, c: "#f1c40f" },
-        { x: 0.87, y: 0.28, r: 24, c: "#2ecc71" },
-        { x: 0.2, y: 0.62, r: 18, c: "#e91e63" },
-        { x: 0.5, y: 0.55, r: 22, c: "#9b59b6" },
-        { x: 0.76, y: 0.52, r: 20, c: "#ff9800" },
+        { x: 0.07, y: 0.12, r: 22, c: "#e74c3c" },
+        { x: 0.18, y: 0.52, r: 26, c: "#3498db" },
+        { x: 0.88, y: 0.14, r: 20, c: "#f1c40f" },
+        { x: 0.82, y: 0.55, r: 24, c: "#2ecc71" },
+        { x: 0.08, y: 0.82, r: 18, c: "#e91e63" },
+        { x: 0.92, y: 0.78, r: 22, c: "#9b59b6" },
+        { x: 0.35, y: 0.15, r: 20, c: "#ff9800" },
       ]
 
       for (const u of umbrellas) {
@@ -190,13 +190,13 @@ export default function BeachScene({ isNight, weatherCategory }: BeachSceneProps
         }
       }
 
-      // --- Palm trees (top-down) ---
+      // --- Palm trees (top-down) — avoid center-bottom footer zone ---
       const palms = [
-        { x: 0.05, y: 0.02, s: 32 },
-        { x: 0.45, y: 0.06, s: 36 },
-        { x: 0.93, y: 0.08, s: 28 },
-        { x: 0.25, y: 0.72, s: 34 },
-        { x: 0.7, y: 0.68, s: 28 },
+        { x: 0.04, y: 0.05, s: 32 },
+        { x: 0.3, y: 0.02, s: 34 },
+        { x: 0.94, y: 0.04, s: 28 },
+        { x: 0.12, y: 0.7, s: 34 },
+        { x: 0.88, y: 0.65, s: 28 },
       ]
 
       for (const p of palms) {
@@ -287,7 +287,7 @@ export default function BeachScene({ isNight, weatherCategory }: BeachSceneProps
         bottom: 0,
         left: 0,
         width: "100%",
-        height: "35%",
+        height: "27%",
         zIndex: 2,
         pointerEvents: "none",
       }}
