@@ -188,28 +188,36 @@ export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgro
         ctx.fillRect(0, 0, w, h)
       }
 
-      // Draw "(" crest particles rotated upward, drifting up
+      // Draw "(" crest particles with fade lifecycle and organic undulation
       ctx.textBaseline = "middle"
       ctx.textAlign = "center"
       for (const c of crests) {
-        const wobbleX = Math.sin(time * c.wobbleSpeed + c.wobbleOffset) * 6
+        c.life += 1
+        // Fade in / out opacity
+        let alpha = c.baseOpacity
+        if (c.life < c.fadeIn) {
+          alpha *= c.life / c.fadeIn
+        } else if (c.life > c.fadeOutStart) {
+          alpha *= 1 - (c.life - c.fadeOutStart) / (c.maxLife - c.fadeOutStart)
+        }
+        // Compound wobble for organic wave motion
+        const wx =
+          Math.sin(time * c.wobbleFreqX + c.wobblePhaseX) * c.wobbleAmpX +
+          Math.sin(time * c.wobbleFreqX * 0.6 + c.wobblePhaseX * 1.4) * c.wobbleAmpX * 0.4
+        const wy =
+          Math.sin(time * c.wobbleFreqY + c.wobblePhaseY) * c.wobbleAmpY
         ctx.save()
-        ctx.translate(c.x + wobbleX, c.y)
+        ctx.translate(c.x + wx, c.y + wy)
         ctx.rotate(Math.PI / 2)
         ctx.font = `bold ${c.size}px Arial, sans-serif`
-        ctx.fillStyle = `rgba(255,255,255,${c.opacity})`
+        ctx.fillStyle = `rgba(255,255,255,${Math.max(0, alpha)})`
         ctx.fillText("(", 0, 0)
         ctx.restore()
-        c.y -= c.speed
-        if (c.y < -c.size) {
-          const fresh = spawnCrest(w, h, true)
-          c.x = fresh.x
-          c.y = fresh.y
-          c.speed = fresh.speed
-          c.size = fresh.size
-          c.opacity = fresh.opacity
-          c.wobbleOffset = fresh.wobbleOffset
-          c.wobbleSpeed = fresh.wobbleSpeed
+        c.y -= c.driftSpeed
+        // Respawn when life expires or drifts off screen
+        if (c.life >= c.maxLife || c.y < -c.size * 2) {
+          const fresh = spawnCrest(w, h)
+          Object.assign(c, fresh)
         }
       }
 
