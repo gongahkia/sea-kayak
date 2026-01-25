@@ -22,8 +22,8 @@ With this frustration nagging at me, I created `Sea Kayak` to make it easier to 
 ## Screenshots
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="./asset/reference/1.png" width="48%">
-  <img src="./asset/reference/2.png" width="48%">
+  <img src="./asset/reference/v2/1.png" width="48%">
+  <img src="./asset/reference/v2/2.png" width="48%">
 </div>
 
 ## Usage
@@ -76,7 +76,7 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
 
 ## Architecture
 
-![](./asset/reference/architecture.png)
+![](./asset/reference/architecture/architecture.png)
 
 ## Issues
 
