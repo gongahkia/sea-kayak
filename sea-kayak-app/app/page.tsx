@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import { motion } from "framer-motion"
 import "./globals.css"
 import WaveBackground from "./components/WaveBackground"
+import BeachScene from "./components/BeachScene"
 
 type WeatherCategory = "clear" | "cloudy" | "rain" | "storm"
 
@@ -206,7 +207,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4">
+        <BeachScene isNight={isNight} />
+
+        <div className="absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4 z-10" style={{ textShadow: isNight ? "0 1px 4px rgba(0,0,0,0.6)" : "0 1px 3px rgba(255,255,255,0.7)" }}>
           <p className="text-xs md:text-sm">
             Source code{" "}
             <a
