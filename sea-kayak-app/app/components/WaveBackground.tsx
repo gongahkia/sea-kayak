@@ -144,10 +144,23 @@ export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgro
       return c
     })
 
-    let drops: Array<{ x: number; y: number; speed: number; length: number }> = []
+    let ripples: Array<{
+      x: number; y: number
+      radius: number; maxRadius: number
+      expandSpeed: number; opacity: number
+    }> = []
     let prevWeather = ""
     let flashOpacity = 0
     let nextFlash = Infinity
+
+    const spawnRipple = (w: number, h: number) => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      radius: 0,
+      maxRadius: 6 + Math.random() * 10,
+      expandSpeed: 0.3 + Math.random() * 0.5,
+      opacity: 0.3 + Math.random() * 0.25,
+    })
 
     const draw = (timestamp: number) => {
       time += 0.008
@@ -157,13 +170,12 @@ export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgro
 
       if (weather !== prevWeather) {
         prevWeather = weather
-        const count = weather === "storm" ? 250 : weather === "rain" ? 120 : 0
-        drops = Array.from({ length: count }, () => ({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          speed: 5 + Math.random() * 8,
-          length: 12 + Math.random() * 18,
-        }))
+        const count = weather === "storm" ? 180 : weather === "rain" ? 80 : 0
+        ripples = Array.from({ length: count }, () => {
+          const r = spawnRipple(w, h)
+          r.radius = Math.random() * r.maxRadius
+          return r
+        })
         if (weather === "storm") {
           nextFlash = timestamp + 3000 + Math.random() * 7000
         } else {

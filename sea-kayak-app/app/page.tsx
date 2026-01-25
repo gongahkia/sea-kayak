@@ -31,9 +31,9 @@ export default function Home() {
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
   const [sgtHour, setSgtHour] = useState(22) // TEMP: forced to 10pm for night preview
-  const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("clear") // TEMP: forced for preview
+  const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("storm") // TEMP: forced for preview
 
-  const isNight = true // TEMP: forced night mode for preview
+  const isNight = sgtHour >= 19 || sgtHour < 6.5 // TEMP: derived from forced hour
 
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
@@ -72,15 +72,16 @@ export default function Home() {
   }, [])
 
   const fetchWeather = useCallback(() => {
-    fetch(WEATHER_API_URL)
-      .then((r) => r.json())
-      .then((data) => {
-        const code = data?.current?.weather_code
-        if (typeof code === "number") {
-          setWeatherCategory(categorizeWMO(code))
-        }
-      })
-      .catch(() => {})
+    // TEMP: disabled for weather preview
+    // fetch(WEATHER_API_URL)
+    //   .then((r) => r.json())
+    //   .then((data) => {
+    //     const code = data?.current?.weather_code
+    //     if (typeof code === "number") {
+    //       setWeatherCategory(categorizeWMO(code))
+    //     }
+    //   })
+    //   .catch(() => {})
   }, [])
 
   useEffect(() => {
