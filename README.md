@@ -39,7 +39,7 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
 
 * *Frontend*: [React](https://react.dev/), [Next.js](https://nextjs.org/), [Vercel](https://vercel.com/)
 * *Backend*: [Python](https://www.python.org/), [Github Actions](https://github.com/features/actions)
-* *Package*: [Docker](https://www.docker.com/)
+* *API*: [Open-Meteo Weather API](https://open-meteo.com/)
 
 ## Coverage
 
