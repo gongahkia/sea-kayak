@@ -1,4 +1,5 @@
-[![](https://img.shields.io/badge/sea_kayak_1.0.0-passing-green)](https://github.com/gongahkia/sea-kayak/releases/tag/1.0.0) 
+[![](https://img.shields.io/badge/sea_kayak_1.0.0-passing-light_green)](https://github.com/gongahkia/sea-kayak/releases/tag/1.0.0) 
+[![](https://img.shields.io/badge/sea_kayak_2.0.0-passing-green)](https://github.com/gongahkia/sea-kayak/releases/tag/2.0.0) 
 ![](https://github.com/gongahkia/sea-kayak/actions/workflows/collate.yml/badge.svg)
 ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/sea-kayak)
 
@@ -63,18 +64,9 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
 * [singaporeinternationalarbitration.wordpress.com/feed/](https://singaporeinternationalarbitration.wordpress.com/feed/)
 * [lawgazette.com.sg/feed/](https://lawgazette.com.sg/feed/)
 * [lawgazette.com.sg/category/notices/disciplinary-tribunal-reports/feed/](https://lawgazette.com.sg/category/notices/disciplinary-tribunal-reports/feed/)
-* [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-journal](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-journal)
 * [hungryhippo.huey.xyz/individual-site/law.nus.edu.sg/trail](https://hungryhippo.huey.xyz/individual-site/law.nus.edu.sg/trail)
+* [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-journal](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-journal)
 * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Advocacy-and-Procedure](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Advocacy-and-Procedure)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Construction-and-Infrastructure](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Construction-and-Infrastructure)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Corporate](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Corporate)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Crime](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Crime)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Employment-Law](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Employment-Law)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Family-and-Personal-Law](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Family-and-Personal-Law)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Fintech](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Fintech)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Insolvency-and-Restructuring](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Insolvency-and-Restructuring)
-    * [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Transportation](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Transportation)
 * [lexology.com/email/rss.aspx?tagType=5&tagRef=155&tagTitle=%20Singapore&extrajr=&extrawr=](https://www.lexology.com/email/rss.aspx?tagType=5&tagRef=155&tagTitle=%20Singapore&extrajr=&extrawr=)
 
 ### Local RSS Feeds
