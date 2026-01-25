@@ -30,10 +30,10 @@ export default function Home() {
   const [randomUrl, setRandomUrl] = useState("#")
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
-  const [sgtHour, setSgtHour] = useState(getSGTHour)
+  const [sgtHour, setSgtHour] = useState(22) // TEMP: forced to 10pm for night preview
   const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("clear")
 
-  const isNight = sgtHour >= 19 || sgtHour < 6.5
+  const isNight = true // TEMP: forced night mode for preview
 
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
