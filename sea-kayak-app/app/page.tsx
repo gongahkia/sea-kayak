@@ -33,7 +33,7 @@ export default function Home() {
   const [sgtHour, setSgtHour] = useState(getSGTHour)
   const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("clear")
 
-  const isNight = sgtHour >= 19 || sgtHour < 6.5
+  const isNight = sgtHour >= 18 || sgtHour < 7
 
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
@@ -99,6 +99,9 @@ export default function Home() {
     infoSectionRef.current?.scrollIntoView({ behavior: "smooth" })
   }
 
+  const textShadow = isNight
+    ? "0 1px 6px rgba(0,0,0,0.7)"
+    : "0 1px 4px rgba(255,255,255,0.8)"
   const textClass = isNight ? "text-sky-100" : "text-sky-900"
   const linkClass = isNight
     ? "text-sky-300 hover:underline font-medium"
@@ -108,7 +111,7 @@ export default function Home() {
     : "text-indigo-500 hover:underline"
   const btnBorder = isNight ? "border-slate-600" : "border-black"
   const btnText = isNight ? "text-sky-100" : "text-black"
-  const btnBg = isNight ? "bg-slate-800" : "bg-white"
+  const btnBg = isNight ? "bg-slate-800/90" : "bg-white/90"
   const shadowClass = isNight ? "neobrutalist-button-shadow-night" : "neobrutalist-button-shadow"
 
   return (
@@ -180,6 +183,7 @@ export default function Home() {
       <section
         ref={infoSectionRef}
         className={`min-h-screen flex flex-col items-center justify-center ${textClass} relative snap-start px-4 py-16 z-10`}
+        style={{ textShadow }}
       >
         <div className="max-w-2xl text-center space-y-4 md:space-y-6 w-full px-4">
           <p className="text-base md:text-lg leading-relaxed">
