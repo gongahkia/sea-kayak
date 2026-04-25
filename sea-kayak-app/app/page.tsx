@@ -25,7 +25,31 @@ function categorizeWMO(code: number): WeatherCategory {
 const WEATHER_API_URL =
   "https://api.open-meteo.com/v1/forecast?latitude=1.3521&longitude=103.8198&current=weather_code,is_day&timezone=Asia/Singapore"
 
-type RouteItem = { url: string; title: string; description: string }
+type RouteItem = { url: string; title: string; description: string; published?: string }
+
+function pickWeighted(items: RouteItem[]): RouteItem {
+  if (items.length === 0) throw new Error("pickWeighted: empty list")
+  const now = Date.now()
+  const HOUR = 3_600_000
+  const weights = items.map((it) => {
+    if (!it.published) return 1
+    const t = Date.parse(it.published)
+    if (Number.isNaN(t)) return 1
+    const ageH = (now - t) / HOUR
+    if (ageH < 0) return 1 // future-dated, treat as old
+    if (ageH <= 48) return 10
+    if (ageH <= 168) return 4 // 1 week
+    if (ageH <= 720) return 2 // 1 month
+    return 1
+  })
+  const total = weights.reduce((a, b) => a + b, 0)
+  let r = Math.random() * total
+  for (let i = 0; i < items.length; i++) {
+    r -= weights[i]
+    if (r <= 0) return items[i]
+  }
+  return items[items.length - 1]
+}
 
 export default function Home() {
   const [routes, setRoutes] = useState<RouteItem[]>([])
@@ -44,17 +68,18 @@ export default function Home() {
         const items: RouteItem[] = Array.isArray(data)
           ? data.map((d: unknown): RouteItem =>
               typeof d === "string"
-                ? { url: d, title: "", description: "" }
+                ? { url: d, title: "", description: "", published: "" }
                 : {
                     url: (d as RouteItem).url,
                     title: (d as RouteItem).title || "",
                     description: (d as RouteItem).description || "",
+                    published: (d as RouteItem).published || "",
                   },
             )
           : []
         setRoutes(items)
         if (items.length > 0) {
-          setCurrent(items[Math.floor(Math.random() * items.length)])
+          setCurrent(pickWeighted(items))
         }
       })
       .catch(console.error)
