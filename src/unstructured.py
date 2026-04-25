@@ -33,7 +33,7 @@ def extract_urls(url):
             seen.add(absolute_url)
             # use anchor text as a best-effort title; description left empty
             title = (a_tag.get_text() or "").strip()
-            items.append({"url": absolute_url, "title": title, "description": ""})
+            items.append({"url": absolute_url, "title": title, "description": "", "published": ""})
 
         return items
     except Exception:

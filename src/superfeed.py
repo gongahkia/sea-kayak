@@ -1,5 +1,7 @@
 # ----- required imports -----
 
+import calendar
+import datetime
 import json
 import feedparser
 import requests
@@ -18,6 +20,19 @@ def _clean_desc(raw):
     if len(text) > DESC_MAX:
         text = text[: DESC_MAX - 1].rstrip() + "…"
     return text
+
+
+def _published_iso(entry):
+    p = entry.get("published_parsed") or entry.get("updated_parsed")
+    if not p:
+        return ""
+    try:
+        ts = calendar.timegm(p)  # feedparser yields struct_time in UTC
+        return datetime.datetime.fromtimestamp(
+            ts, tz=datetime.timezone.utc
+        ).isoformat()
+    except Exception:
+        return ""
 
 
 def scrape_rss_urls(rss_url):
@@ -39,6 +54,7 @@ def scrape_rss_urls(rss_url):
                         "description": _clean_desc(
                             entry.get("summary") or entry.get("description") or ""
                         ),
+                        "published": _published_iso(entry),
                     }
                 )
         return items
