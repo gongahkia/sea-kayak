@@ -209,7 +209,7 @@ export default function Home() {
           </p>
         </div>
 
-        <BeachScene isNight={isNight} weatherCategory={effWeather} />
+        <BeachScene isNight={isNight} weatherCategory={weatherCategory} />
 
         <div className={`absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4 z-10 ${isNight ? "text-white" : "text-sky-900"}`}>
           <p className="text-xs md:text-sm">
