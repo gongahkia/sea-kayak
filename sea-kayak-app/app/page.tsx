@@ -62,7 +62,19 @@ function saveSeen(m: SeenMap) {
   } catch {}
 }
 
-function getSource(url: string): string {
+const TITLE_PREFIX_SOURCE: Record<string, string> = {
+  "SAL Prac": "SAL Practitioner",
+  SAcLJ: "SAcLJ",
+  "Asian JM": "Asian JM",
+}
+
+function sourceFromTitle(title: string): string {
+  const m = title.match(/^\[([^\]]+)\]/)
+  if (!m) return ""
+  return TITLE_PREFIX_SOURCE[m[1].trim()] || ""
+}
+
+function getSource(url: string, title: string = ""): string {
   try {
     const u = new URL(url)
     const h = u.hostname.replace(/^www\./, "").toLowerCase()
@@ -93,11 +105,12 @@ function getSource(url: string): string {
       if (path.includes("sal-practitioner")) return "SAL Practitioner"
       if (path.includes("sal-journal")) return "SAL Journal"
       if (path.includes("law.nus.edu.sg/trail")) return "NUS TRAIL"
-      return ""
+      return sourceFromTitle(title)
     }
-    return ""
+    // shorturl.at, tinyurl.com, and any other unknown host -> try title prefix
+    return sourceFromTitle(title)
   } catch {
-    return ""
+    return sourceFromTitle(title)
   }
 }
 
@@ -273,11 +286,11 @@ export default function Home() {
             {current.title && (
               <div className="hidden md:block absolute left-full ml-4 top-1/2 -translate-y-1/2 w-72 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none z-20">
                 <div className="relative bg-white text-slate-900 rounded-xl shadow-lg border border-slate-200 px-4 py-3 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-[6px] before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-slate-200 before:rotate-45">
-                  {(getSource(current.url) || current.citation) && (
+                  {(getSource(current.url, current.title) || current.citation) && (
                     <div className="flex flex-wrap gap-1.5 mb-1.5">
-                      {getSource(current.url) && (
+                      {getSource(current.url, current.title) && (
                         <span className="text-[0.65rem] font-semibold uppercase tracking-wide bg-slate-700 text-white rounded px-2 py-0.5">
-                          {getSource(current.url)}
+                          {getSource(current.url, current.title)}
                         </span>
                       )}
                       {current.citation && (
