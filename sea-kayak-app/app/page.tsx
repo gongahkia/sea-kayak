@@ -62,6 +62,45 @@ function saveSeen(m: SeenMap) {
   } catch {}
 }
 
+function getSource(url: string): string {
+  try {
+    const u = new URL(url)
+    const h = u.hostname.replace(/^www\./, "").toLowerCase()
+    const path = u.pathname.toLowerCase()
+    if (h.endsWith("singaporelawwatch.sg")) return "Singapore Law Watch"
+    if (h.endsWith("mlaw.gov.sg")) return "MinLaw"
+    if (h.endsWith("mas.gov.sg")) return "MAS"
+    if (h.endsWith("agc.gov.sg")) return "AGC"
+    if (h.endsWith("allenandgledhill.com")) return "Allen & Gledhill"
+    if (h.endsWith("wongpartnership.com")) return "WongPartnership"
+    if (h.endsWith("withersworldwide.com")) return "Withers"
+    if (h.endsWith("dentons.rodyk.com") || h.endsWith("rodyk.com")) return "Dentons Rodyk"
+    if (h.endsWith("twobirds.com")) return "Bird & Bird"
+    if (h.endsWith("harryelias.com")) return "Harry Elias"
+    if (h.endsWith("leenlee.com.sg")) return "Lee & Lee"
+    if (h.endsWith("lawgazette.com.sg")) return "Law Gazette"
+    if (h.endsWith("singaporeinternationalarbitration.wordpress.com") ||
+        h.endsWith("singaporeinternationalarbitration.com")) return "SG Arbitration Blog"
+    if (h.endsWith("lexology.com")) return "Lexology"
+    if (h.endsWith("blog.nus.edu.sg")) return "NUS Law Research"
+    if (h.endsWith("law.nus.edu.sg")) return "NUS Law"
+    if (h.endsWith("journalsonline.academypublishing.org.sg")) return "SAL Academy"
+    if (h.endsWith("academypublishing.org.sg")) return "SAL Academy"
+    if (h.endsWith("events.sal.sg")) return "SAL Events"
+    if (h.endsWith("sal.org.sg")) return "SAL"
+    if (h.endsWith("store.lawnet.com") || h.endsWith("lawnet.com")) return "LawNet"
+    if (h.endsWith("hungryhippo.huey.xyz")) {
+      if (path.includes("sal-practitioner")) return "SAL Practitioner"
+      if (path.includes("sal-journal")) return "SAL Journal"
+      if (path.includes("law.nus.edu.sg/trail")) return "NUS TRAIL"
+      return ""
+    }
+    return ""
+  } catch {
+    return ""
+  }
+}
+
 function baseWeight(it: RouteItem): number {
   if (!it.published) return 1
   const t = Date.parse(it.published)
@@ -234,10 +273,19 @@ export default function Home() {
             {current.title && (
               <div className="hidden md:block absolute left-full ml-4 top-1/2 -translate-y-1/2 w-72 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none z-20">
                 <div className="relative bg-white text-slate-900 rounded-xl shadow-lg border border-slate-200 px-4 py-3 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-[6px] before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-slate-200 before:rotate-45">
-                  {current.citation && (
-                    <span className="inline-block text-[0.65rem] font-mono font-semibold uppercase tracking-wide bg-slate-900 text-white rounded px-2 py-0.5 mb-1.5">
-                      {current.citation}
-                    </span>
+                  {(getSource(current.url) || current.citation) && (
+                    <div className="flex flex-wrap gap-1.5 mb-1.5">
+                      {getSource(current.url) && (
+                        <span className="text-[0.65rem] font-semibold uppercase tracking-wide bg-slate-700 text-white rounded px-2 py-0.5">
+                          {getSource(current.url)}
+                        </span>
+                      )}
+                      {current.citation && (
+                        <span className="text-[0.65rem] font-mono font-semibold uppercase tracking-wide bg-slate-900 text-white rounded px-2 py-0.5">
+                          {current.citation}
+                        </span>
+                      )}
+                    </div>
                   )}
                   <p className="text-sm font-semibold leading-snug">{current.title}</p>
                   {current.description && (
