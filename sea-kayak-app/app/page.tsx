@@ -125,41 +125,43 @@ export default function Home() {
 
       <section className="min-h-screen flex items-center justify-center snap-start px-4 relative z-10">
         <div className="flex flex-col items-center gap-4 md:gap-8 relative w-full max-w-md">
-          <a
-            href={current.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full md:w-[500px]"
-          >
-            <div className="neobrutalist-button-container">
-              <motion.div
-                id="paddle"
-                className={`neobrutalist-button w-full h-14 md:h-16 ${btnBg} ${btnText} border-4 ${btnBorder} rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer`}
-                initial={{ x: -6, y: -6 }}
-                whileHover={{ x: -3, y: -3 }}
-                whileTap={{ x: 0, y: 0 }}
-                animate={{ x: -6, y: -6 }}
-                onMouseEnter={handleHover}
-              >
-                <div className="absolute inset-0 flex items-center justify-center z-10 px-2">
-                  PADDLE THE OCEAN
+          <div className="relative group w-full md:w-[500px]">
+            <a
+              href={current.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full"
+            >
+              <div className="neobrutalist-button-container">
+                <motion.div
+                  id="paddle"
+                  className={`neobrutalist-button w-full h-14 md:h-16 ${btnBg} ${btnText} border-4 ${btnBorder} rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer`}
+                  initial={{ x: -6, y: -6 }}
+                  whileHover={{ x: -3, y: -3 }}
+                  whileTap={{ x: 0, y: 0 }}
+                  animate={{ x: -6, y: -6 }}
+                  onMouseEnter={handleHover}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center z-10 px-2">
+                    PADDLE THE OCEAN
+                  </div>
+                </motion.div>
+                <div className={shadowClass}></div>
+              </div>
+            </a>
+            {current.title && (
+              <div className="hidden md:block absolute left-full ml-4 top-1/2 -translate-y-1/2 w-72 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none z-20">
+                <div className="relative bg-white text-slate-900 rounded-xl shadow-lg border border-slate-200 px-4 py-3 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-[6px] before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-slate-200 before:rotate-45">
+                  <p className="text-sm font-semibold leading-snug">{current.title}</p>
+                  {current.description && (
+                    <p className="text-xs mt-1 text-slate-600 leading-snug line-clamp-3">
+                      {current.description}
+                    </p>
+                  )}
                 </div>
-              </motion.div>
-              <div className={shadowClass}></div>
-            </div>
-          </a>
-          {current.title && (
-            <div className={`w-full md:w-[500px] text-center px-2 ${textClass}`}>
-              <p className="text-sm md:text-base font-semibold line-clamp-2 leading-snug">
-                {current.title}
-              </p>
-              {current.description && (
-                <p className="text-xs md:text-sm mt-1 opacity-80 line-clamp-2 leading-snug">
-                  {current.description}
-                </p>
-              )}
-            </div>
-          )}
+              </div>
+            )}
+          </div>
           <div className="flex w-full md:w-[500px] gap-4">
             <div className="neobrutalist-button-container w-1/2">
               <motion.button
