@@ -32,10 +32,20 @@ export default function Home() {
 
   const [sgtHour, setSgtHour] = useState(getSGTHour)
   const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("clear")
+  const [hourOverride, setHourOverride] = useState<number | null>(null) // ?h= override
+  const [weatherOverride, setWeatherOverride] = useState<WeatherCategory | null>(null) // ?w= override
 
-  const isNight = sgtHour >= 18 || sgtHour < 7
+  const effHour = hourOverride ?? sgtHour
+  const effWeather = weatherOverride ?? weatherCategory
+  const isNight = effHour >= 18 || effHour < 7
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search) // dev-only overrides
+    const h = params.get("h")
+    const w = params.get("w")
+    if (h !== null && !Number.isNaN(parseFloat(h))) setHourOverride(parseFloat(h))
+    if (w === "clear" || w === "cloudy" || w === "rain" || w === "storm") setWeatherOverride(w)
+
     fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
       .then((response) => response.json())
       .then((data) => {
@@ -99,10 +109,8 @@ export default function Home() {
     infoSectionRef.current?.scrollIntoView({ behavior: "smooth" })
   }
 
-  const textShadow = isNight
-    ? "0 1px 6px rgba(0,0,0,0.7)"
-    : "0 1px 4px rgba(255,255,255,0.8)"
-  const textClass = isNight ? "text-sky-100" : "text-sky-900"
+  const textShadow = "none" // v1: no glow
+  const textClass = isNight ? "text-white" : "text-sky-900"
   const linkClass = isNight
     ? "text-sky-300 hover:underline font-medium"
     : "text-indigo-600 md:text-indigo-500 hover:underline font-medium"
@@ -116,7 +124,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-y-auto overflow-x-hidden snap-y snap-mandatory">
-      <WaveBackground sgtHour={sgtHour} weatherCategory={weatherCategory} />
+      <WaveBackground sgtHour={effHour} weatherCategory={effWeather} />
 
       <section className="min-h-screen flex items-center justify-center snap-start px-4 relative z-10">
         <div className="flex flex-col items-center gap-4 md:gap-8 relative w-full max-w-md">
@@ -211,9 +219,9 @@ export default function Home() {
           </p>
         </div>
 
-        <BeachScene isNight={isNight} weatherCategory={weatherCategory} />
+        <BeachScene isNight={isNight} weatherCategory={effWeather} />
 
-        <div className="absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4 z-10" style={{ textShadow: isNight ? "0 1px 4px rgba(0,0,0,0.6)" : "0 1px 3px rgba(255,255,255,0.7)" }}>
+        <div className={`absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4 z-10 ${isNight ? "text-white" : "text-sky-900"}`}>
           <p className="text-xs md:text-sm">
             Source code{" "}
             <a
