@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import "./globals.css"
 import WaveBackground from "./components/WaveBackground"
 import BeachScene from "./components/BeachScene"
+import { getSource, normalizeRouteData, type RouteItem } from "./lib/sources"
 
 type WeatherCategory = "clear" | "cloudy" | "rain" | "storm"
 
@@ -25,13 +26,6 @@ function categorizeWMO(code: number): WeatherCategory {
 const WEATHER_API_URL =
   "https://api.open-meteo.com/v1/forecast?latitude=1.3521&longitude=103.8198&current=weather_code,is_day&timezone=Asia/Singapore"
 
-type RouteItem = {
-  url: string
-  title: string
-  description: string
-  published?: string
-  citation?: string
-}
 type SeenMap = Record<string, number> // url -> ms timestamp paddled
 
 const SEEN_KEY = "sea-kayak:seen"
@@ -60,58 +54,6 @@ function saveSeen(m: SeenMap) {
   try {
     window.localStorage.setItem(SEEN_KEY, JSON.stringify(m))
   } catch {}
-}
-
-const TITLE_PREFIX_SOURCE: Record<string, string> = {
-  "SAL Prac": "SAL Practitioner",
-  SAcLJ: "SAcLJ",
-  "Asian JM": "Asian JM",
-}
-
-function sourceFromTitle(title: string): string {
-  const m = title.match(/^\[([^\]]+)\]/)
-  if (!m) return ""
-  return TITLE_PREFIX_SOURCE[m[1].trim()] || ""
-}
-
-function getSource(url: string, title: string = ""): string {
-  try {
-    const u = new URL(url)
-    const h = u.hostname.replace(/^www\./, "").toLowerCase()
-    const path = u.pathname.toLowerCase()
-    if (h.endsWith("singaporelawwatch.sg")) return "Singapore Law Watch"
-    if (h.endsWith("mlaw.gov.sg")) return "MinLaw"
-    if (h.endsWith("mas.gov.sg")) return "MAS"
-    if (h.endsWith("agc.gov.sg")) return "AGC"
-    if (h.endsWith("allenandgledhill.com")) return "Allen & Gledhill"
-    if (h.endsWith("wongpartnership.com")) return "WongPartnership"
-    if (h.endsWith("withersworldwide.com")) return "Withers"
-    if (h.endsWith("dentons.rodyk.com") || h.endsWith("rodyk.com")) return "Dentons Rodyk"
-    if (h.endsWith("twobirds.com")) return "Bird & Bird"
-    if (h.endsWith("harryelias.com")) return "Harry Elias"
-    if (h.endsWith("leenlee.com.sg")) return "Lee & Lee"
-    if (h.endsWith("lawgazette.com.sg")) return "Law Gazette"
-    if (h.endsWith("singaporeinternationalarbitration.wordpress.com") ||
-        h.endsWith("singaporeinternationalarbitration.com")) return "SG Arbitration Blog"
-    if (h.endsWith("lexology.com")) return "Lexology"
-    if (h.endsWith("blog.nus.edu.sg")) return "NUS Law Research"
-    if (h.endsWith("law.nus.edu.sg")) return "NUS Law"
-    if (h.endsWith("journalsonline.academypublishing.org.sg")) return "SAL Academy"
-    if (h.endsWith("academypublishing.org.sg")) return "SAL Academy"
-    if (h.endsWith("events.sal.sg")) return "SAL Events"
-    if (h.endsWith("sal.org.sg")) return "SAL"
-    if (h.endsWith("store.lawnet.com") || h.endsWith("lawnet.com")) return "LawNet"
-    if (h.endsWith("hungryhippo.huey.xyz")) {
-      if (path.includes("sal-practitioner")) return "SAL Practitioner"
-      if (path.includes("sal-journal")) return "SAL Journal"
-      if (path.includes("law.nus.edu.sg/trail")) return "NUS TRAIL"
-      return sourceFromTitle(title)
-    }
-    // shorturl.at, tinyurl.com, and any other unknown host -> try title prefix
-    return sourceFromTitle(title)
-  } catch {
-    return sourceFromTitle(title)
-  }
 }
 
 function baseWeight(it: RouteItem): number {
@@ -148,6 +90,7 @@ export default function Home() {
   const [routes, setRoutes] = useState<RouteItem[]>([])
   const [current, setCurrent] = useState<RouteItem>({ url: "#", title: "", description: "" })
   const [seen, setSeen] = useState<SeenMap>({})
+  const [feedUrl, setFeedUrl] = useState("")
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
   const [sgtHour, setSgtHour] = useState(getSGTHour)
@@ -163,19 +106,7 @@ export default function Home() {
     fetch("/routes.json") // DEV-ONLY: REVERT to https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json before final push
       .then((response) => response.json())
       .then((data) => {
-        const items: RouteItem[] = Array.isArray(data)
-          ? data.map((d: unknown): RouteItem =>
-              typeof d === "string"
-                ? { url: d, title: "", description: "", published: "", citation: "" }
-                : {
-                    url: (d as RouteItem).url,
-                    title: (d as RouteItem).title || "",
-                    description: (d as RouteItem).description || "",
-                    published: (d as RouteItem).published || "",
-                    citation: (d as RouteItem).citation || "",
-                  },
-            )
-          : []
+        const items = normalizeRouteData(data)
         setRoutes(items)
         if (items.length > 0) {
           setCurrent(pickWeighted(items, initialSeen))
@@ -234,6 +165,22 @@ export default function Home() {
   }
 
   const seenCount = Object.keys(seen).length
+
+  const handleSuggestSource = (e: React.FormEvent) => {
+    e.preventDefault()
+    const v = feedUrl.trim()
+    if (!v) return
+    const params = new URLSearchParams({
+      title: `New source: ${v}`,
+      body: `Please consider adding this feed to Sea Kayak:\n\n${v}\n\n_Submitted via the suggest form on the landing page._`,
+      labels: "new-source",
+    })
+    window.open(
+      `https://github.com/gongahkia/sea-kayak/issues/new?${params.toString()}`,
+      "_blank",
+    )
+    setFeedUrl("")
+  }
 
   const scrollToInfo = () => {
     infoSectionRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -383,6 +330,31 @@ export default function Home() {
           </p>
         </div>
 
+        <form
+          onSubmit={handleSuggestSource}
+          className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-2 max-w-md w-full px-4"
+        >
+          <input
+            type="url"
+            required
+            value={feedUrl}
+            onChange={(e) => setFeedUrl(e.target.value)}
+            placeholder="https://example.com/feed.xml"
+            aria-label="Suggest a feed URL"
+            className={`flex-1 px-3 py-2 rounded-lg text-sm border-2 focus:outline-none focus:ring-2 focus:ring-sky-400 ${
+              isNight
+                ? "bg-slate-800/80 text-sky-100 border-slate-600 placeholder:text-slate-400"
+                : "bg-white/90 text-black border-black placeholder:text-slate-500"
+            }`}
+          />
+          <button
+            type="submit"
+            className={`px-4 py-2 rounded-lg text-sm font-semibold border-2 ${btnBg} ${btnText} ${btnBorder}`}
+          >
+            Suggest a feed
+          </button>
+        </form>
+
         <BeachScene isNight={isNight} weatherCategory={weatherCategory} />
 
         <div className={`absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4 z-10 ${isNight ? "text-white" : "text-sky-900"}`}>
@@ -395,6 +367,10 @@ export default function Home() {
               className={subtleLinkClass}
             >
               here
+            </a>
+            {" · "}
+            <a href="/health" className={subtleLinkClass}>
+              Source health
             </a>
             .
           </p>
