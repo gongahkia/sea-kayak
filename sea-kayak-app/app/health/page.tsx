@@ -4,36 +4,19 @@ import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
 import WaveBackground from "../components/WaveBackground"
 import BeachScene from "../components/BeachScene"
-import { getSource, normalizeRouteData, type RouteItem } from "../lib/sources"
+import {
+  computeHealth,
+  normalizeRouteData,
+  type HealthStatus,
+  type RouteItem,
+} from "../lib/sources"
 import { useSgtAndWeather } from "../lib/weather"
 
-type Status = "active" | "stale" | "dead" | "undated"
-type SourceHealth = {
-  name: string
-  count: number
-  ageDays: number | null
-  status: Status
-}
-
-function statusFor(ageDays: number | null): Status {
-  if (ageDays === null) return "undated"
-  if (ageDays <= 7) return "active"
-  if (ageDays <= 30) return "stale"
-  return "dead"
-}
-
-const STATUS_DOT: Record<Status, string> = {
+const STATUS_DOT: Record<HealthStatus, string> = {
   active: "bg-emerald-500",
   stale: "bg-amber-500",
   dead: "bg-rose-500",
   undated: "bg-slate-500",
-}
-
-const STATUS_RANK: Record<Status, number> = {
-  active: 0,
-  stale: 1,
-  undated: 2,
-  dead: 3,
 }
 
 export default function HealthPage() {
@@ -49,33 +32,7 @@ export default function HealthPage() {
       .finally(() => setLoaded(true))
   }, [])
 
-  const rows: SourceHealth[] = useMemo(() => {
-    const groups = new Map<string, RouteItem[]>()
-    for (const it of items) {
-      const s = getSource(it.url, it.title) || "(unknown)"
-      const arr = groups.get(s)
-      if (arr) arr.push(it)
-      else groups.set(s, [it])
-    }
-    const now = Date.now()
-    const out: SourceHealth[] = []
-    for (const [name, list] of groups.entries()) {
-      let latest: number | null = null
-      for (const it of list) {
-        if (!it.published) continue
-        const t = Date.parse(it.published)
-        if (!Number.isNaN(t) && (latest === null || t > latest)) latest = t
-      }
-      const ageDays = latest === null ? null : Math.floor((now - latest) / 86_400_000)
-      out.push({ name, count: list.length, ageDays, status: statusFor(ageDays) })
-    }
-    out.sort((a, b) => {
-      const r = STATUS_RANK[a.status] - STATUS_RANK[b.status]
-      if (r !== 0) return r
-      return b.count - a.count
-    })
-    return out
-  }, [items])
+  const rows = useMemo(() => computeHealth(items), [items])
 
   const textClass = isNight ? "text-white" : "text-sky-900"
   const subtleLinkClass = isNight

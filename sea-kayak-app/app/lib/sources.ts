@@ -60,6 +60,57 @@ export function getSource(url: string, title: string = ""): string {
   }
 }
 
+export type HealthStatus = "active" | "stale" | "dead" | "undated"
+
+export type SourceHealth = {
+  name: string
+  count: number
+  ageDays: number | null
+  status: HealthStatus
+}
+
+const HEALTH_STATUS_RANK: Record<HealthStatus, number> = {
+  active: 0,
+  stale: 1,
+  undated: 2,
+  dead: 3,
+}
+
+export function statusFor(ageDays: number | null): HealthStatus {
+  if (ageDays === null) return "undated"
+  if (ageDays <= 7) return "active"
+  if (ageDays <= 30) return "stale"
+  return "dead"
+}
+
+export function computeHealth(items: RouteItem[]): SourceHealth[] {
+  const groups = new Map<string, RouteItem[]>()
+  for (const it of items) {
+    const s = getSource(it.url, it.title) || "(unknown)"
+    const arr = groups.get(s)
+    if (arr) arr.push(it)
+    else groups.set(s, [it])
+  }
+  const now = Date.now()
+  const out: SourceHealth[] = []
+  for (const [name, list] of groups.entries()) {
+    let latest: number | null = null
+    for (const it of list) {
+      if (!it.published) continue
+      const t = Date.parse(it.published)
+      if (!Number.isNaN(t) && (latest === null || t > latest)) latest = t
+    }
+    const ageDays = latest === null ? null : Math.floor((now - latest) / 86_400_000)
+    out.push({ name, count: list.length, ageDays, status: statusFor(ageDays) })
+  }
+  out.sort((a, b) => {
+    const r = HEALTH_STATUS_RANK[a.status] - HEALTH_STATUS_RANK[b.status]
+    if (r !== 0) return r
+    return b.count - a.count
+  })
+  return out
+}
+
 export function normalizeRouteData(data: unknown): RouteItem[] {
   if (!Array.isArray(data)) return []
   return data.map((d: unknown): RouteItem =>
