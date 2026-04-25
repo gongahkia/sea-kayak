@@ -36,6 +36,9 @@ def _clean_desc(raw):
         return ""
     # strip HTML and collapse whitespace
     text = BeautifulSoup(raw, "html.parser").get_text(" ", strip=True)
+    # treat purely-ellipsis/punctuation placeholders as empty
+    if not re.search(r"[A-Za-z0-9]", text):
+        return ""
     if len(text) > DESC_MAX:
         text = text[: DESC_MAX - 1].rstrip() + "…"
     return text
