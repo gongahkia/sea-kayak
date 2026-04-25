@@ -1,25 +1,12 @@
 "use client"
 
-import { useState, useEffect, useMemo, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import "./globals.css"
 import WaveBackground from "./components/WaveBackground"
 import BeachScene from "./components/BeachScene"
-import {
-  computeHealth,
-  getSource,
-  normalizeRouteData,
-  type HealthStatus,
-  type RouteItem,
-} from "./lib/sources"
+import { getSource, normalizeRouteData, type RouteItem } from "./lib/sources"
 import { useSgtAndWeather } from "./lib/weather"
-
-const STATUS_DOT: Record<HealthStatus, string> = {
-  active: "bg-emerald-500",
-  stale: "bg-amber-500",
-  dead: "bg-rose-500",
-  undated: "bg-slate-500",
-}
 
 type SeenMap = Record<string, number> // url -> ms timestamp paddled
 
@@ -131,7 +118,6 @@ export default function Home() {
   }
 
   const seenCount = Object.keys(seen).length
-  const healthRows = useMemo(() => computeHealth(routes), [routes])
 
   const scrollToInfo = () => {
     infoSectionRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -294,40 +280,7 @@ export default function Home() {
             >
               here
             </a>
-            {" · "}
-            <span className="relative group inline-block align-baseline">
-              <a href="/health" className={subtleLinkClass}>
-                Source health
-              </a>
-              {healthRows.length > 0 && (
-                <div className="hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 pb-3 w-80 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-30">
-                  <div className="relative bg-white text-slate-900 rounded-xl shadow-lg border border-slate-200 max-h-[60vh] overflow-y-auto px-3 py-2 text-left after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-[6px] after:w-3 after:h-3 after:bg-white after:border-r after:border-b after:border-slate-200 after:rotate-45">
-                    <table className="w-full text-xs">
-                      <tbody>
-                        {healthRows.map((r) => (
-                          <tr key={r.name} className="border-t border-slate-100 first:border-t-0">
-                            <td className="py-1 pr-2">
-                              <span
-                                className={`inline-block w-1.5 h-1.5 rounded-full ${STATUS_DOT[r.status]} mr-1.5 align-middle`}
-                              />
-                              {r.name}
-                            </td>
-                            <td className="py-1 text-right text-slate-500 tabular-nums">
-                              {r.ageDays === null
-                                ? "—"
-                                : r.ageDays === 0
-                                  ? "today"
-                                  : `${r.ageDays}d`}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              )}
-            </span>
-            .
+.
           </p>
           <p className="mt-2 md:mt-4 text-[0.7rem] md:text-xs">
             &copy; 2025 Sea Kayak. All rights reserved.
