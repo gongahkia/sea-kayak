@@ -36,12 +36,6 @@ export default function Home() {
   const isNight = sgtHour >= 18 || sgtHour < 7
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search) // dev-only overrides
-    const h = params.get("h")
-    const w = params.get("w")
-    if (h !== null && !Number.isNaN(parseFloat(h))) setHourOverride(parseFloat(h))
-    if (w === "clear" || w === "cloudy" || w === "rain" || w === "storm") setWeatherOverride(w)
-
     fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
       .then((response) => response.json())
       .then((data) => {
@@ -120,7 +114,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-y-auto overflow-x-hidden snap-y snap-mandatory">
-      <WaveBackground sgtHour={effHour} weatherCategory={effWeather} />
+      <WaveBackground sgtHour={sgtHour} weatherCategory={weatherCategory} />
 
       <section className="min-h-screen flex items-center justify-center snap-start px-4 relative z-10">
         <div className="flex flex-col items-center gap-4 md:gap-8 relative w-full max-w-md">
