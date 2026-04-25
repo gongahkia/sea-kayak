@@ -123,7 +123,7 @@ export default function Home() {
 
   const handleHover = () => {
     if (routes.length > 0) {
-      setCurrent(routes[Math.floor(Math.random() * routes.length)])
+      setCurrent(pickWeighted(routes))
     }
   }
 
