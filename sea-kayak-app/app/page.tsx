@@ -1,30 +1,12 @@
 "use client"
 
-import { useState, useEffect, useRef, useCallback } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import "./globals.css"
 import WaveBackground from "./components/WaveBackground"
 import BeachScene from "./components/BeachScene"
 import { getSource, normalizeRouteData, type RouteItem } from "./lib/sources"
-
-type WeatherCategory = "clear" | "cloudy" | "rain" | "storm"
-
-function getSGTHour(): number {
-  const now = new Date()
-  const sgt = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Singapore" }))
-  return sgt.getHours() + sgt.getMinutes() / 60
-}
-
-function categorizeWMO(code: number): WeatherCategory {
-  if (code <= 1) return "clear"
-  if (code <= 48) return "cloudy"
-  if (code <= 82) return "rain"
-  if (code >= 95) return "storm"
-  return "clear"
-}
-
-const WEATHER_API_URL =
-  "https://api.open-meteo.com/v1/forecast?latitude=1.3521&longitude=103.8198&current=weather_code,is_day&timezone=Asia/Singapore"
+import { useSgtAndWeather } from "./lib/weather"
 
 type SeenMap = Record<string, number> // url -> ms timestamp paddled
 
@@ -90,13 +72,9 @@ export default function Home() {
   const [routes, setRoutes] = useState<RouteItem[]>([])
   const [current, setCurrent] = useState<RouteItem>({ url: "#", title: "", description: "" })
   const [seen, setSeen] = useState<SeenMap>({})
-  const [feedUrl, setFeedUrl] = useState("")
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
-  const [sgtHour, setSgtHour] = useState(getSGTHour)
-  const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("clear")
-
-  const isNight = sgtHour >= 18 || sgtHour < 7
+  const { sgtHour, weatherCategory, isNight } = useSgtAndWeather()
 
   useEffect(() => {
     const initialSeen = pruneSeen(loadSeen(), SEEN_TTL_HOURS)
@@ -126,31 +104,6 @@ export default function Home() {
     return () => window.removeEventListener("wheel", handleWheel)
   }, [])
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSgtHour(getSGTHour())
-    }, 60_000)
-    return () => clearInterval(interval)
-  }, [])
-
-  const fetchWeather = useCallback(() => {
-    fetch(WEATHER_API_URL)
-      .then((r) => r.json())
-      .then((data) => {
-        const code = data?.current?.weather_code
-        if (typeof code === "number") {
-          setWeatherCategory(categorizeWMO(code))
-        }
-      })
-      .catch(() => {})
-  }, [])
-
-  useEffect(() => {
-    fetchWeather()
-    const interval = setInterval(fetchWeather, 30 * 60_000)
-    return () => clearInterval(interval)
-  }, [fetchWeather])
-
   const handleHover = () => {
     if (routes.length > 0) {
       setCurrent(pickWeighted(routes, seen))
@@ -165,22 +118,6 @@ export default function Home() {
   }
 
   const seenCount = Object.keys(seen).length
-
-  const handleSuggestSource = (e: React.FormEvent) => {
-    e.preventDefault()
-    const v = feedUrl.trim()
-    if (!v) return
-    const params = new URLSearchParams({
-      title: `New source: ${v}`,
-      body: `Please consider adding this feed to Sea Kayak:\n\n${v}\n\n_Submitted via the suggest form on the landing page._`,
-      labels: "new-source",
-    })
-    window.open(
-      `https://github.com/gongahkia/sea-kayak/issues/new?${params.toString()}`,
-      "_blank",
-    )
-    setFeedUrl("")
-  }
 
   const scrollToInfo = () => {
     infoSectionRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -329,31 +266,6 @@ export default function Home() {
             </a>
           </p>
         </div>
-
-        <form
-          onSubmit={handleSuggestSource}
-          className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-2 max-w-md w-full px-4"
-        >
-          <input
-            type="url"
-            required
-            value={feedUrl}
-            onChange={(e) => setFeedUrl(e.target.value)}
-            placeholder="https://example.com/feed.xml"
-            aria-label="Suggest a feed URL"
-            className={`flex-1 px-3 py-2 rounded-lg text-sm border-2 focus:outline-none focus:ring-2 focus:ring-sky-400 ${
-              isNight
-                ? "bg-slate-800/80 text-sky-100 border-slate-600 placeholder:text-slate-400"
-                : "bg-white/90 text-black border-black placeholder:text-slate-500"
-            }`}
-          />
-          <button
-            type="submit"
-            className={`px-4 py-2 rounded-lg text-sm font-semibold border-2 ${btnBg} ${btnText} ${btnBorder}`}
-          >
-            Suggest a feed
-          </button>
-        </form>
 
         <BeachScene isNight={isNight} weatherCategory={weatherCategory} />
 
