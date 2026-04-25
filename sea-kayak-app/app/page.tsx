@@ -81,7 +81,7 @@ export default function Home() {
     setSeen(initialSeen)
     saveSeen(initialSeen) // persist pruned map
 
-    fetch("/routes.json") // DEV-ONLY: REVERT to https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json before final push
+    fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
       .then((response) => response.json())
       .then((data) => {
         const items = normalizeRouteData(data)

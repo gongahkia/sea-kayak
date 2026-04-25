@@ -43,7 +43,3 @@ next-env.d.ts
 __pycache__
 myenv
 CLAUDE.md
-
-# DEV-ONLY: temp local copy of routes.json for live preview testing.
-# REVERT before final push: remove this line and delete sea-kayak-app/public/routes.json.
-sea-kayak-app/public/routes.json
