@@ -32,12 +32,8 @@ export default function Home() {
 
   const [sgtHour, setSgtHour] = useState(getSGTHour)
   const [weatherCategory, setWeatherCategory] = useState<WeatherCategory>("clear")
-  const [hourOverride, setHourOverride] = useState<number | null>(null) // ?h= override
-  const [weatherOverride, setWeatherOverride] = useState<WeatherCategory | null>(null) // ?w= override
 
-  const effHour = hourOverride ?? sgtHour
-  const effWeather = weatherOverride ?? weatherCategory
-  const isNight = effHour >= 18 || effHour < 7
+  const isNight = sgtHour >= 18 || sgtHour < 7
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search) // dev-only overrides
