@@ -38,7 +38,7 @@ export default function Home() {
   const isNight = sgtHour >= 18 || sgtHour < 7
 
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
+    fetch("/routes.json") // DEV-ONLY: REVERT to https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json before final push
       .then((response) => response.json())
       .then((data) => {
         const items: RouteItem[] = Array.isArray(data)
