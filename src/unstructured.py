@@ -18,19 +18,23 @@ def extract_urls(url):
     try:
         response = requests.get(url, headers=headers, timeout=15)
         response.raise_for_status()
-        
+
         soup = BeautifulSoup(response.content, "html.parser")
-        urls = []
-        
+        items = []
+        seen = set()
+
         for a_tag in soup.find_all("a", href=True):
             href = a_tag["href"]
-            # Join relative URLs with base URL
             absolute_url = urljoin(url, href)
-            # Basic validation to ensure it's a web link
-            if absolute_url.startswith(("http://", "https://")):
-                urls.append(absolute_url)
-                
-        return list(set(urls))
+            if not absolute_url.startswith(("http://", "https://")):
+                continue
+            if absolute_url in seen:
+                continue
+            seen.add(absolute_url)
+            # use anchor text as a best-effort title; description left empty
+            title = (a_tag.get_text() or "").strip()
+            items.append({"url": absolute_url, "title": title, "description": ""})
+
+        return items
     except Exception:
-        # Return empty list on failure to avoid breaking flattening logic
         return []

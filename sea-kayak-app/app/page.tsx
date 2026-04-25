@@ -25,9 +25,11 @@ function categorizeWMO(code: number): WeatherCategory {
 const WEATHER_API_URL =
   "https://api.open-meteo.com/v1/forecast?latitude=1.3521&longitude=103.8198&current=weather_code,is_day&timezone=Asia/Singapore"
 
+type RouteItem = { url: string; title: string; description: string }
+
 export default function Home() {
-  const [routes, setRoutes] = useState<string[]>([])
-  const [randomUrl, setRandomUrl] = useState("#")
+  const [routes, setRoutes] = useState<RouteItem[]>([])
+  const [current, setCurrent] = useState<RouteItem>({ url: "#", title: "", description: "" })
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
   const [sgtHour, setSgtHour] = useState(getSGTHour)
@@ -39,15 +41,20 @@ export default function Home() {
     fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
       .then((response) => response.json())
       .then((data) => {
-        type RouteItem = { url: string }
-        const routesArray = Array.isArray(data)
-          ? typeof data[0] === "string"
-            ? data
-            : data.map((item: RouteItem) => item.url)
+        const items: RouteItem[] = Array.isArray(data)
+          ? data.map((d: unknown): RouteItem =>
+              typeof d === "string"
+                ? { url: d, title: "", description: "" }
+                : {
+                    url: (d as RouteItem).url,
+                    title: (d as RouteItem).title || "",
+                    description: (d as RouteItem).description || "",
+                  },
+            )
           : []
-        setRoutes(routesArray)
-        if (routesArray.length > 0) {
-          setRandomUrl(routesArray[Math.floor(Math.random() * routesArray.length)])
+        setRoutes(items)
+        if (items.length > 0) {
+          setCurrent(items[Math.floor(Math.random() * items.length)])
         }
       })
       .catch(console.error)
@@ -91,7 +98,7 @@ export default function Home() {
 
   const handleHover = () => {
     if (routes.length > 0) {
-      setRandomUrl(routes[Math.floor(Math.random() * routes.length)])
+      setCurrent(routes[Math.floor(Math.random() * routes.length)])
     }
   }
 
@@ -119,7 +126,7 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center snap-start px-4 relative z-10">
         <div className="flex flex-col items-center gap-4 md:gap-8 relative w-full max-w-md">
           <a
-            href={randomUrl}
+            href={current.url}
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full md:w-[500px]"
@@ -141,6 +148,20 @@ export default function Home() {
               <div className={shadowClass}></div>
             </div>
           </a>
+          <div className={`w-full md:w-[500px] min-h-[3.5rem] md:min-h-[4rem] text-center px-2 ${textClass}`}>
+            {current.title ? (
+              <>
+                <p className="text-sm md:text-base font-semibold line-clamp-2 leading-snug">
+                  {current.title}
+                </p>
+                {current.description && (
+                  <p className="text-xs md:text-sm mt-1 opacity-80 line-clamp-2 leading-snug">
+                    {current.description}
+                  </p>
+                )}
+              </>
+            ) : null}
+          </div>
           <div className="flex w-full md:w-[500px] gap-4">
             <div className="neobrutalist-button-container w-1/2">
               <motion.button
