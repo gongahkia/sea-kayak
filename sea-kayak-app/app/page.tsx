@@ -26,23 +26,58 @@ const WEATHER_API_URL =
   "https://api.open-meteo.com/v1/forecast?latitude=1.3521&longitude=103.8198&current=weather_code,is_day&timezone=Asia/Singapore"
 
 type RouteItem = { url: string; title: string; description: string; published?: string }
+type SeenMap = Record<string, number> // url -> ms timestamp paddled
 
-function pickWeighted(items: RouteItem[]): RouteItem {
+const SEEN_KEY = "sea-kayak:seen"
+const SEEN_TTL_HOURS = 24 * 7 // 7 days
+
+function loadSeen(): SeenMap {
+  if (typeof window === "undefined") return {}
+  try {
+    const raw = window.localStorage.getItem(SEEN_KEY)
+    if (!raw) return {}
+    const parsed = JSON.parse(raw)
+    return typeof parsed === "object" && parsed ? (parsed as SeenMap) : {}
+  } catch {
+    return {}
+  }
+}
+
+function pruneSeen(m: SeenMap, ttlHours: number): SeenMap {
+  const cutoff = Date.now() - ttlHours * 3_600_000
+  const out: SeenMap = {}
+  for (const [k, v] of Object.entries(m)) if (v >= cutoff) out[k] = v
+  return out
+}
+
+function saveSeen(m: SeenMap) {
+  try {
+    window.localStorage.setItem(SEEN_KEY, JSON.stringify(m))
+  } catch {}
+}
+
+function baseWeight(it: RouteItem): number {
+  if (!it.published) return 1
+  const t = Date.parse(it.published)
+  if (Number.isNaN(t)) return 1
+  const ageH = (Date.now() - t) / 3_600_000
+  if (ageH < 0) return 1
+  if (ageH <= 48) return 10
+  if (ageH <= 168) return 4
+  if (ageH <= 720) return 2
+  return 1
+}
+
+function pickWeighted(items: RouteItem[], seen: SeenMap = {}): RouteItem {
   if (items.length === 0) throw new Error("pickWeighted: empty list")
-  const now = Date.now()
-  const HOUR = 3_600_000
-  const weights = items.map((it) => {
-    if (!it.published) return 1
-    const t = Date.parse(it.published)
-    if (Number.isNaN(t)) return 1
-    const ageH = (now - t) / HOUR
-    if (ageH < 0) return 1 // future-dated, treat as old
-    if (ageH <= 48) return 10
-    if (ageH <= 168) return 4 // 1 week
-    if (ageH <= 720) return 2 // 1 month
-    return 1
-  })
-  const total = weights.reduce((a, b) => a + b, 0)
+  // primary pass: zero-weight already-seen items so we explore unseen first
+  let weights = items.map((it) => (seen[it.url] ? 0 : baseWeight(it)))
+  let total = weights.reduce((a, b) => a + b, 0)
+  if (total === 0) {
+    // exhausted unseen pool — fall back to baseline weights (ignore seen)
+    weights = items.map(baseWeight)
+    total = weights.reduce((a, b) => a + b, 0)
+  }
   let r = Math.random() * total
   for (let i = 0; i < items.length; i++) {
     r -= weights[i]
@@ -54,6 +89,7 @@ function pickWeighted(items: RouteItem[]): RouteItem {
 export default function Home() {
   const [routes, setRoutes] = useState<RouteItem[]>([])
   const [current, setCurrent] = useState<RouteItem>({ url: "#", title: "", description: "" })
+  const [seen, setSeen] = useState<SeenMap>({})
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
   const [sgtHour, setSgtHour] = useState(getSGTHour)
@@ -62,6 +98,10 @@ export default function Home() {
   const isNight = sgtHour >= 18 || sgtHour < 7
 
   useEffect(() => {
+    const initialSeen = pruneSeen(loadSeen(), SEEN_TTL_HOURS)
+    setSeen(initialSeen)
+    saveSeen(initialSeen) // persist pruned map
+
     fetch("/routes.json") // DEV-ONLY: REVERT to https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json before final push
       .then((response) => response.json())
       .then((data) => {
@@ -79,7 +119,7 @@ export default function Home() {
           : []
         setRoutes(items)
         if (items.length > 0) {
-          setCurrent(pickWeighted(items))
+          setCurrent(pickWeighted(items, initialSeen))
         }
       })
       .catch(console.error)
@@ -123,9 +163,18 @@ export default function Home() {
 
   const handleHover = () => {
     if (routes.length > 0) {
-      setCurrent(pickWeighted(routes))
+      setCurrent(pickWeighted(routes, seen))
     }
   }
+
+  const recordSeen = (url: string) => {
+    if (!url || url === "#") return
+    const next = { ...seen, [url]: Date.now() }
+    setSeen(next)
+    saveSeen(next)
+  }
+
+  const seenCount = Object.keys(seen).length
 
   const scrollToInfo = () => {
     infoSectionRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -156,6 +205,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full"
+              onClick={() => recordSeen(current.url)}
             >
               <div className="neobrutalist-button-container">
                 <motion.div
@@ -221,6 +271,11 @@ export default function Home() {
               <div className={shadowClass}></div>
             </div>
           </div>
+          {seenCount > 0 && (
+            <p className={`text-xs italic opacity-60 ${textClass}`}>
+              Paddled {seenCount} {seenCount === 1 ? "article" : "articles"} in the last 7 days
+            </p>
+          )}
         </div>
       </section>
 
