@@ -148,20 +148,18 @@ export default function Home() {
               <div className={shadowClass}></div>
             </div>
           </a>
-          <div className={`w-full md:w-[500px] min-h-[3.5rem] md:min-h-[4rem] text-center px-2 ${textClass}`}>
-            {current.title ? (
-              <>
-                <p className="text-sm md:text-base font-semibold line-clamp-2 leading-snug">
-                  {current.title}
+          {current.title && (
+            <div className={`w-full md:w-[500px] text-center px-2 ${textClass}`}>
+              <p className="text-sm md:text-base font-semibold line-clamp-2 leading-snug">
+                {current.title}
+              </p>
+              {current.description && (
+                <p className="text-xs md:text-sm mt-1 opacity-80 line-clamp-2 leading-snug">
+                  {current.description}
                 </p>
-                {current.description && (
-                  <p className="text-xs md:text-sm mt-1 opacity-80 line-clamp-2 leading-snug">
-                    {current.description}
-                  </p>
-                )}
-              </>
-            ) : null}
-          </div>
+              )}
+            </div>
+          )}
           <div className="flex w-full md:w-[500px] gap-4">
             <div className="neobrutalist-button-container w-1/2">
               <motion.button
