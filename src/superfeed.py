@@ -3,13 +3,32 @@
 import calendar
 import datetime
 import json
+import re
 import feedparser
 import requests
 from bs4 import BeautifulSoup
+from urllib.parse import unquote
 
 # ----- helper functions -----
 
 DESC_MAX = 200  # chars
+
+# matches SG court neutral citations: [YYYY] SGCA/SGHC/SGHCR/SGFC/SGDC/SGMC,
+# with optional bracketed division suffix like (A), (I), (Appeal), and trailing number
+_CITATION_RE = re.compile(
+    r"\[(?:19|20)\d{2}\]\s+SG(?:CA|HC|HCR|FC|DC|MC|HCF)(?:\s*\([A-Za-z]+\))?\s+\d+",
+)
+
+
+def _extract_citation(*texts):
+    for t in texts:
+        if not t:
+            continue
+        m = _CITATION_RE.search(unquote(t))
+        if m:
+            # collapse internal whitespace
+            return re.sub(r"\s+", " ", m.group(0)).strip()
+    return ""
 
 
 def _clean_desc(raw):
@@ -47,14 +66,17 @@ def scrape_rss_urls(rss_url):
         items = []
         for entry in feed.entries:
             if "link" in entry:
+                title = (entry.get("title") or "").strip()
+                desc = _clean_desc(
+                    entry.get("summary") or entry.get("description") or ""
+                )
                 items.append(
                     {
                         "url": entry.link,
-                        "title": (entry.get("title") or "").strip(),
-                        "description": _clean_desc(
-                            entry.get("summary") or entry.get("description") or ""
-                        ),
+                        "title": title,
+                        "description": desc,
                         "published": _published_iso(entry),
+                        "citation": _extract_citation(entry.link, title, desc),
                     }
                 )
         return items

@@ -25,7 +25,13 @@ function categorizeWMO(code: number): WeatherCategory {
 const WEATHER_API_URL =
   "https://api.open-meteo.com/v1/forecast?latitude=1.3521&longitude=103.8198&current=weather_code,is_day&timezone=Asia/Singapore"
 
-type RouteItem = { url: string; title: string; description: string; published?: string }
+type RouteItem = {
+  url: string
+  title: string
+  description: string
+  published?: string
+  citation?: string
+}
 type SeenMap = Record<string, number> // url -> ms timestamp paddled
 
 const SEEN_KEY = "sea-kayak:seen"
@@ -108,12 +114,13 @@ export default function Home() {
         const items: RouteItem[] = Array.isArray(data)
           ? data.map((d: unknown): RouteItem =>
               typeof d === "string"
-                ? { url: d, title: "", description: "", published: "" }
+                ? { url: d, title: "", description: "", published: "", citation: "" }
                 : {
                     url: (d as RouteItem).url,
                     title: (d as RouteItem).title || "",
                     description: (d as RouteItem).description || "",
                     published: (d as RouteItem).published || "",
+                    citation: (d as RouteItem).citation || "",
                   },
             )
           : []
@@ -227,6 +234,11 @@ export default function Home() {
             {current.title && (
               <div className="hidden md:block absolute left-full ml-4 top-1/2 -translate-y-1/2 w-72 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none z-20">
                 <div className="relative bg-white text-slate-900 rounded-xl shadow-lg border border-slate-200 px-4 py-3 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-[6px] before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-slate-200 before:rotate-45">
+                  {current.citation && (
+                    <span className="inline-block text-[0.65rem] font-mono font-semibold uppercase tracking-wide bg-slate-900 text-white rounded px-2 py-0.5 mb-1.5">
+                      {current.citation}
+                    </span>
+                  )}
                   <p className="text-sm font-semibold leading-snug">{current.title}</p>
                   {current.description && (
                     <p className="text-xs mt-1 text-slate-600 leading-snug line-clamp-3">

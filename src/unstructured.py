@@ -5,6 +5,8 @@ import requests
 from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from urllib.parse import urljoin
 
+from superfeed import _extract_citation
+
 # Suppress warning when parsing XML with HTML parser (intentional for mixed content)
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
@@ -33,7 +35,15 @@ def extract_urls(url):
             seen.add(absolute_url)
             # use anchor text as a best-effort title; description left empty
             title = (a_tag.get_text() or "").strip()
-            items.append({"url": absolute_url, "title": title, "description": "", "published": ""})
+            items.append(
+                {
+                    "url": absolute_url,
+                    "title": title,
+                    "description": "",
+                    "published": "",
+                    "citation": _extract_citation(absolute_url, title),
+                }
+            )
 
         return items
     except Exception:
