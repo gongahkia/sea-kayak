@@ -43,3 +43,6 @@ next-env.d.ts
 __pycache__
 myenv
 CLAUDE.md
+data/scrape_metadata/drift_report.md
+data/scrape_metadata/run_summary.json
+data/scrape_metadata/fingerprints.prev.json
