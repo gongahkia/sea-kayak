@@ -33,13 +33,26 @@ jobs:
             python main.py
             echo "Finished running orchestration script."
 
+      - name: Upload scrape metadata artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrape-metadata
+          path: |
+            data/scrape_metadata/drift_report.md
+            data/scrape_metadata/run_summary.json
+          if-no-files-found: ignore
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/routes.json
+          if [ -f data/scrape_metadata/fingerprints.json ]; then
+            git add data/scrape_metadata/fingerprints.json
+          fi
           if git diff --cached --quiet; then
-            echo "No changes to data/routes.json; skipping commit."
+            echo "No changes to commit; skipping."
             exit 0
           fi
           git commit -m "Updated routes.json"

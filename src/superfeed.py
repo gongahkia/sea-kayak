@@ -9,6 +9,15 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import unquote
 
+from retry import retry, FeedOutcomes, classify_exception, TerminalError
+
+# module-level outcome tracker; main.py reads this after the run
+OUTCOMES = FeedOutcomes()
+
+_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+}
+
 # ----- helper functions -----
 
 DESC_MAX = 200  # chars
@@ -57,14 +66,40 @@ def _published_iso(entry):
         return ""
 
 
-def scrape_rss_urls(rss_url):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-    }
-    try:
-        response = requests.get(rss_url, headers=headers, timeout=15)
-        response.raise_for_status()
+def fetch_feed_bytes(rss_url):
+    # network-only step, retried by the retry decorator below
+    resp = requests.get(rss_url, headers=_HEADERS, timeout=15)
+    resp.raise_for_status()
+    body = resp.content
+    if not body or len(body) < 32:
+        # treat near-empty payloads as transient (some CDNs return blank 200s)
+        from retry import RetryableError
 
+        raise RetryableError(f"empty/short body ({len(body)} bytes) from {rss_url}")
+    return resp
+
+
+def scrape_rss_urls(rss_url):
+    attempts = {"n": 0}
+
+    def _on_retry(exc, attempt, delay):
+        OUTCOMES.record_attempt(rss_url, attempt, exc, delay)
+
+    @retry(max_attempts=3, base_delay=1.0, max_delay=30.0, on_retry=_on_retry)
+    def _fetch():
+        attempts["n"] += 1
+        return fetch_feed_bytes(rss_url)
+
+    try:
+        response = _fetch()
+        n = attempts["n"]
+        # publish raw bytes so drift monitor can fingerprint w/o a second fetch
+        try:
+            from drift import record_fetch  # lazy import: drift is optional
+
+            record_fetch(rss_url, response.content, response.headers.get("Content-Type", ""))
+        except Exception:
+            pass  # drift monitoring must never break scraping
         feed = feedparser.parse(response.content)
         items = []
         for entry in feed.entries:
@@ -82,9 +117,17 @@ def scrape_rss_urls(rss_url):
                         "citation": _extract_citation(entry.link, title, desc),
                     }
                 )
+        OUTCOMES.record_result(
+            rss_url, "retried_ok" if n > 1 else "first_try", n
+        )
         return items
-    except Exception:
-        return []
+    except BaseException as e:
+        cls = classify_exception(e)
+        status = "terminal" if cls is TerminalError else "retried_fail"
+        OUTCOMES.record_result(
+            rss_url, status, attempts["n"], error=f"{type(e).__name__}: {e}"
+        )
+        return []  # preserve original contract: failure -> empty list
 
 
 def remove_duplicates(items):
