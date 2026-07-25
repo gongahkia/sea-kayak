@@ -1,5 +1,915 @@
 [
     {
+        "url": "https://www.singaporelawwatch.sg/Headlines/Trump-hits-Singapore-with-new-125-tariff-that-will-affect-one-third-of-its-exports",
+        "title": "Trump hits Singapore with new 12.5% tariff that will affect one-third of its exports",
+        "description": "Singapore has rejected suggestions that it engages in unfair trade practises, including the use of forced labour in supply chains.",
+        "published": "2026-07-24T00:01:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Headlines/Singapore-seeks-to-avoid-becoming-collateral-damage-from-US-tariffs-Vivian-Balakrishnan",
+        "title": "Singapore seeks to avoid becoming collateral damage from US tariffs: Vivian Balakrishnan",
+        "description": "Beyond Singapore’s discussions with Washington, Balakrishnan said the uncertainty over US tariffs has reinforced the need for ASEAN to deepen economic integration and enhance its resilience.",
+        "published": "2026-07-24T00:01:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://events.sal.sg/event/GlobalRuleofLawConference2026/programme",
+        "title": "ADV: Global Rule of Law Conference | The Role of the Rule of Law in Advancing International Cooperation and Development",
+        "description": "What holds the international order together, and what happens when it frays? Moderated by Assoc Prof Jean Ho (NUS), this plenary features Justice Yuko Miyazaki (SICC), Deputy Attorney General Lionel…",
+        "published": "2026-07-24T00:01:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://luma.com/d10rkzdk",
+        "title": "ADV: LegalTech GoWhere: From Pain Points to Possibilities: Building Your Legaltech Toolkit | 28 July, 10am - 12nn",
+        "description": "Every law firm's legaltech journey starts with a challenge. Join us for live showcases from legaltech providers, practical insights from MinLaw’s LIFT pilot, and real conversations about the tools an…",
+        "published": "2026-07-24T00:01:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Commentaries/RajahTann/2607-09_SCA Clarifies Assessment of Fraud Damages.pdf",
+        "title": "Singapore Court of Appeal clarifies assessment of fraud damages in a falling market",
+        "description": "The Singapore Court of Appeal decision in Kupetz, Jonathan v Terraform Labs Pte Ltd [2026] SGCA(I) 1 highlights the importance of identifying when the fraud ceases to be operative, after which any lo…",
+        "published": "2026-07-24T10:30:00+00:00",
+        "citation": "[2026] SGCA(I) 1"
+    },
+    {
+        "url": "https://www.allenandgledhill.com/sg/publication/articles/33126/pdpc-consults-on-proposed-advisory-guidelines-on-use-of-personal-data-in-generative-ai",
+        "title": "PDPC consults on proposed advisory guidelines on use of personal data in generative AI",
+        "description": "The proposed guidelines address some of the key data protection issues relating to generative AI (“gen AI”) today which include the collection and use of personal data to develop gen AI models, the a…",
+        "published": "2026-07-24T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 154.pdf",
+        "title": "RIC Dormitory (SG) Pte Ltd v H8 Holdings Pte Ltd [2026] SGHC 154",
+        "description": "Civil Procedure — Summary judgment ; Debt and Recovery — Loans | Decision Date: 23 Jul 2026",
+        "published": "2026-07-24T10:30:00+00:00",
+        "citation": "[2026] SGHC 154"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(I) 11.pdf",
+        "title": "GNC Holdings LLC v ONI Global Pte Ltd and another [2026] SGHC(I) 11",
+        "description": "Civil Procedure — Judgments and orders | Decision Date: 23 Jul 2026",
+        "published": "2026-07-24T10:30:00+00:00",
+        "citation": "[2026] SGHC(I) 11"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 27.pdf",
+        "title": "Tumyu Ltd  v TLC Northcote Development Ltd and others [2026] SGHCR 27",
+        "description": "Civil Procedure — Striking out ; Civil Procedure — Production of documents | Decision Date: 23 Jul 2026",
+        "published": "2026-07-24T10:30:00+00:00",
+        "citation": "[2026] SGHCR 27"
+    },
+    {
+        "url": "https://sso.agc.gov.sg//SL-Supp/S513-2026/Published/20260723?DocDate=20260723",
+        "title": "Income Tax (Nexstep Discovery Pte. Ltd. — Section 13(12) Exemption) Order 2026 (S 513 of 2026)",
+        "description": "Published: 23 Jul 2026",
+        "published": "2026-07-24T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://sso.agc.gov.sg//SL-Supp/S512-2026/Published/20260723?DocDate=20260723",
+        "title": "Infrastructure Protection (Protected Areas) (Revocation) Order 2026 (S 512 of 2026)",
+        "description": "Published: 23 Jul 2026",
+        "published": "2026-07-24T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://sso.agc.gov.sg//SL-Supp/S511-2026/Published/20260723?DocDate=20260723",
+        "title": "Infrastructure Protection (Protected Places) (No. 5) Order 2026 (S 511 of 2026)",
+        "description": "Published: 23 Jul 2026",
+        "published": "2026-07-24T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 153.pdf",
+        "title": "Lam Kin Hing Kenneth v Yung Man Tung [2026] SGHC 153",
+        "description": "Contract — Breach ; Contract — Contractual terms | Decision Date: 21 Jul 2026",
+        "published": "2026-07-22T10:30:00+00:00",
+        "citation": "[2026] SGHC 153"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 34 (revised).pdf",
+        "title": "Kuvera Properties Pte Ltd v Far East Opus Pte Ltd [2026] SGCA 34",
+        "description": "Limitation of actions — Particular causes of action | Decision Date: 17 Jul 2026",
+        "published": "2026-07-20T10:30:00+00:00",
+        "citation": "[2026] SGCA 34"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 150.pdf",
+        "title": "Re Ficus Asia Investment Pte Ltd (Redefine Capital Fund and others, non-parties) [2026] SGHC 150",
+        "description": "Companies — Schemes of arrangement | Decision Date: 17 Jul 2026",
+        "published": "2026-07-20T10:30:00+00:00",
+        "citation": "[2026] SGHC 150"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 33.pdf",
+        "title": "Deloitte & Touche LLP v Hin Leong Trading (Pte) Ltd (in compulsory liquidation) [2026] SGCA 33",
+        "description": "Contract — Damages ; Tort — Negligence | Decision Date: 16 Jul 2026",
+        "published": "2026-07-17T10:30:00+00:00",
+        "citation": "[2026] SGCA 33"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 32.pdf",
+        "title": "Ren Xinwu v Homing Holdings Pte Ltd (in liquidation) and another [2026] SGCA 32",
+        "description": "Insolvency Law — Winding up | Decision Date: 16 Jul 2026",
+        "published": "2026-07-17T10:30:00+00:00",
+        "citation": "[2026] SGCA 32"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 149.pdf",
+        "title": "Ripple Markets APAC Pte Ltd v I-Remit, Inc and others [2026] SGHC 149",
+        "description": "Civil Procedure — Summary judgment ; Contract — Breach | Decision Date: 16 Jul 2026",
+        "published": "2026-07-17T10:30:00+00:00",
+        "citation": "[2026] SGHC 149"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 25.pdf",
+        "title": "Pacific Healthcare Holdings Ltd and another v Precious Surgery Centre Pte Ltd and another and another suit [2026] SGHCR 25",
+        "description": "Civil Procedure — Amendment of pleadings | Decision Date: 16 Jul 2026",
+        "published": "2026-07-17T10:30:00+00:00",
+        "citation": "[2026] SGHCR 25"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 146.pdf",
+        "title": "Re Mirror Trading International (Pty) Ltd (in liquidation) and others [2026] SGHC 146",
+        "description": "Insolvency Law — Cross-border insolvency | Decision Date: 15 Jul 2026",
+        "published": "2026-07-16T10:30:00+00:00",
+        "citation": "[2026] SGHC 146"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 145.pdf",
+        "title": "DSS v DST [2026] SGHC 145",
+        "description": "Arbitration — Award | Decision Date: 15 Jul 2026",
+        "published": "2026-07-16T10:30:00+00:00",
+        "citation": "[2026] SGHC 145"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(I) 10.pdf",
+        "title": "DWJ v DWK [2026] SGHC(I) 10",
+        "description": "Arbitration — Award ; Civil Procedure — Costs | Decision Date: 15 Jul 2026",
+        "published": "2026-07-16T10:30:00+00:00",
+        "citation": "[2026] SGHC(I) 10"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 148.pdf",
+        "title": "Chong Jorina v Ritz Property Investimentos Imobiliarios Ltda and another [2026] SGHC 148",
+        "description": "Civil Procedure — Costs | Decision Date: 14 Jul 2026",
+        "published": "2026-07-15T10:30:00+00:00",
+        "citation": "[2026] SGHC 148"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 147.pdf",
+        "title": "Shanmugam Kasiviswanathan v Bloomberg LP and another and another matter [2026] SGHC 147",
+        "description": "Tort – Defamation ; Damages – Assessment | Decision Date: 14 Jul 2026",
+        "published": "2026-07-15T10:30:00+00:00",
+        "citation": "[2026] SGHC 147"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 144.pdf",
+        "title": "Lim Soon Hing v Lim Beng Wee Simon and another [2026] SGHC 144",
+        "description": "Contract — Breach ; Contract — Contractual terms | Decision Date: 14 Jul 2026",
+        "published": "2026-07-15T10:30:00+00:00",
+        "citation": "[2026] SGHC 144"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 143.pdf",
+        "title": "Gurpreet Gill Maag v Chubb Insurance Singapore Ltd [2026] SGHC 143",
+        "description": "Insurance — Homeowner’s insurance policy | Decision Date: 13 Jul 2026",
+        "published": "2026-07-14T10:30:00+00:00",
+        "citation": "[2026] SGHC 143"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 24.pdf",
+        "title": "Juniper Biologics Pte Ltd v Ramandeep Singh [2026] SGHCR 24",
+        "description": "Civil Procedure — Amendments | Decision Date: 13 Jul 2026",
+        "published": "2026-07-14T10:30:00+00:00",
+        "citation": "[2026] SGHCR 24"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 142.pdf",
+        "title": "Rachmat Hidayat bin Edy Juju v Public Prosecutor [2026] SGHC 142",
+        "description": "Criminal Procedure and Sentencing — Sentencing | Decision Date: 08 Jul 2026",
+        "published": "2026-07-09T10:30:00+00:00",
+        "citation": "[2026] SGHC 142"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 141 (revised).pdf",
+        "title": "Lee Boon Khim and others v Entech Global Solutions Pte Ltd [2026] SGHC 141",
+        "description": "Arbitration — Award | Decision Date: 08 Jul 2026",
+        "published": "2026-07-09T10:30:00+00:00",
+        "citation": "[2026] SGHC 141"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 21.pdf",
+        "title": "XTC v XTD [2026] SGHCF 21",
+        "description": "Family Law — Matrimonial assets | Decision Date: 07 Jul 2026",
+        "published": "2026-07-09T10:30:00+00:00",
+        "citation": "[2026] SGHCF 21"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 31 (revised).pdf",
+        "title": "Lim Tean v Public Prosecutor [2026] SGCA 31",
+        "description": "Criminal Procedure and Sentencing — Criminal motions | Decision Date: 06 Jul 2026",
+        "published": "2026-07-07T10:30:00+00:00",
+        "citation": "[2026] SGCA 31"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 29.pdf",
+        "title": "Gao Xiong v Public Prosecutor [2026] SGCA 29",
+        "description": "Criminal Procedure and Sentencing — Sentencing | Decision Date: 03 Jul 2026",
+        "published": "2026-07-06T10:30:00+00:00",
+        "citation": "[2026] SGCA 29"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 140.pdf",
+        "title": "Ethoz Capital Ltd v Goken Aesthetics Practice Pte Ltd and others (Chen Qiao Ning, third party) [2026] SGHC 140",
+        "description": "Contract — Misrepresentation ; Contract — Mistake | Decision Date: 03 Jul 2026",
+        "published": "2026-07-06T10:30:00+00:00",
+        "citation": "[2026] SGHC 140"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 30.pdf",
+        "title": "Munusamy Ramarmurth v Public Prosecutor [2026] SGCA 30",
+        "description": "Criminal Procedure and Sentencing — Stay of execution | Decision Date: 02 Jul 2026",
+        "published": "2026-07-03T10:30:00+00:00",
+        "citation": "[2026] SGCA 30"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 23.pdf",
+        "title": "Re See Chuen Lim, Alvin (alias Shu Quanlin, Alvin) (Kanthosamy Rajendran, non-party) [2026] SGHCR 23",
+        "description": "Insolvency Law — Bankruptcy | Decision Date: 01 Jul 2026",
+        "published": "2026-07-02T10:30:00+00:00",
+        "citation": "[2026] SGHCR 23"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 139 (revised).pdf",
+        "title": "Competition and Consumer Commission of Singapore v CNL Logistic Solutions Pte Ltd and another [2026] SGHC 139",
+        "description": "Competition Law — Anti-competitive agreements | Decision Date: 30 Jun 2026",
+        "published": "2026-07-01T10:30:00+00:00",
+        "citation": "[2026] SGHC 139"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 138.pdf",
+        "title": "AQCEL Synergies (Hong Kong) Ltd v Liberty Industries Holdings Pte Ltd (Liberty House Group Pte Ltd (in compulsory liquidation, acting through joint and several liquidators), non-party) [2026] SGHC 138",
+        "description": "Companies — Winding up ; Conflict of laws — Choice of law | Decision Date: 30 Jun 2026",
+        "published": "2026-07-01T10:30:00+00:00",
+        "citation": "[2026] SGHC 138"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 22.pdf",
+        "title": "Salutica Allied Solutions Sdn Bhd v Apple South Asia Pte. Ltd. [2026] SGHCR 22",
+        "description": "Intellectual Property — Patents and inventions | Decision Date: 30 Jun 2026",
+        "published": "2026-07-01T10:30:00+00:00",
+        "citation": "[2026] SGHCR 22"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(A) 19.pdf",
+        "title": "Full Support Healthcare Ltd v Smart Glove International Pte Ltd and another appeal [2026] SGHC(A) 19",
+        "description": "Contract — Breach ; Contract — Discharge | Decision Date: 29 Jun 2026",
+        "published": "2026-06-30T10:30:00+00:00",
+        "citation": "[2026] SGHC(A) 19"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 136.pdf",
+        "title": "Public Prosecutor v Toh Sze Ee [2026] SGHC 136",
+        "description": "Criminal Law — Offences | Decision Date: 29 Jun 2026",
+        "published": "2026-06-30T10:30:00+00:00",
+        "citation": "[2026] SGHC 136"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(I) 9.pdf",
+        "title": "Kupetz, Jonathan and others v Terraform Labs Pte Ltd and others [2026] SGHC(I) 9",
+        "description": "Tort — Misrepresentation | Decision Date: 29 Jun 2026",
+        "published": "2026-06-30T10:30:00+00:00",
+        "citation": "[2026] SGHC(I) 9"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 20.pdf",
+        "title": "YFF v YFG and another (First Non-Party and another, non-parties) [2026] SGHCF 20",
+        "description": "Injunctions — Purposes for grant ; Land — Caveats | Decision Date: 26 Jun 2026",
+        "published": "2026-06-30T10:30:00+00:00",
+        "citation": "[2026] SGHCF 20"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGIPOS 8.pdf",
+        "title": "MAN Marken GmbH v VMAN Engine Singapore Pte Ltd [2026] SGIPOS 8",
+        "description": "Trade marks and trade names – Opposition to Registration | Decision Date: 23 Jun 2026",
+        "published": "2026-06-29T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCI 8.pdf",
+        "title": "Intraworks Strategic Fund I, LP and others v Prisma AI Corp Pte Ltd and another and another matter [2026] SGHC(I) 8",
+        "description": "Companies — Oppression ; Contract — Breach | Decision Date: 25 Jun 2026",
+        "published": "2026-06-26T10:30:00+00:00",
+        "citation": "[2026] SGHC(I) 8"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCI 7 .pdf",
+        "title": "South Pacific Oil Ltd v Pacific Islands Energy Pte Ltd [2026] SGHC(I) 7",
+        "description": "Arbitration — Award | Decision Date: 25 Jun 2026",
+        "published": "2026-06-26T10:30:00+00:00",
+        "citation": "[2026] SGHC(I) 7"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 137.pdf",
+        "title": "Public Prosecutor v Thina Vengades Rao [2026] SGHC 137",
+        "description": "Criminal Law — Offences  | Decision Date: 23 Jun 2026",
+        "published": "2026-06-24T10:30:00+00:00",
+        "citation": "[2026] SGHC 137"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 28.pdf",
+        "title": "Lau Lee Sheng and others v Envy Asset Management Pte Ltd (in liquidation) and others and another appeal [2026] SGCA 28",
+        "description": "Insolvency Law — Avoidance of transactions | Decision Date: 22 Jun 2026",
+        "published": "2026-06-23T10:30:00+00:00",
+        "citation": "[2026] SGCA 28"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 135.pdf",
+        "title": "Management Corporation Strata Title No 3564 v Edmund Motor Pte Ltd [2026] SGHC 135",
+        "description": "Building and Construction Law — Statutes and regulations | Decision Date: 22 Jun 2026",
+        "published": "2026-06-23T10:30:00+00:00",
+        "citation": "[2026] SGHC 135"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 134.pdf",
+        "title": "Twitter Asia Pacific Pte Ltd v Media Matters for America [2026] SGHC 134",
+        "description": "Civil Procedure — Service ; Tort — Defamation | Decision Date: 19 Jun 2026",
+        "published": "2026-06-22T10:30:00+00:00",
+        "citation": "[2026] SGHC 134"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGITBR 3.pdf",
+        "title": "ZYT v The Comptroller of Income Tax [2026] SGITBR 3",
+        "description": "Revenue Law  – Income taxation | Decision Date: 16 Jun 2026",
+        "published": "2026-06-22T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 133.pdf",
+        "title": "Altitude Xperience Pte Ltd (formerly known as Skyventure VWT Singapore Pte Ltd) v Simba Telecom Pte Ltd [2026] SGHC 133",
+        "description": "Statutory Interpretation — Statutes | Decision Date: 19 Jun 2026",
+        "published": "2026-06-19T10:30:00+00:00",
+        "citation": "[2026] SGHC 133"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 132.pdf",
+        "title": "Tan Chek Jin Adrian and others v Comptroller of Income Tax [2026] SGHC 132",
+        "description": "Revenue Law — Income taxation | Decision Date: 18 Jun 2026",
+        "published": "2026-06-19T10:30:00+00:00",
+        "citation": "[2026] SGHC 132"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(A) 18.pdf",
+        "title": "Lo Yew Seng v Astrawati Aluwi [2026] SGHC(A) 18",
+        "description": "Tort — Misrepresentation | Decision Date: 17 Jun 2026",
+        "published": "2026-06-18T10:30:00+00:00",
+        "citation": "[2026] SGHC(A) 18"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 131.pdf",
+        "title": "Shaw Towers Realty (Pte) Ltd v Chief Assessor [2026] SGHC 131",
+        "description": "Revenue Law — Property tax | Decision Date: 17 Jun 2026",
+        "published": "2026-06-18T10:30:00+00:00",
+        "citation": "[2026] SGHC 131"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 130.pdf",
+        "title": "Ong Cheng Cheng v Attorney-General [2026] SGHC 130",
+        "description": "Administrative Law — Judicial review | Decision Date: 17 Jun 2026",
+        "published": "2026-06-18T10:30:00+00:00",
+        "citation": "[2026] SGHC 130"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 129.pdf",
+        "title": "Lin Tze Kin (suing as co-executor of the estate of Tan Ah Kar, deceased) and another v Lim Sze Eng and another [2026] SGHC 129",
+        "description": "Equity — Remedies | Decision Date: 16 Jun 2026",
+        "published": "2026-06-17T10:30:00+00:00",
+        "citation": "[2026] SGHC 129"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 19.pdf",
+        "title": "XHI v XHJ [2026] SGHCF 19",
+        "description": "Family Law — Matrimonial assets ; Family Law — Maintenance | Decision Date: 16 Jun 2026",
+        "published": "2026-06-17T10:30:00+00:00",
+        "citation": "[2026] SGHCF 19"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 128.pdf",
+        "title": "DSV and another v DSU [2026] SGHC 128",
+        "description": "Arbitration — Award ; Arbitration — Arbitral procedure | Decision Date: 15 Jun 2026",
+        "published": "2026-06-16T10:30:00+00:00",
+        "citation": "[2026] SGHC 128"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 127.pdf",
+        "title": "Zhuang Yujie v Openmeta Pte Ltd and others [2026] SGHC 127",
+        "description": "Companies — Statutory derivative action | Decision Date: 15 Jun 2026",
+        "published": "2026-06-16T10:30:00+00:00",
+        "citation": "[2026] SGHC 127"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 126.pdf",
+        "title": "Equation Recycling Pte Ltd v Leading Bio-Energy (S) Pte Ltd [2026] SGHC 126",
+        "description": "Civil Procedure — Pleadings | Decision Date: 15 Jun 2026",
+        "published": "2026-06-16T10:30:00+00:00",
+        "citation": "[2026] SGHC 126"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 20.pdf",
+        "title": "Tan Ng Kuang v Prinfu Pte Ltd (formerly known as Prinfu Family Office Pte Ltd) [2026] SGHCR 20",
+        "description": "Landlord and Tenant — Distress for rent | Decision Date: 09 Jun 2026",
+        "published": "2026-06-15T10:30:00+00:00",
+        "citation": "[2026] SGHCR 20"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 104.pdf",
+        "title": "Fauziyah bte Mohd Ahbidin (executrix of the estate of Mohamed Ahbideen bin Mohamed Kassim (alias Ahna Mohamed Zainal Abidin bin Kassim), deceased) v Majlis Ugama Islam Singapura [2026] SGHC 104",
+        "description": "Civil Procedure — Limitation ; Equity — Defences | Decision Date: 14 May 2026",
+        "published": "2026-05-15T10:30:00+00:00",
+        "citation": "[2026] SGHC 104"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 125.pdf",
+        "title": "EC-Council Pte Ltd v WPP Singapore Pte Ltd [2026] SGHC 125",
+        "description": "Civil Procedure — Discontinuance | Decision Date: 12 Jun 2026",
+        "published": "2026-06-16T10:30:00+00:00",
+        "citation": "[2026] SGHC 125"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 124.pdf",
+        "title": "Exchange Union Co and others v Wo Qi and others [2026] SGHC 124",
+        "description": "Civil Procedure — Stay of court proceedings ; Conflict of Laws — Natural forum | Decision Date: 12 Jun 2026",
+        "published": "2026-06-16T10:30:00+00:00",
+        "citation": "[2026] SGHC 124"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 123.pdf",
+        "title": "Anurag Avula and another v MatchMove Pay Pte Ltd [2026] SGHC 123",
+        "description": "Civil Procedure — Judgments and orders | Decision Date: 10 Jun 2026",
+        "published": "2026-06-11T10:30:00+00:00",
+        "citation": "[2026] SGHC 123"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 21.pdf",
+        "title": "Marsh (Singapore) Pte Ltd v Lee Alaric [2026] SGHCR 21",
+        "description": "Civil Procedure — Amendment of pleadings | Decision Date: 10 Jun 2026",
+        "published": "2026-06-11T10:30:00+00:00",
+        "citation": "[2026] SGHCR 21"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 18.pdf",
+        "title": "Lateral Solutions Pte Ltd (in liquidation) v Low Tuck Loong Raymond [2026] SGHCR 18",
+        "description": "Civil Procedure — Striking out | Decision Date: 08 Jun 2026",
+        "published": "2026-06-11T10:30:00+00:00",
+        "citation": "[2026] SGHCR 18"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 122 (revised).pdf",
+        "title": "Public Prosecutor v BQG and another [2026] SGHC 122",
+        "description": "Criminal Law — Offences | Decision Date: 08 Jun 2026",
+        "published": "2026-06-09T10:30:00+00:00",
+        "citation": "[2026] SGHC 122"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(A) 17.pdf",
+        "title": "Deepak Mishra and another v Rashmi Bothra [2026] SGHC(A) 17",
+        "description": "Contract — Illegality and public policy | Decision Date: 05 Jun 2026",
+        "published": "2026-06-08T10:30:00+00:00",
+        "citation": "[2026] SGHC(A) 17"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 121.pdf",
+        "title": "Public Prosecutor v Annamalai Kokila Parvathi and other appeals [2026] SGHC 121",
+        "description": "Criminal Law — Statutory offences | Decision Date: 04 Jun 2026",
+        "published": "2026-06-05T10:30:00+00:00",
+        "citation": "[2026] SGHC 121"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 18 (revised v2).pdf",
+        "title": "YET v YEU [2026] SGHCF 18",
+        "description": "Civil Procedure — Affidavits ; Courts and Jurisdiction — Jurisdiction | Decision Date: 04 Jun 2026",
+        "published": "2026-06-05T10:30:00+00:00",
+        "citation": "[2026] SGHCF 18"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 17.pdf",
+        "title": "XWV v XWW [2026] SGHCF 17",
+        "description": "Family Law — Ancillary powers of court | Decision Date: 04 Jun 2026",
+        "published": "2026-06-05T10:30:00+00:00",
+        "citation": "[2026] SGHCF 17"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 120.pdf",
+        "title": "Chong Jorina v Ritz Property Investimentos Imobiliarios Ltda and another [2026] SGHC 120",
+        "description": "Tort — Misrepresentation ; Evidence — Adverse inferences | Decision Date: 02 Jun 2026",
+        "published": "2026-06-04T10:30:00+00:00",
+        "citation": "[2026] SGHC 120"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 16 (revised).pdf",
+        "title": "XZC v XZD [2026] SGHCF 16",
+        "description": "Family Law — Maintenance ; Family Law — Matrimonial assets | Decision Date: 03 Jun 2026",
+        "published": "2026-06-04T10:30:00+00:00",
+        "citation": "[2026] SGHCF 16"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(I) 5.pdf",
+        "title": "DTH and another v DTF and others [2026] SGHC(I) 5",
+        "description": "Arbitration — Award | Decision Date: 02 Jun 2026",
+        "published": "2026-06-03T10:30:00+00:00",
+        "citation": "[2026] SGHC(I) 5"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 119.pdf",
+        "title": "DXB v DXC [2026] SGHC 119",
+        "description": "Legal Profession — Bill of costs ; Civil Procedure — Sealing orders | Decision Date: 29 May 2026",
+        "published": "2026-06-02T10:30:00+00:00",
+        "citation": "[2026] SGHC 119"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 118.pdf",
+        "title": "Paulus Tannos v Attorney-General [2026] SGHC 118",
+        "description": "Constitutional Law — Judicial review  | Decision Date: 29 May 2026",
+        "published": "2026-06-02T10:30:00+00:00",
+        "citation": "[2026] SGHC 118"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 117.pdf",
+        "title": "Leow Hock Soon and another v Chew Eik Khoon and others [2026] SGHC 117",
+        "description": "Companies — Oppression ; Contract — Misrepresentation | Decision Date: 26 May 2026",
+        "published": "2026-05-28T10:30:00+00:00",
+        "citation": "[2026] SGHC 117"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 116.pdf",
+        "title": "Public Prosecutor v Eng Kwan Meng Garrick [2026] SGHC 116",
+        "description": "Road Traffic — Offences ; Criminal Procedure and Sentencing — Sentencing | Decision Date: 26 May 2026",
+        "published": "2026-05-28T10:30:00+00:00",
+        "citation": "[2026] SGHC 116"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 114.pdf",
+        "title": "Ge Zhi v Attorney-General [2026] SGHC 114",
+        "description": "Criminal Procedure and Sentencing — Appeal  | Decision Date: 26 May 2026",
+        "published": "2026-05-28T10:30:00+00:00",
+        "citation": "[2026] SGHC 114"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA(I) 3.pdf",
+        "title": "ONI Global Pte Ltd and another v GNC Holdings LLC and another appeal [2026] SGCA(I) 3",
+        "description": "Arbitration — Enforcement | Decision Date: 25 May 2026",
+        "published": "2026-05-26T10:30:00+00:00",
+        "citation": "[2026] SGCA(I) 3"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 115.pdf",
+        "title": "Ankit Sharma v Public Prosecutor [2026] SGHC 115",
+        "description": "Criminal Law — Offences ; Criminal Law — Appeal  | Decision Date: 25 May 2026",
+        "published": "2026-05-26T10:30:00+00:00",
+        "citation": "[2026] SGHC 115"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 113.pdf",
+        "title": "JEH v Public Prosecutor [2026] SGHC 113",
+        "description": "Criminal Law — Statutory offences | Decision Date: 22 May 2026",
+        "published": "2026-05-25T10:30:00+00:00",
+        "citation": "[2026] SGHC 113"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 112.pdf",
+        "title": "Djony Gunawan v Christina Lesmana [2026] SGHC 112",
+        "description": "Res Judicata — Cause of action estoppel ; Res Judicata — Issue estoppel | Decision Date: 22 May 2026",
+        "published": "2026-05-25T10:30:00+00:00",
+        "citation": "[2026] SGHC 112"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 111 revised.pdf",
+        "title": "Lee Frank v Institute of Mental Health and others [2026] SGHC 111",
+        "description": "Civil Procedure — Striking out ; Statutory Interpretation — Statutes | Decision Date: 21 May 2026",
+        "published": "2026-05-22T10:30:00+00:00",
+        "citation": "[2026] SGHC 111"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 110.pdf",
+        "title": "Galvez Mary Joe Blanco v Public Prosecutor [2026] SGHC 110",
+        "description": "Criminal Law — Statutory offences ; Criminal Procedure and Sentencing — Sentencing | Decision Date: 21 May 2026",
+        "published": "2026-05-22T10:30:00+00:00",
+        "citation": "[2026] SGHC 110"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 100.pdf",
+        "title": "JXC Pte Ltd v Thye Chuan Engineering Construction Co Pte Ltd [2026] SGHC 100",
+        "description": "Arbitration — Award | Decision Date: 21 May 2026",
+        "published": "2026-05-22T10:30:00+00:00",
+        "citation": "[2026] SGHC 100"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 27.pdf",
+        "title": "Wong Mei Lee Millie v Ngor Shing Rong Jake [2026] SGCA 27",
+        "description": "Trusts — Resulting trusts | Decision Date: 20 May 2026",
+        "published": "2026-05-21T10:30:00+00:00",
+        "citation": "[2026] SGCA 27"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 109.pdf",
+        "title": "Meta Health Ltd v Chua Kheng Choon and others [2026] SGHC 109",
+        "description": "Courts And Jurisdiction — Jurisdiction | Decision Date: 20 May 2026",
+        "published": "2026-05-21T10:30:00+00:00",
+        "citation": "[2026] SGHC 109"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 15.pdf",
+        "title": "YCS v YCT [2026] SGHCF 15",
+        "description": "Family Law — Custody ; Family Law — Maintenance | Decision Date: 20 May 2026",
+        "published": "2026-05-21T10:30:00+00:00",
+        "citation": "[2026] SGHCF 15"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGIPOS 7.pdf",
+        "title": "Merck KGaA v Pfizer Inc [2026] SGIPOS 7",
+        "description": "Trade marks and trade names – Opposition to Registration  | Decision Date: 18 May 2026",
+        "published": "2026-05-21T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 23.pdf",
+        "title": "Low Sze Song v Public Prosecutor and another appeal [2026] SGCA 23",
+        "description": "Criminal Law — Statutory offences | Decision Date: 19 May 2026",
+        "published": "2026-05-20T10:30:00+00:00",
+        "citation": "[2026] SGCA 23"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 108 revised.pdf",
+        "title": "Yang Ing Woei v Singapore Medical Council [2026] SGHC 108",
+        "description": "Administrative Law — Remedies | Decision Date: 19 May 2026",
+        "published": "2026-05-20T10:30:00+00:00",
+        "citation": "[2026] SGHC 108"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 107.pdf",
+        "title": "Ling Zhao Bin v Public Prosecutor [2026] SGHC 107",
+        "description": "Criminal Law — Statutory offences | Decision Date: 18 May 2026",
+        "published": "2026-05-19T10:30:00+00:00",
+        "citation": "[2026] SGHC 107"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 106.pdf",
+        "title": "DWE v DWF [2026] SGHC 106",
+        "description": "Arbitration — Award  | Decision Date: 18 May 2026",
+        "published": "2026-05-19T10:30:00+00:00",
+        "citation": "[2026] SGHC 106"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 17.pdf",
+        "title": "eSave AG v eSave APAC Pte Ltd and another [2026] SGHCR 17",
+        "description": "Civil Procedure — Production of documents | Decision Date: 18 May 2026",
+        "published": "2026-05-19T10:30:00+00:00",
+        "citation": "[2026] SGHCR 17"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 16.pdf",
+        "title": "United Overseas Bank Ltd v SGmade Co-Operates Pte Ltd [2026] SGHCR 16",
+        "description": "Credit and Security — Mortgage of real property  | Decision Date: 18 May 2026",
+        "published": "2026-05-19T10:30:00+00:00",
+        "citation": "[2026] SGHCR 16"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCAI 2.pdf",
+        "title": "KBP Biosciences Pte Ltd and another v Novo Nordisk A/S [2026] SGCA(I) 2",
+        "description": "Injunctions — Mareva injunction ; Arbitration — Injunction | Decision Date: 14 May 2026",
+        "published": "2026-05-15T10:30:00+00:00",
+        "citation": "[2026] SGCA(I) 2"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCA 16.pdf",
+        "title": "Capajet Pte Ltd v EV Technology Pte Ltd and others and other matters [2026] SGHC(A) 16",
+        "description": "Civil Procedure — Appeals ; Civil Procedure — Summary judgment | Decision Date: 14 May 2026",
+        "published": "2026-05-15T10:30:00+00:00",
+        "citation": "[2026] SGHC(A) 16"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 105.pdf",
+        "title": "BP Projects Pte Ltd v One Wind Pte Ltd and others [2026] SGHC 105",
+        "description": "Tort – Conspiracy ; Tort – Misrepresentation | Decision Date: 14 May 2026",
+        "published": "2026-05-15T10:30:00+00:00",
+        "citation": "[2026] SGHC 105"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 103.pdf",
+        "title": "Hu Yinan v Peh Chin Hua and others [2026] SGHC 103",
+        "description": "Civil Procedure — Production of Documents | Decision Date: 14 May 2026",
+        "published": "2026-05-15T10:30:00+00:00",
+        "citation": "[2026] SGHC 103"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 26 revised v2.pdf",
+        "title": "DRH v DRI [2026] SGCA 26",
+        "description": "Civil Procedure — Striking out ; Civil Procedure — Appeals | Decision Date: 12 May 2026",
+        "published": "2026-05-14T10:30:00+00:00",
+        "citation": "[2026] SGCA 26"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(A) 15.pdf",
+        "title": "Tan Huat Chan v Wu Lee Choo [2026] SGHC(A) 15",
+        "description": "Land — Sale of land ; Family Law — Consent orders | Decision Date: 13 May 2026",
+        "published": "2026-05-14T10:30:00+00:00",
+        "citation": "[2026] SGHC(A) 15"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 102.pdf",
+        "title": "Re oCap Management Pte Ltd (in liquidation) [2026] SGHC 102",
+        "description": "Insolvency Law — Winding up | Decision Date: 13 May 2026",
+        "published": "2026-05-14T10:30:00+00:00",
+        "citation": "[2026] SGHC 102"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 15.pdf",
+        "title": "Laguna National Golf and Country Club Ltd (in liquidation) and others v Kwee Seng Chio Peter and others [2026] SGHCR 15",
+        "description": "Civil Procedure — Amendments ; Civil Procedure — Discontinuance | Decision Date: 13 May 2026",
+        "published": "2026-05-14T10:30:00+00:00",
+        "citation": "[2026] SGHCR 15"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 25.pdf",
+        "title": "Lian Hoe Heng v Public Prosecutor [2026] SGCA 25",
+        "description": "Abuse of Process — Appellant alleging counsel below rendered inadequate legal assistance | Decision Date: 12 May 2026",
+        "published": "2026-05-13T10:30:00+00:00",
+        "citation": "[2026] SGCA 25"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 101.pdf",
+        "title": "Commersol Commodities Pte Ltd v Comptroller of Goods and Services Tax [2026] SGHC 101",
+        "description": "Administrative Law — Judicial Review | Decision Date: 12 May 2026",
+        "published": "2026-05-13T10:30:00+00:00",
+        "citation": "[2026] SGHC 101"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGIPOS 6.pdf",
+        "title": "Rockwool AS (Rockwool International AS) v Saudi Rock Wool Factory [2026] SGIPOS 6",
+        "description": "Trade marks and trade names – Opposition to Registration | Decision Date: 13 May 2026",
+        "published": "2026-05-13T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 98.pdf",
+        "title": "Public Prosecutor v Hossain Mohammad Azim [2026] SGHC 98",
+        "description": "Criminal Procedure and Sentencing — Sentencing | Decision Date: 08 May 2026",
+        "published": "2026-05-12T10:30:00+00:00",
+        "citation": "[2026] SGHC 98"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 14.pdf",
+        "title": "Seng Hock Chye Daniel v Denso International Asia Pte Ltd [2026] SGHCR 14",
+        "description": "Civil Procedure — Striking out ; Employment Law — Termination | Decision Date: 11 May 2026",
+        "published": "2026-05-12T10:30:00+00:00",
+        "citation": "[2026] SGHCR 14"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 24.pdf",
+        "title": "Singapore Commodities Group Co, Pte Ltd v Founder Group (Hong Kong) Ltd (in liquidation) [2026] SGCA 24",
+        "description": "Arbitration — Agreement ; Insolvency Law — Winding up | Decision Date: 08 May 2026",
+        "published": "2026-05-11T10:30:00+00:00",
+        "citation": "[2026] SGCA 24"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 99 revised.pdf",
+        "title": "Habeeb Zaleena d/o Pallivilakam Kader Habeeb Mohamed v Public Prosecutor [2026] SGHC 99",
+        "description": "Criminal Procedure and Sentencing — Sentencing | Decision Date: 08 May 2026",
+        "published": "2026-05-11T10:30:00+00:00",
+        "citation": "[2026] SGHC 99"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGGST 1.pdf",
+        "title": "GIY v The Comptroller of Goods and Services Tax [2026] SGGST 1",
+        "description": "Revenue Law  – Goods and Services Tax Act | Decision Date: 30 Apr 2026",
+        "published": "2026-05-11T10:30:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 13.pdf",
+        "title": "XSB v XSC [2026] SGHCF 13",
+        "description": "Family Law — Matrimonial assets | Decision Date: 07 May 2026",
+        "published": "2026-05-08T10:30:00+00:00",
+        "citation": "[2026] SGHCF 13"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 97.pdf",
+        "title": "Medipas LLC and another v Erdenet Mining Corp SOE [2026] SGHC 97",
+        "description": "Arbitration — Agreement | Decision Date: 07 May 2026",
+        "published": "2026-05-08T10:30:00+00:00",
+        "citation": "[2026] SGHC 97"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 22.pdf",
+        "title": "Louis Vuitton Malletier v Ng Hoe Seng (formerly trading as EMCASE SG) [2026] SGCA 22",
+        "description": "Damages — Assessment | Decision Date: 06 May 2026",
+        "published": "2026-05-07T10:30:00+00:00",
+        "citation": "[2026] SGCA 22"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 96 revised.pdf",
+        "title": "Tengku Abdul Kadir bin Mohamed v New Eastern (1971) Pte Ltd and another [2026] SGHC 96",
+        "description": "Companies — Directors ; Companies — Members | Decision Date: 06 May 2026",
+        "published": "2026-05-07T10:30:00+00:00",
+        "citation": "[2026] SGHC 96"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCF 12.pdf",
+        "title": "CXR v CXQ [2026] SGHCF 12",
+        "description": "Family Law — Custody | Decision Date: 06 May 2026",
+        "published": "2026-05-07T10:30:00+00:00",
+        "citation": "[2026] SGHCF 12"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC(A) 14.pdf",
+        "title": "Tia Sock Kiu Sally v Tia Oon Lai and another appeal [2026] SGHC(A) 14",
+        "description": "Trusts — Constructive trusts | Decision Date: 05 May 2026",
+        "published": "2026-05-06T10:30:00+00:00",
+        "citation": "[2026] SGHC(A) 14"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC 95.pdf",
+        "title": "Ho Hui Min v Public Prosecutor [2026] SGHC 95",
+        "description": "Criminal Law — Statutory offences | Decision Date: 05 May 2026",
+        "published": "2026-05-06T10:30:00+00:00",
+        "citation": "[2026] SGHC 95"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHCF 11 (revised).pdf",
+        "title": "XTR v XTQ [2026] SGHCF 11",
+        "description": "Family Law — Judicial separation | Decision Date: 05 May 2026",
+        "published": "2026-05-06T10:30:00+00:00",
+        "citation": "[2026] SGHCF 11"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHCR 13.pdf",
+        "title": "Goh Chin Cheng v Choco Up SG Pte Ltd [2026] SGHCR 13",
+        "description": "Civil Procedure — Affidavits ; Civil Procedure — Costs | Decision Date: 04 May 2026",
+        "published": "2026-05-05T10:30:00+00:00",
+        "citation": "[2026] SGHCR 13"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC 94 (revised).pdf",
+        "title": "Cape, Matthew Benjamin v Collis, John Charles and others [2026] SGHC 94",
+        "description": "Civil Procedure — Striking out ; Contract – Contractual terms | Decision Date: 30 Apr 2026",
+        "published": "2026-05-04T10:30:00+00:00",
+        "citation": "[2026] SGHC 94"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC 93.pdf",
+        "title": "True Yoga Pte Ltd and others v Wee Ewe Seng Patrick John [2026] SGHC 93",
+        "description": "Insolvency Law — Bankruptcy | Decision Date: 30 Apr 2026",
+        "published": "2026-05-04T10:30:00+00:00",
+        "citation": "[2026] SGHC 93"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC 92.pdf",
+        "title": "Liao Nuoqian v Public Prosecutor [2026] SGHC 92",
+        "description": "Criminal Procedure and Sentencing — Sentencing | Decision Date: 30 Apr 2026",
+        "published": "2026-05-04T10:30:00+00:00",
+        "citation": "[2026] SGHC 92"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC 91.pdf",
+        "title": "Kardachi, Jason Aleksander (as private trustee in bankruptcy of Rajesh Bothra) and another v Deepak Mishra and others [2026] SGHC 91",
+        "description": "Civil Procedure — Judgments and orders | Decision Date: 30 Apr 2026",
+        "published": "2026-05-04T10:30:00+00:00",
+        "citation": "[2026] SGHC 91"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC 90.pdf",
+        "title": "Public Prosecutor v Tan Shay Howe [2026] SGHC 90",
+        "description": "Criminal Procedure and Sentencing — Sentencing  | Decision Date: 29 Apr 2026",
+        "published": "2026-04-30T10:30:00+00:00",
+        "citation": "[2026] SGHC 90"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC 89.pdf",
+        "title": "Lum Hsien Loong Kenneth v Public Prosecutor [2026] SGHC 89",
+        "description": "Criminal Law — Statutory offences | Decision Date: 29 Apr 2026",
+        "published": "2026-04-30T10:30:00+00:00",
+        "citation": "[2026] SGHC 89"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGCA 21.pdf",
+        "title": "Chong Hoon Cheong v Public Prosecutor [2026] SGCA 21",
+        "description": "Criminal Procedure and Sentencing — Review | Decision Date: 28 Apr 2026",
+        "published": "2026-04-29T10:30:00+00:00",
+        "citation": "[2026] SGCA 21"
+    },
+    {
+        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/[2026] SGHC(A) 13.pdf",
+        "title": "Lee Cheng Mui v Lee Say Yng [2026] SGHC(A) 13",
+        "description": "Land — Interest in land ; Tort — Trespass | Decision Date: 28 Apr 2026",
+        "published": "2026-04-29T10:30:00+00:00",
+        "citation": "[2026] SGHC(A) 13"
+    },
+    {
         "url": "https://dentons.rodyk.com/en/insights/alerts/2026/july/14/mddi-and-imda-consult-on-proposed-digital-infrastructure-bill",
         "title": "MDDI and IMDA consult on proposed Digital Infrastructure Bill to regulate major data centres and cloud service providers",
         "description": "If enacted, the draft Bill would introduce a licensing regime for providers of major foundational digital infrastructure services, namely major data centre (DC) facility services and cloud computing…",
@@ -1057,13 +1967,6 @@
         "citation": ""
     },
     {
-        "url": "https://events.sal.sg/event/GlobalRuleofLawConference2026/programme",
-        "title": "ADV: Global Rule of Law Conference | Strengthening Societies and Supporting Economic Growth",
-        "description": "How does the rule of law hold societies together and drive economic growth — when transformation, inequality, and shifting expectations test its limits? Moderated by Justice Debbie Ong, this plenary…",
-        "published": "2026-07-18T00:01:00+00:00",
-        "citation": ""
-    },
-    {
         "url": "https://store.lawnet.com/privacy-and-data-protection-law.html?utm_source=slw_edm&utm_medium=slwadv&utm_campaign=2026jun-ap_pdplaw-slw_edm-slwadv-&utm_id=ap_pdplaw",
         "title": "ADV: Newly Published: Privacy and Data Protection Law",
         "description": "Over the past decade, privacy and data protection law in Singapore has expanded significantly. A substantial body of case law has emerged under the Personal Data Protection Act and Protection from Ha…",
@@ -1081,13 +1984,6 @@
         "url": "https://www.singaporelawwatch.sg/Headlines/3b-money-laundering-case-Conveyancing-lawyer-charged-with-forgery-over-property-purchase",
         "title": "$3b money laundering case: Conveyancing lawyer charged with forgery over property purchase",
         "description": "Chan I-Fei Julia was charged with forgery on July 16.",
-        "published": "2026-07-17T00:01:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://luma.com/d10rkzdk",
-        "title": "ADV: LegalTech GoWhere: From Pain Points to Possibilities: Building Your Legaltech Toolkit | 28 July, 10am - 12nn",
-        "description": "Every law firm's legaltech journey starts with a challenge. Join us for live showcases from legaltech providers, practical insights from MinLaw’s LIFT pilot, and real conversations about the tools an…",
         "published": "2026-07-17T00:01:00+00:00",
         "citation": ""
     },
@@ -1526,34 +2422,6 @@
         "citation": ""
     },
     {
-        "url": "https://www.singaporelawwatch.sg/Headlines/Judiciary-Law-Society-to-form-joint-committee-to-tackle-lawyers-attrition",
-        "title": "Judiciary, Law Society to form joint committee to tackle lawyers’ attrition",
-        "description": "Lawyers had cited court deadlines and interactions with judges as significant sources of stress driving attrition.",
-        "published": "2026-06-23T00:01:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Headlines/Apex-court-dismisses-almost-all-of-the-appeals-by-Envys-ex-employees-over-S38-million-of-clawbacks",
-        "title": "Apex court dismisses almost all of the appeals by Envy’s ex-employees over S$38 million of clawbacks",
-        "description": "Only fees calculated as a percentage of the amount invested by referred investors do not have to be returned, rule judges.",
-        "published": "2026-06-23T00:01:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Headlines/Spore-High-Court-halts-defamation-suit-filed-by-X-Corp-says-case-should-be-heard-in-US",
-        "title": "S’pore High Court halts defamation suit filed by X Corp, says case should be heard in US",
-        "description": "Judge says case against non-profit US site should be heard in Texas court.",
-        "published": "2026-06-23T00:01:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Headlines/Simba-ordered-to-pay-S700000-in-damages-to-indoor-skydiving-operator-Altitude-Xperience-for-trespass",
-        "title": "Simba ordered to pay S$700,000 in damages to indoor skydiving operator Altitude Xperience for trespass",
-        "description": "The telco-operator was also ordered to vacate the iFly Building’s rooftop space.",
-        "published": "2026-06-23T00:01:00+00:00",
-        "citation": ""
-    },
-    {
         "url": "https://www.mlaw.gov.sg/speech-by-minister-edwin-tong-sc-at-pro-bono-sg-awards-2026/",
         "title": "Speech by Minister for Law and Second Minister for Home Affairs Edwin Tong SC at Pro Bono SG Awards 2026",
         "description": "Pro Bono SG",
@@ -1757,6 +2625,62 @@
         "citation": ""
     },
     {
+        "url": "https://lawgazette.com.sg/feature/beyond-traditional-risk-allocation/",
+        "title": "Beyond Traditional Risk Allocation",
+        "description": "Distressed transactions and restructuring often proceed without the benefit of conventional contractual protections, requiring insolvency practitioners to navigate heightened legal and commercial ris…",
+        "published": "2026-07-15T07:00:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://lawgazette.com.sg/feature/the-evolution-of-construction-law-in-singapore/",
+        "title": "The Evolution of Construction Law in Singapore",
+        "description": "From General Litigation to a Distinct Discipline (A Bicentennial reflection for SGLAW 200 years) 1. Introduction: The Architecture of Singapore’s Legal History, Shaped by Construction Law As Singapor…",
+        "published": "2026-07-15T06:00:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://lawgazette.com.sg/feature/redefining-winning/",
+        "title": "Redefining Winning",
+        "description": "What Every Lawyer Needs to Know About Therapeutic Justice Family life is a highly private affair. Many families live their lives without the need for court intervention until serious troubles occur t…",
+        "published": "2026-07-15T05:00:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://lawgazette.com.sg/practice/the-young-lawyer/a-note-to-those-beginning-the-journey/",
+        "title": "A Note to Those Beginning the Journey",
+        "description": "Reflections from thirty years at the Bar To you, who have just been called to the Bar — welcome. You have worked hard to reach this moment, and it deserves to be savoured. But as the excitement of he…",
+        "published": "2026-07-13T07:00:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://lawgazette.com.sg/practice/ethics-in-practice/beyond-the-checklist-identifying-red-flags-in-practice/",
+        "title": "Beyond the Checklist: Identifying Red Flags in Practice",
+        "description": "In the past few years, we have seen a flurry of activity in the Anti-Money Laundering scene. Kicking off the season in April 2023 was the Legal Profession (Prevention of Money Laundering and Financin…",
+        "published": "2026-07-13T06:00:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://lawgazette.com.sg/practice/tech-talk/flirting-with-a-modest-ai-intervention-for-the-singapore-bar/",
+        "title": "Flirting with a Modest AI Intervention for the Singapore Bar",
+        "description": "Abstract Senior practitioners within Singapore’s legal community have long admonished younger lawyers for a perceived want of perseverance, attributing their early departure from practice to individu…",
+        "published": "2026-07-13T05:00:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://lawgazette.com.sg/members/fiat-justitia/fiat-justitia-commenting-or-politicking/",
+        "title": "Fiat Justitia: Commenting or Politicking",
+        "description": "The Legal Profession (Amendment) Act 1986 removed the Law Society's general right to comment on all impending legislation. The post Fiat Justitia: Commenting or Politicking appeared first on The Sing…",
+        "published": "2026-07-12T07:00:00+00:00",
+        "citation": ""
+    },
+    {
+        "url": "https://lawgazette.com.sg/notices/disciplinary-tribunal-reports/disciplinary-tribunal-reports-2/",
+        "title": "Disciplinary Tribunal Reports",
+        "description": "Pursuant to section 93(5) of the Legal Profession Act, the Council of the Law Society is required to publish the findings and determination of the Disciplinary Tribunal in the Singapore Law Gazette o…",
+        "published": "2026-07-10T07:00:00+00:00",
+        "citation": ""
+    },
+    {
         "url": "https://lawgazette.com.sg/feature/in-claude-we-trust/",
         "title": "In Claude we trust: Confidentiality in the GenAI era",
         "description": "Revisiting the Scope of Confidentiality in the Generative AI Era Introduction Claude Code, Claude Cowork, Claude Skills. Claude creeps its way into almost any conversation involving Generative AI (Ge…",
@@ -1768,202 +2692,6 @@
         "title": "AI Prompts and the Fragility of Legal Professional Privilege",
         "description": "Abstract: This article examines how generative AI may undermine legal professional privilege under Singapore law. It argues that prompts and exchanges with AI systems are unlikely, by themselves, to…",
         "published": "2026-06-13T07:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://lawgazette.com.sg/practice/practice-matters/bridging-law-and-social-service/",
-        "title": "Bridging Law and Social Service",
-        "description": "Ethical and Practical Considerations in Interdisciplinary Family Practice In family disputes, it is common for there to be underlying issues that involve fractured relationships trauma, child welfare…",
-        "published": "2026-06-13T06:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://lawgazette.com.sg/practice/practice-matters/3-common-pitfalls-in-ip-protection/",
-        "title": "3 Common Pitfalls in IP Protection",
-        "description": "Intellectual property (“IP”) issues are often viewed as largely administrative or procedural matters. In practice, however, effective IP protection frequently requires a more nuanced and specialised…",
-        "published": "2026-06-13T05:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://lawgazette.com.sg/practice/practice-matters/science-fiction-real-liability-legal-risks-of-ai-in-hr/",
-        "title": "Science Fiction, Real Liability: Legal Risks of AI in HR",
-        "description": "Abstract The growing use of artificial intelligence (“AI”) in human resources (“HR”) presents new legal challenges for employers in Singapore. While AI enhances efficiency and consistency, its role i…",
-        "published": "2026-06-13T04:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://lawgazette.com.sg/practice/tech-talk/grounds-for-concern-fair-use-terms-of-use-and-the-grist-for-ai/",
-        "title": "Grounds for Concern: Fair Use, Terms of Use and the Grist for AI",
-        "description": "Much ink has been spilled about copyright and AI. Almost all of it pools in two places: the works used as model training data, and the works that models generate as potentially and allegedly infringi…",
-        "published": "2026-06-13T03:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://lawgazette.com.sg/members/fiat-justitia/law-soc-new-millennium-and-its-new-home/",
-        "title": "Fiat Justitia: The Law Society in the New Millennium and Its New Home",
-        "description": "The Law Society’s New Home Tracey Yeo, ‘Southward Ho! A Permanent Home Close to the River’, Singapore Law Gazette, Jun 1999, at 4 Following the footsteps of Singapore’s pioneers, the Law Society of S…",
-        "published": "2026-06-12T07:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://lawgazette.com.sg/notices/disciplinary-tribunal-reports/dtr-june-2026/",
-        "title": "Disciplinary Tribunal Reports",
-        "description": "Pursuant to section 93(5) of the Legal Profession Act, the Council of the Law Society is required to publish the findings and determination of the Disciplinary Tribunal in the Singapore Law Gazette o…",
-        "published": "2026-06-10T07:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://lawgazette.com.sg/feature/the-evolution-of-insolvency-and-restructuring-law-in-singapore/",
-        "title": "The Evolution of Insolvency and Restructuring Law in Singapore",
-        "description": "Supporting Economic Resilience in a Volatile World Introduction Over the last twenty years, Singapore has significantly reformed its insolvency and restructuring laws. Originally focused on liquidati…",
-        "published": "2026-05-15T07:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://lawgazette.com.sg/feature/bicentennial-celebrations-developments-in-intellectual-property/",
-        "title": "Bicentennial Celebrations — Developments in Intellectual Property",
-        "description": "Introduction – The Historical Foundations of Intellectual Property Laws in Singapore As a profession we should look at this Bicentenary year with thankfulness whilst also harbouring an assuring measu…",
-        "published": "2026-05-15T06:00:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 153.pdf",
-        "title": "Lam Kin Hing Kenneth v Yung Man Tung [2026] SGHC 153",
-        "description": "",
-        "published": "2026-07-22T02:30:00+00:00",
-        "citation": "[2026] SGHC 153"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 34 (revised).pdf",
-        "title": "Kuvera Properties Pte Ltd v Far East Opus Pte Ltd [2026] SGCA 34",
-        "description": "",
-        "published": "2026-07-20T02:30:00+00:00",
-        "citation": "[2026] SGCA 34"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 150.pdf",
-        "title": "Re Ficus Asia Investment Pte Ltd (Redefine Capital Fund and others, non-parties) [2026] SGHC 150",
-        "description": "",
-        "published": "2026-07-20T02:30:00+00:00",
-        "citation": "[2026] SGHC 150"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 33.pdf",
-        "title": "Deloitte & Touche LLP v Hin Leong Trading (Pte) Ltd (in compulsory liquidation) [2026] SGCA 33",
-        "description": "",
-        "published": "2026-07-17T02:30:00+00:00",
-        "citation": "[2026] SGCA 33"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGCA 32.pdf",
-        "title": "Ren Xinwu v Homing Holdings Pte Ltd (in liquidation) and another [2026] SGCA 32",
-        "description": "",
-        "published": "2026-07-17T02:30:00+00:00",
-        "citation": "[2026] SGCA 32"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 149.pdf",
-        "title": "Ripple Markets APAC Pte Ltd v I-Remit, Inc and others [2026] SGHC 149",
-        "description": "",
-        "published": "2026-07-17T02:30:00+00:00",
-        "citation": "[2026] SGHC 149"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHCR 25.pdf",
-        "title": "Pacific Healthcare Holdings Ltd and another v Precious Surgery Centre Pte Ltd and another and another suit [2026] SGHCR 25",
-        "description": "",
-        "published": "2026-07-17T02:30:00+00:00",
-        "citation": "[2026] SGHCR 25"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 146.pdf",
-        "title": "Re Mirror Trading International (Pty) Ltd (in liquidation) and others [2026] SGHC 146",
-        "description": "",
-        "published": "2026-07-16T02:30:00+00:00",
-        "citation": "[2026] SGHC 146"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC 145.pdf",
-        "title": "DSS v DST [2026] SGHC 145",
-        "description": "",
-        "published": "2026-07-16T02:30:00+00:00",
-        "citation": "[2026] SGHC 145"
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026 SGHC(I) 10.pdf",
-        "title": "DWJ v DWK [2026] SGHC(I) 10",
-        "description": "",
-        "published": "2026-07-16T02:30:00+00:00",
-        "citation": "[2026] SGHC(I) 10"
-    },
-    {
-        "url": "https://www.mas.gov.sg/publications/consultations/2025/consultation-paper-on-proposed-guidelines-on-liquidity-risk-management",
-        "title": "MAS: Response to consultation paper on proposed guidelines on liquidity risk management for banks, merchant banks and finance companies",
-        "description": "",
-        "published": "2026-07-13T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.mas.gov.sg/publications/consultations/2026/cp-on-proposed-amendments-to-the-cis-code-to-facilitate-retail-fund-product-innovation",
-        "title": "MAS: Consultation paper on proposed amendments to the Code on collective investment schemes to facilitate retail fund product innovation",
-        "description": "",
-        "published": "2026-07-10T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.mas.gov.sg/publications/consultations/2025/consultation-paper-on-updates-to-the-guidelines-on-liquidity-risk-management-practices",
-        "title": "MAS: Response to Consultation Paper on Updates to the Guidelines on Liquidity Risk Management Practices (Fund Management Companies)",
-        "description": "",
-        "published": "2026-07-03T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Notices & Directions/RC 6 of 2026.pdf",
-        "title": "State Courts RC No. 6 of 2026: Designation of tribunal judges for CDRT & judges for PHC",
-        "description": "",
-        "published": "2026-07-02T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.mas.gov.sg/regulation/notices/notice-656",
-        "title": "MAS: Notice 656 Exposures to Single Counterparty Groups for Banks Incorporated in Singapore",
-        "description": "",
-        "published": "2026-07-02T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Notices & Directions/RC 5 of 2026.pdf",
-        "title": "State Courts RC No. 5 of 2026: Designation of tribunal judges for CDRT & judges for PHC",
-        "description": "",
-        "published": "2026-06-02T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Notices & Directions/Supreme Court Amendment No. 3 of 2026 (PD 2021).pdf",
-        "title": "Supreme Court Practice Directions 2021 Amendment No. 3 of 2026: Amendments to Parts 19, 22 and Appx A & B",
-        "description": "",
-        "published": "2026-07-01T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.singaporelawwatch.sg/Portals/0/Notices & Directions/PD 5 of 2026.pdf",
-        "title": "State Courts Practice Directions 2021 Amendment No. 5 of 2026: Amendments to Part XVII and Appx A1 & A2",
-        "description": "",
-        "published": "2026-07-01T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.mas.gov.sg/regulation/notices/notice-sfa-04-n21",
-        "title": "MAS: Trade marks and trade names – Opposition to Registration, updated 26 June 2026",
-        "description": "",
-        "published": "2026-06-29T02:30:00+00:00",
-        "citation": ""
-    },
-    {
-        "url": "https://www.mas.gov.sg/regulation/notices/notice-sfa-04-n07-on-prohibited-representations-made-by-exempt-persons",
-        "title": "MAS: Notice ​SFA 04-N07 Prohibited Representations Made by Exempt Persons Under the 2nd Schedule to the Securities & Futures (Licensing & Conduct of Business) Regulations, last revised 12 June 2026",
-        "description": "",
-        "published": "2026-06-15T02:30:00+00:00",
         "citation": ""
     }
 ]
