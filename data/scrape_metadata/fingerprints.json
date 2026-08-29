@@ -2,7 +2,7 @@
   "feeds": {
     "https://blog.nus.edu.sg/lawresearch/feed/": {
       "current_fingerprint": {
-        "body_sha256": "5eaab74b559021b011aca2cae53ece9c7085113ae318783efb7b966774809321",
+        "body_sha256": "79fcd73fa08aa57bbee6f297abb293273a644d2de1efe545d555310012856597",
         "content_type": "application/rss+xml",
         "encoding": "utf-8",
         "entry_count": 9,
@@ -23,14 +23,9 @@
           "version"
         ],
         "root_tag": "rss",
-        "size_bytes": 89273
+        "size_bytes": 89272
       },
       "history": [
-        {
-          "entry_count": 9,
-          "structural_sha": "78ec8f94a678bbe0",
-          "ts": "2026-08-22T00:57:08.418799+00:00"
-        },
         {
           "entry_count": 9,
           "structural_sha": "78ec8f94a678bbe0",
@@ -60,13 +55,18 @@
           "entry_count": 9,
           "structural_sha": "78ec8f94a678bbe0",
           "ts": "2026-08-28T08:44:01.463337+00:00"
+        },
+        {
+          "entry_count": 9,
+          "structural_sha": "78ec8f94a678bbe0",
+          "ts": "2026-08-29T05:21:20.034373+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:01.463337+00:00"
+      "last_success_iso": "2026-08-29T05:21:20.034373+00:00"
     },
     "https://lawgazette.com.sg/feed/": {
       "current_fingerprint": {
-        "body_sha256": "1a7ca430baa51c477ecd04b7482082647f6465b71ecee6e7aec2c0c8b4d16736",
+        "body_sha256": "5582a7dd8bb088dccadd9aeb3639cbe6ca62d8587ee70c639e542eeb8d53b90f",
         "content_type": "application/rss+xml",
         "encoding": "utf-8",
         "entry_count": 10,
@@ -90,11 +90,6 @@
         "size_bytes": 405190
       },
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "78ec8f94a678bbe0",
-          "ts": "2026-08-22T00:57:09.599400+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "78ec8f94a678bbe0",
@@ -124,9 +119,14 @@
           "entry_count": 10,
           "structural_sha": "78ec8f94a678bbe0",
           "ts": "2026-08-28T08:44:01.732328+00:00"
+        },
+        {
+          "entry_count": 10,
+          "structural_sha": "78ec8f94a678bbe0",
+          "ts": "2026-08-29T05:21:21.024591+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:01.732328+00:00"
+      "last_success_iso": "2026-08-29T05:21:21.024591+00:00"
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "current_fingerprint": {
@@ -160,11 +160,6 @@
         {
           "entry_count": 10,
           "structural_sha": "a67add66c9e9ca56",
-          "ts": "2026-08-22T00:57:08.573178+00:00"
-        },
-        {
-          "entry_count": 10,
-          "structural_sha": "a67add66c9e9ca56",
           "ts": "2026-08-23T01:01:56.337536+00:00"
         },
         {
@@ -191,13 +186,18 @@
           "entry_count": 10,
           "structural_sha": "a67add66c9e9ca56",
           "ts": "2026-08-28T08:44:01.557088+00:00"
+        },
+        {
+          "entry_count": 10,
+          "structural_sha": "a67add66c9e9ca56",
+          "ts": "2026-08-29T05:21:20.123190+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:01.557088+00:00"
+      "last_success_iso": "2026-08-29T05:21:20.123190+00:00"
     },
     "https://www.mlaw.gov.sg/feed.xml": {
       "current_fingerprint": {
-        "body_sha256": "24c71d4400e306c59247eaf009fdd9630d6145a6c68e02604bb3c32245008810",
+        "body_sha256": "550d4776990434c41e882174ad8e8fdf77c4ac6f65818ad90d4393040cefe95c",
         "content_type": "text/xml",
         "encoding": "utf-8",
         "entry_count": 10,
@@ -218,14 +218,9 @@
         "format": "xml",
         "root_attrs": [],
         "root_tag": "feed",
-        "size_bytes": 117709
+        "size_bytes": 134578
       },
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "a4a24201ab4ec4f9",
-          "ts": "2026-08-22T00:57:07.604414+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "a4a24201ab4ec4f9",
@@ -255,9 +250,14 @@
           "entry_count": 10,
           "structural_sha": "a4a24201ab4ec4f9",
           "ts": "2026-08-28T08:44:00.413606+00:00"
+        },
+        {
+          "entry_count": 10,
+          "structural_sha": "a4a24201ab4ec4f9",
+          "ts": "2026-08-29T05:21:19.023358+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:00.413606+00:00"
+      "last_success_iso": "2026-08-29T05:21:19.023358+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml": {
       "current_fingerprint": {
@@ -287,11 +287,6 @@
         {
           "entry_count": 142,
           "structural_sha": "9f567f1678e04caf",
-          "ts": "2026-08-22T00:57:05.809143+00:00"
-        },
-        {
-          "entry_count": 142,
-          "structural_sha": "9f567f1678e04caf",
           "ts": "2026-08-23T01:01:54.651571+00:00"
         },
         {
@@ -318,16 +313,21 @@
           "entry_count": 147,
           "structural_sha": "9f567f1678e04caf",
           "ts": "2026-08-28T08:43:59.499216+00:00"
+        },
+        {
+          "entry_count": 147,
+          "structural_sha": "9f567f1678e04caf",
+          "ts": "2026-08-29T05:21:18.124764+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:43:59.499216+00:00"
+      "last_success_iso": "2026-08-29T05:21:18.124764+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml": {
       "current_fingerprint": {
-        "body_sha256": "121463ea4ced772cdb38165ba9738ff4249b0e3217e75cf599cef9feff673e83",
+        "body_sha256": "bc4e19ceab7efd475f71ecc07ba04e4c6fb21945bf53af01eda37d199bec5f09",
         "content_type": "text/xml",
         "encoding": "utf-8",
-        "entry_count": 131,
+        "entry_count": 130,
         "first_entry_attrs": [],
         "first_entry_children": [
           "author",
@@ -344,14 +344,9 @@
           "version"
         ],
         "root_tag": "rss",
-        "size_bytes": 117990
+        "size_bytes": 117373
       },
       "history": [
-        {
-          "entry_count": 131,
-          "structural_sha": "9f567f1678e04caf",
-          "ts": "2026-08-22T00:57:07.367121+00:00"
-        },
         {
           "entry_count": 131,
           "structural_sha": "9f567f1678e04caf",
@@ -381,16 +376,21 @@
           "entry_count": 131,
           "structural_sha": "9f567f1678e04caf",
           "ts": "2026-08-28T08:44:00.102606+00:00"
+        },
+        {
+          "entry_count": 130,
+          "structural_sha": "9f567f1678e04caf",
+          "ts": "2026-08-29T05:21:18.751906+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:00.102606+00:00"
+      "last_success_iso": "2026-08-29T05:21:18.751906+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Judgments.xml": {
       "current_fingerprint": {
-        "body_sha256": "e19904bfb5ba95f776b97683ff3f71fe6fc6e1f82976e1a1bedbfe93a7115842",
+        "body_sha256": "0636ccb188c7ade542481483b9a125a63d6f4928551fc196574a78c62afb3fd3",
         "content_type": "text/xml",
         "encoding": "utf-8",
-        "entry_count": 111,
+        "entry_count": 113,
         "first_entry_attrs": [],
         "first_entry_children": [
           "author",
@@ -407,14 +407,9 @@
           "version"
         ],
         "root_tag": "rss",
-        "size_bytes": 53943
+        "size_bytes": 54944
       },
       "history": [
-        {
-          "entry_count": 107,
-          "structural_sha": "9f567f1678e04caf",
-          "ts": "2026-08-22T00:57:05.358897+00:00"
-        },
         {
           "entry_count": 107,
           "structural_sha": "9f567f1678e04caf",
@@ -444,9 +439,14 @@
           "entry_count": 111,
           "structural_sha": "9f567f1678e04caf",
           "ts": "2026-08-28T08:43:59.129478+00:00"
+        },
+        {
+          "entry_count": 113,
+          "structural_sha": "9f567f1678e04caf",
+          "ts": "2026-08-29T05:21:18.024289+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:43:59.129478+00:00"
+      "last_success_iso": "2026-08-29T05:21:18.024289+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Notices.xml": {
       "current_fingerprint": {
@@ -459,23 +459,18 @@
           "expand_collapse",
           "icon"
         ],
-        "anchor_count": 235,
-        "body_sha256": "b7d63ca5890740282b34f293c020da1af29c43a92d080b089329d2e796d80497",
+        "anchor_count": 236,
+        "body_sha256": "89c20fd0263e84804607d02cd06e0dd5e6b27aeee946e5f6e869830e3c8949f9",
         "content_type": "text/html",
         "encoding": "utf-8",
-        "entry_count": 235,
+        "entry_count": 236,
         "format": "html",
-        "size_bytes": 72929,
+        "size_bytes": 73192,
         "top_tags": [
           "html"
         ]
       },
       "history": [
-        {
-          "entry_count": 235,
-          "structural_sha": "f9f94708435489ea",
-          "ts": "2026-08-22T00:57:06.954093+00:00"
-        },
         {
           "entry_count": 235,
           "structural_sha": "f9f94708435489ea",
@@ -505,16 +500,21 @@
           "entry_count": 235,
           "structural_sha": "f9f94708435489ea",
           "ts": "2026-08-28T08:43:59.974043+00:00"
+        },
+        {
+          "entry_count": 236,
+          "structural_sha": "f9f94708435489ea",
+          "ts": "2026-08-29T05:21:18.621463+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:43:59.974043+00:00"
+      "last_success_iso": "2026-08-29T05:21:18.621463+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/SuperFeed.xml": {
       "current_fingerprint": {
-        "body_sha256": "d0f3307e8e6cf198d62907996183f1bba884959e31b7796910dec075fee5e2a6",
+        "body_sha256": "a3dbbf15d4e1f2f28d20acd222aec39eba261162b0e1542e9f46747dd0195ea8",
         "content_type": "text/xml",
         "encoding": "utf-8",
-        "entry_count": 15,
+        "entry_count": 8,
         "first_entry_attrs": [],
         "first_entry_children": [
           "author",
@@ -531,14 +531,9 @@
           "version"
         ],
         "root_tag": "rss",
-        "size_bytes": 9958
+        "size_bytes": 6808
       },
       "history": [
-        {
-          "entry_count": 11,
-          "structural_sha": "9f567f1678e04caf",
-          "ts": "2026-08-22T00:57:04.995861+00:00"
-        },
         {
           "entry_count": 11,
           "structural_sha": "9f567f1678e04caf",
@@ -568,13 +563,18 @@
           "entry_count": 15,
           "structural_sha": "9f567f1678e04caf",
           "ts": "2026-08-28T08:43:59.035166+00:00"
+        },
+        {
+          "entry_count": 8,
+          "structural_sha": "9f567f1678e04caf",
+          "ts": "2026-08-29T05:21:17.942947+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:43:59.035166+00:00"
+      "last_success_iso": "2026-08-29T05:21:17.942947+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries": {
       "current_fingerprint": {
-        "body_sha256": "724648b7560b3e2e69771ad9587767a80d039bd337ec461f71ac73a1c6fac1c2",
+        "body_sha256": "d3476526d328ca9c5ab452c1042f4dccfca858c7e6bf9527c0139c227ae08892",
         "content_type": "application/xml",
         "encoding": "utf-8",
         "entry_count": 10,
@@ -597,11 +597,6 @@
         "size_bytes": 6696
       },
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d",
-          "ts": "2026-08-22T00:57:10.934486+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
@@ -631,13 +626,18 @@
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
           "ts": "2026-08-28T08:44:03.149438+00:00"
+        },
+        {
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d",
+          "ts": "2026-08-29T05:21:23.005268+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:03.149438+00:00"
+      "last_success_iso": "2026-08-29T05:21:23.005268+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "current_fingerprint": {
-        "body_sha256": "da1b7ecc76cf6a046d3df13632f5e33d0eddac81694c8903be3f181779ffe448",
+        "body_sha256": "2a26e307069e884e9eb929cf626bc6add3a963c4e4b8aa2085bf4bc4c8b69d69",
         "content_type": "application/xml",
         "encoding": "utf-8",
         "entry_count": 10,
@@ -662,11 +662,6 @@
         "size_bytes": 7673
       },
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "2a223ec51570e3b6",
-          "ts": "2026-08-22T00:57:12.273450+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "2a223ec51570e3b6",
@@ -696,13 +691,18 @@
           "entry_count": 10,
           "structural_sha": "2a223ec51570e3b6",
           "ts": "2026-08-28T08:44:04.786012+00:00"
+        },
+        {
+          "entry_count": 10,
+          "structural_sha": "2a223ec51570e3b6",
+          "ts": "2026-08-29T05:21:23.883387+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:04.786012+00:00"
+      "last_success_iso": "2026-08-29T05:21:23.883387+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "current_fingerprint": {
-        "body_sha256": "aac13a72cb2d030aa42397f6f36e6ffb3cbbae6a4b5945b9ad967ae076e395a6",
+        "body_sha256": "e3b580a93c7cf6ccb30f3312a9b7fc36acee82e8a0f939c49427038a2206832c",
         "content_type": "application/xml",
         "encoding": "utf-8",
         "entry_count": 10,
@@ -725,11 +725,6 @@
         "size_bytes": 5780
       },
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d",
-          "ts": "2026-08-22T00:57:10.127831+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
@@ -759,13 +754,18 @@
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
           "ts": "2026-08-28T08:44:02.480010+00:00"
+        },
+        {
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d",
+          "ts": "2026-08-29T05:21:21.876902+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:02.480010+00:00"
+      "last_success_iso": "2026-08-29T05:21:21.876902+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/notices-and-directions": {
       "current_fingerprint": {
-        "body_sha256": "f5c5612db6f3cef747e6cdf0dd74658ec50933ad018b657751cdf4df2f0675f5",
+        "body_sha256": "e9d11f4a230ba6a7f18b945b0a709e81ac85cbaefb93d5bcd4496a3de6d86077",
         "content_type": "application/xml",
         "encoding": "utf-8",
         "entry_count": 10,
@@ -788,11 +788,6 @@
         "size_bytes": 6513
       },
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d",
-          "ts": "2026-08-22T00:57:10.502352+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
@@ -822,9 +817,14 @@
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
           "ts": "2026-08-28T08:44:02.810507+00:00"
+        },
+        {
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d",
+          "ts": "2026-08-29T05:21:22.681602+00:00"
         }
       ],
-      "last_success_iso": "2026-08-28T08:44:02.810507+00:00"
+      "last_success_iso": "2026-08-29T05:21:22.681602+00:00"
     }
   }
 }
