@@ -35,7 +35,7 @@ jobs:
 
       - name: Upload scrape metadata artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: scrape-metadata
           path: |
