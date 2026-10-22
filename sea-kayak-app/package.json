@@ -6,11 +6,15 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predev": "node scripts/sync-news.mjs",
+    "prebuild": "node scripts/sync-news.mjs",
+    "test": "node --test ../tests/*.test.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "framer-motion": "^12.12.1",
-    "next": "^15.5.9",
+    "next": "15.5.28",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -21,9 +25,19 @@
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
-    "eslint-config-next": "15.1.8",
-    "postcss": "^8.5.3",
+    "eslint-config-next": "15.5.28",
+    "postcss": "8.5.23",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "sharp": "0.35.5",
+    "source-map-js": "1.2.2",
+    "brace-expansion@1": "1.1.21",
+    "postcss-selector-parser": "7.1.6"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

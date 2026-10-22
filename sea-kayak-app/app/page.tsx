@@ -7,90 +7,35 @@ import WaveBackground from "./components/WaveBackground"
 import BeachScene from "./components/BeachScene"
 import { getSource, normalizeRouteData, type RouteItem } from "./lib/sources"
 import { useSgtAndWeather } from "./lib/weather"
-
-type SeenMap = Record<string, number> // url -> ms timestamp paddled
+import { normalizeSeen, pickWeighted, type SeenMap } from "./lib/reading"
+import { requestJson } from "./lib/request"
 
 const SEEN_KEY = "sea-kayak:seen"
-const SEEN_TTL_HOURS = 24 * 7 // 7 days
+const LIVE_NEWS = "https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json"
 
 function loadSeen(): SeenMap {
-  if (typeof window === "undefined") return {}
-  try {
-    const raw = window.localStorage.getItem(SEEN_KEY)
-    if (!raw) return {}
-    const parsed = JSON.parse(raw)
-    return typeof parsed === "object" && parsed ? (parsed as SeenMap) : {}
-  } catch {
-    return {}
-  }
-}
-
-function pruneSeen(m: SeenMap, ttlHours: number): SeenMap {
-  const cutoff = Date.now() - ttlHours * 3_600_000
-  const out: SeenMap = {}
-  for (const [k, v] of Object.entries(m)) if (v >= cutoff) out[k] = v
-  return out
-}
-
-function saveSeen(m: SeenMap) {
-  try {
-    window.localStorage.setItem(SEEN_KEY, JSON.stringify(m))
-  } catch {}
-}
-
-function baseWeight(it: RouteItem): number {
-  if (!it.published) return 1
-  const t = Date.parse(it.published)
-  if (Number.isNaN(t)) return 1
-  const ageH = (Date.now() - t) / 3_600_000
-  if (ageH < 0) return 1
-  if (ageH <= 48) return 10
-  if (ageH <= 168) return 4
-  if (ageH <= 720) return 2
-  return 1
-}
-
-function pickWeighted(items: RouteItem[], seen: SeenMap = {}): RouteItem {
-  if (items.length === 0) throw new Error("pickWeighted: empty list")
-  // primary pass: zero-weight already-seen items so we explore unseen first
-  let weights = items.map((it) => (seen[it.url] ? 0 : baseWeight(it)))
-  let total = weights.reduce((a, b) => a + b, 0)
-  if (total === 0) {
-    // exhausted unseen pool — fall back to baseline weights (ignore seen)
-    weights = items.map(baseWeight)
-    total = weights.reduce((a, b) => a + b, 0)
-  }
-  let r = Math.random() * total
-  for (let i = 0; i < items.length; i++) {
-    r -= weights[i]
-    if (r <= 0) return items[i]
-  }
-  return items[items.length - 1]
+  try { return normalizeSeen(JSON.parse(window.localStorage.getItem(SEEN_KEY) || "{}")) } catch { return {} }
 }
 
 export default function Home() {
   const [routes, setRoutes] = useState<RouteItem[]>([])
-  const [current, setCurrent] = useState<RouteItem>({ url: "#", title: "", description: "" })
+  const [current, setCurrent] = useState<RouteItem | null>(null)
   const [seen, setSeen] = useState<SeenMap>({})
+  const [newsError, setNewsError] = useState<string | null>(null)
+  const [newsWarning, setNewsWarning] = useState(false)
+  const [historyError, setHistoryError] = useState(false)
+  const [attempt, setAttempt] = useState(0)
+  const seenRef = useRef<SeenMap>({})
+  const rerollRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const infoSectionRef = useRef<HTMLDivElement>(null)
 
   const { sgtHour, weatherCategory, isNight } = useSgtAndWeather()
 
   useEffect(() => {
-    const initialSeen = pruneSeen(loadSeen(), SEEN_TTL_HOURS)
+    const initialSeen = loadSeen()
+    seenRef.current = initialSeen
     setSeen(initialSeen)
-    saveSeen(initialSeen) // persist pruned map
-
-    fetch("https://raw.githubusercontent.com/gongahkia/sea-kayak/main/data/routes.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const items = normalizeRouteData(data)
-        setRoutes(items)
-        if (items.length > 0) {
-          setCurrent(pickWeighted(items, initialSeen))
-        }
-      })
-      .catch(console.error)
+    try { localStorage.setItem(SEEN_KEY, JSON.stringify(initialSeen)) } catch { setHistoryError(true) }
 
     const handleWheel = (e: WheelEvent) => {
       if (e.deltaY > 0) {
@@ -101,20 +46,53 @@ export default function Home() {
     }
 
     window.addEventListener("wheel", handleWheel)
-    return () => window.removeEventListener("wheel", handleWheel)
+    return () => { window.removeEventListener("wheel", handleWheel); clearTimeout(rerollRef.current) }
   }, [])
+
+  useEffect(() => {
+    const controller = new AbortController()
+    setNewsError(null)
+    setNewsWarning(false)
+    const readNews = async (url: string) => {
+      const data = await requestJson(url, { signal: controller.signal })
+      if (!Array.isArray(data) || data.length > 20000) throw new Error("Invalid news snapshot")
+      const items = normalizeRouteData(data)
+      if (!items.length) throw new Error("No usable news")
+      return items
+    }
+    void (async () => {
+      let items: RouteItem[]
+      let saved = false
+      try { items = await readNews(LIVE_NEWS) } catch (error) {
+        if (controller.signal.aborted) throw error
+        items = await readNews("/routes.json")
+        saved = true
+      }
+      if (controller.signal.aborted) return
+      setRoutes(items)
+      setCurrent(pickWeighted(items, seenRef.current))
+      setNewsWarning(saved)
+    })().catch(() => {
+      if (!controller.signal.aborted) setNewsError("News links are unavailable. Please try again.")
+    })
+    return () => controller.abort()
+  }, [attempt])
 
   const handleHover = () => {
     if (routes.length > 0) {
-      setCurrent(pickWeighted(routes, seen))
+      setCurrent(pickWeighted(routes, seenRef.current))
     }
   }
 
   const recordSeen = (url: string) => {
     if (!url || url === "#") return
-    const next = { ...seen, [url]: Date.now() }
+    const next = normalizeSeen({ ...seenRef.current, [url]: Date.now() })
+    seenRef.current = next
     setSeen(next)
-    saveSeen(next)
+    try { localStorage.setItem(SEEN_KEY, JSON.stringify(next)); setHistoryError(false) } catch { setHistoryError(true) }
+    // Keep this activation's href intact until the browser has opened the article.
+    clearTimeout(rerollRef.current)
+    if (routes.length) rerollRef.current = setTimeout(() => setCurrent(pickWeighted(routes, next)), 0)
   }
 
   const seenCount = Object.keys(seen).length
@@ -144,16 +122,18 @@ export default function Home() {
         <div className="flex flex-col items-center gap-4 md:gap-8 relative w-full max-w-md">
           <div className="relative group w-full md:w-[500px]">
             <a
-              href={current.url}
+              href={current?.url}
+              aria-disabled={!current}
+              tabIndex={current ? undefined : -1}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full"
-              onClick={() => recordSeen(current.url)}
+              className="block w-full rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
+              onClick={(event) => { if (current) recordSeen(current.url); else event.preventDefault() }}
             >
               <div className="neobrutalist-button-container">
                 <motion.div
                   id="paddle"
-                  className={`neobrutalist-button w-full h-14 md:h-16 ${btnBg} ${btnText} border-4 ${btnBorder} rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden cursor-pointer`}
+                  className={`neobrutalist-button w-full h-14 md:h-16 ${btnBg} ${btnText} border-4 ${btnBorder} rounded-lg font-bold text-base md:text-lg tracking-wide md:tracking-wider relative overflow-hidden ${current ? "cursor-pointer" : "cursor-wait"}`}
                   initial={{ x: -6, y: -6 }}
                   whileHover={{ x: -3, y: -3 }}
                   whileTap={{ x: 0, y: 0 }}
@@ -161,15 +141,15 @@ export default function Home() {
                   onMouseEnter={handleHover}
                 >
                   <div className="absolute inset-0 flex items-center justify-center z-10 px-2">
-                    PADDLE THE OCEAN
+                    {current ? "PADDLE THE OCEAN" : newsError ? "NEWS UNAVAILABLE" : "LOADING NEWS…"}
                   </div>
                 </motion.div>
                 <div className={shadowClass}></div>
               </div>
             </a>
-            {current.title && (
-              <div className="hidden md:block absolute left-full ml-4 top-1/2 -translate-y-1/2 w-72 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none z-20">
-                <div className="relative bg-white text-slate-900 rounded-xl shadow-lg border border-slate-200 px-4 py-3 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-[6px] before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-slate-200 before:rotate-45">
+            {current?.title && (
+              <div className="hidden md:block absolute left-1/2 bottom-full mb-4 -translate-x-1/2 w-72 xl:left-full xl:ml-4 xl:top-1/2 xl:bottom-auto xl:mb-0 xl:translate-x-0 xl:-translate-y-1/2 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-150 pointer-events-none z-20">
+                <div className="relative bg-white text-slate-900 rounded-xl shadow-lg border border-slate-200 px-4 py-3 before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-[6px] before:w-3 before:h-3 before:bg-white before:border-r before:border-b before:border-slate-200 before:rotate-45 xl:before:top-1/2 xl:before:bottom-auto xl:before:-translate-y-1/2 xl:before:-left-[6px] xl:before:translate-x-0 xl:before:border-l xl:before:border-r-0">
                   {(getSource(current.url, current.title) || current.citation) && (
                     <div className="flex flex-wrap gap-1.5 mb-1.5">
                       {getSource(current.url, current.title) && (
@@ -194,6 +174,11 @@ export default function Home() {
               </div>
             )}
           </div>
+          {(newsError || newsWarning) && <div role={newsError ? "alert" : "status"} className={`text-center text-sm ${textClass}`}>
+            <p>{newsError || "Showing saved news links. The latest update is unavailable."}</p>
+            <button type="button" onClick={() => setAttempt(value => value + 1)} className="min-h-11 min-w-24 px-4 underline font-semibold">TRY AGAIN</button>
+          </div>}
+          {historyError && <p role="status" className={`text-sm text-center ${textClass}`}>Your reading history could not be saved on this device.</p>}
           <div className="flex w-full md:w-[500px] gap-4">
             <div className="neobrutalist-button-container w-1/2">
               <motion.button
@@ -229,7 +214,7 @@ export default function Home() {
             </div>
           </div>
           {seenCount > 0 && (
-            <p className={`text-xs italic opacity-60 ${textClass}`}>
+            <p className={`text-xs italic opacity-60 tabular-nums ${textClass}`}>
               Paddled {seenCount} {seenCount === 1 ? "article" : "articles"} in the last 7 days
             </p>
           )}
