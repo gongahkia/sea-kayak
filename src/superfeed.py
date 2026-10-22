@@ -1,15 +1,17 @@
 # ----- required imports -----
 
 import calendar
+import io
 import datetime
 import json
 import re
 import feedparser
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import unquote
+from urllib.parse import unquote, urlsplit, urljoin
 
-from retry import retry, FeedOutcomes, classify_exception, TerminalError
+from retry import retry, FeedOutcomes, classify_exception, TerminalError, RetryableError
+from feed_http import fetch_public_feed
 
 # module-level outcome tracker; main.py reads this after the run
 OUTCOMES = FeedOutcomes()
@@ -46,7 +48,7 @@ def _clean_desc(raw):
     # strip HTML and collapse whitespace
     text = BeautifulSoup(raw, "html.parser").get_text(" ", strip=True)
     # treat purely-ellipsis/punctuation placeholders as empty
-    if not re.search(r"[A-Za-z0-9]", text):
+    if not any(char.isalnum() for char in text):
         return ""
     if len(text) > DESC_MAX:
         text = text[: DESC_MAX - 1].rstrip() + "…"
@@ -59,24 +61,50 @@ def _published_iso(entry):
         return ""
     try:
         ts = calendar.timegm(p)  # feedparser yields struct_time in UTC
-        return datetime.datetime.fromtimestamp(
-            ts, tz=datetime.timezone.utc
-        ).isoformat()
+        return datetime.datetime.fromtimestamp(ts, tz=datetime.timezone.utc).isoformat()
     except Exception:
         return ""
 
 
-def fetch_feed_bytes(rss_url):
-    # network-only step, retried by the retry decorator below
-    resp = requests.get(rss_url, headers=_HEADERS, timeout=15)
-    resp.raise_for_status()
-    body = resp.content
-    if not body or len(body) < 32:
-        # treat near-empty payloads as transient (some CDNs return blank 200s)
-        from retry import RetryableError
+def fetch_feed_bytes(rss_url, **limits):
+    response = fetch_public_feed(rss_url, _HEADERS, **limits)
+    if not response.content or len(response.content) < 32:
+        raise RetryableError("Feed response is empty or incomplete")
+    return response
 
-        raise RetryableError(f"empty/short body ({len(body)} bytes) from {rss_url}")
-    return resp
+
+def parse_feed_response(response, base_url):
+    final_url = getattr(response, "url", None) or base_url
+    headers = {key.lower(): value for key, value in response.headers.items()}
+    headers["content-location"] = final_url
+    feed = feedparser.parse(io.BytesIO(response.content), response_headers=headers)
+    if feed.get("bozo") or not feed.get("version"):
+        raise RetryableError("Response is not a complete RSS or Atom document")
+    if len(feed.entries) > 5000:
+        raise TerminalError("Feed exceeds the entry-count limit")
+    items = []
+    for entry in feed.entries:
+        link = entry.get("link")
+        if not isinstance(link, str):
+            continue
+        link = urljoin(final_url, link)
+        if _url_identity(link) is None:
+            continue
+        title = entry.get("title") or ""
+        raw_desc = entry.get("summary") or entry.get("description") or ""
+        if not isinstance(title, str) or not isinstance(raw_desc, str):
+            continue
+        title, desc = title.strip(), _clean_desc(raw_desc)
+        items.append(
+            {
+                "url": link,
+                "title": title,
+                "description": desc,
+                "published": _published_iso(entry),
+                "citation": _extract_citation(link, title, desc),
+            }
+        )
+    return items
 
 
 def scrape_rss_urls(rss_url):
@@ -88,40 +116,24 @@ def scrape_rss_urls(rss_url):
     @retry(max_attempts=3, base_delay=1.0, max_delay=30.0, on_retry=_on_retry)
     def _fetch():
         attempts["n"] += 1
-        return fetch_feed_bytes(rss_url)
+        response = fetch_feed_bytes(rss_url)
+        return response, parse_feed_response(response, rss_url)
 
     try:
-        response = _fetch()
+        response, items = _fetch()
         n = attempts["n"]
         # publish raw bytes so drift monitor can fingerprint w/o a second fetch
         try:
             from drift import record_fetch  # lazy import: drift is optional
 
-            record_fetch(rss_url, response.content, response.headers.get("Content-Type", ""))
+            record_fetch(
+                rss_url, response.content, response.headers.get("Content-Type", "")
+            )
         except Exception:
             pass  # drift monitoring must never break scraping
-        feed = feedparser.parse(response.content)
-        items = []
-        for entry in feed.entries:
-            if "link" in entry:
-                title = (entry.get("title") or "").strip()
-                desc = _clean_desc(
-                    entry.get("summary") or entry.get("description") or ""
-                )
-                items.append(
-                    {
-                        "url": entry.link,
-                        "title": title,
-                        "description": desc,
-                        "published": _published_iso(entry),
-                        "citation": _extract_citation(entry.link, title, desc),
-                    }
-                )
-        OUTCOMES.record_result(
-            rss_url, "retried_ok" if n > 1 else "first_try", n
-        )
+        OUTCOMES.record_result(rss_url, "retried_ok" if n > 1 else "first_try", n)
         return items
-    except BaseException as e:
+    except Exception as e:
         cls = classify_exception(e)
         status = "terminal" if cls is TerminalError else "retried_fail"
         OUTCOMES.record_result(
@@ -130,17 +142,63 @@ def scrape_rss_urls(rss_url):
         return []  # preserve original contract: failure -> empty list
 
 
+def _url_identity(value):
+    if not isinstance(value, str):
+        return None
+    value = value.strip()
+    if not value or any(
+        char.isspace() or ord(char) < 32 or ord(char) == 127 for char in value
+    ):
+        return None
+    try:
+        parts = urlsplit(value)
+        if (
+            parts.scheme not in ("http", "https")
+            or not parts.hostname
+            or parts.username
+            or parts.password
+        ):
+            return None
+        _ = parts.port  # reject invalid port spellings
+        return parts._replace(
+            netloc=parts.netloc.lower(), path=parts.path or "/", fragment=""
+        ).geturl()
+    except ValueError:
+        return None
+
+
 def remove_duplicates(items):
-    # dedupe by url, preserve first-seen order; tolerate legacy string entries
+    # Fragments identify sections of one news document; keep its first original link.
     seen = set()
     out = []
-    for it in items:
-        url = it["url"] if isinstance(it, dict) else it
-        if not url or url in seen:
+    for item in items:
+        url = item.get("url") if isinstance(item, dict) else item
+        identity = _url_identity(url)
+        if identity is None or identity in seen:
             continue
-        seen.add(url)
-        out.append(it)
+        seen.add(identity)
+        out.append(item)
     return out
+
+
+def normalize_items(items):
+    if not isinstance(items, list):
+        return []
+    normalized = []
+    for item in items:
+        raw = {"url": item} if isinstance(item, str) else item
+        if not isinstance(raw, dict) or _url_identity(raw.get("url")) is None:
+            continue
+        fields = ("title", "description", "published", "citation")
+        if any(
+            raw.get(key) is not None and not isinstance(raw.get(key), str)
+            for key in fields
+        ):
+            continue
+        normalized.append(
+            {"url": raw["url"].strip(), **{key: raw.get(key) or "" for key in fields}}
+        )
+    return remove_duplicates(normalized)
 
 
 def flatten(nested_list):

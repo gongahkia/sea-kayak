@@ -120,12 +120,26 @@ class FeedOutcomes:
     def __init__(self) -> None:
         self.records: dict = {}  # url -> {status, attempts, error, retries: []}
 
-    def record_attempt(self, url: str, attempt: int, exc: BaseException, delay: float) -> None:
-        rec = self.records.setdefault(url, {"status": "pending", "attempts": 0, "retries": [], "error": ""})
-        rec["retries"].append({"attempt": attempt, "error": f"{type(exc).__name__}: {exc}", "delay_s": round(delay, 2)})
+    def record_attempt(
+        self, url: str, attempt: int, exc: BaseException, delay: float
+    ) -> None:
+        rec = self.records.setdefault(
+            url, {"status": "pending", "attempts": 0, "retries": [], "error": ""}
+        )
+        rec["retries"].append(
+            {
+                "attempt": attempt,
+                "error": f"{type(exc).__name__}: {exc}",
+                "delay_s": round(delay, 2),
+            }
+        )
 
-    def record_result(self, url: str, status: str, attempts: int, error: str = "") -> None:
-        rec = self.records.setdefault(url, {"status": "pending", "attempts": 0, "retries": [], "error": ""})
+    def record_result(
+        self, url: str, status: str, attempts: int, error: str = ""
+    ) -> None:
+        rec = self.records.setdefault(
+            url, {"status": "pending", "attempts": 0, "retries": [], "error": ""}
+        )
         rec["status"] = status  # first_try | retried_ok | retried_fail | terminal
         rec["attempts"] = attempts
         if error:

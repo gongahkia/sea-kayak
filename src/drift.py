@@ -7,6 +7,8 @@ import json
 import os
 import re
 from typing import Optional
+from pathlib import Path
+from persistence import atomic_json, atomic_bytes, read_json
 from urllib.parse import urlparse
 from xml.etree import ElementTree as ET
 
@@ -14,8 +16,12 @@ from bs4 import BeautifulSoup
 
 # ----- config -----
 
-FINGERPRINT_PATH = "./../data/scrape_metadata/fingerprints.json"
-DRIFT_REPORT_PATH = "./../data/scrape_metadata/drift_report.md"
+FINGERPRINT_PATH = str(
+    Path(__file__).resolve().parents[1] / "data/scrape_metadata/fingerprints.json"
+)
+DRIFT_REPORT_PATH = str(
+    Path(__file__).resolve().parents[1] / "data/scrape_metadata/drift_report.md"
+)
 HISTORY_DEPTH = 7  # rolling window for entry-count baseline
 SILENT_THRESHOLD_DAYS = 5
 ENTRY_FLOOR_RATIO = 0.4  # flag when entries < 40% of rolling average
@@ -27,25 +33,55 @@ _loaded = False
 # ----- persistence -----
 
 
-def _load() -> None:
+def configure(directory):
+    global FINGERPRINT_PATH, DRIFT_REPORT_PATH, _state, _loaded
+    directory = Path(directory).resolve()
+    FINGERPRINT_PATH = str(directory / "fingerprints.json")
+    DRIFT_REPORT_PATH = str(directory / "drift_report.md")
+    _state, _loaded = {"feeds": {}}, False
+
+
+def _normalize_state(value):
+    feeds = value.get("feeds") if isinstance(value, dict) else None
+    if not isinstance(feeds, dict):
+        return {"feeds": {}}
+    valid = {}
+    for url, record in feeds.items():
+        if not isinstance(url, str) or not isinstance(record, dict):
+            continue
+        history = record.get("history")
+        history = history if isinstance(history, list) else []
+        history = [
+            item
+            for item in history
+            if isinstance(item, dict)
+            and isinstance(item.get("entry_count"), int)
+            and not isinstance(item.get("entry_count"), bool)
+            and item["entry_count"] >= 0
+        ][-HISTORY_DEPTH:]
+        item = {"history": history}
+        if isinstance(record.get("last_success_iso"), str):
+            item["last_success_iso"] = record["last_success_iso"]
+        fingerprint = record.get("current_fingerprint")
+        if (
+            isinstance(fingerprint, dict)
+            and isinstance(fingerprint.get("entry_count"), int)
+            and fingerprint["entry_count"] >= 0
+        ):
+            item["current_fingerprint"] = fingerprint
+        valid[url] = item
+    return {"feeds": valid}
+
+
+def _load():
     global _state, _loaded
-    if _loaded:
-        return
-    if os.path.exists(FINGERPRINT_PATH):
-        try:
-            with open(FINGERPRINT_PATH, "r", encoding="utf-8") as f:
-                _state = json.load(f)
-                if "feeds" not in _state:
-                    _state = {"feeds": {}}
-        except Exception:
-            _state = {"feeds": {}}
-    _loaded = True
+    if not _loaded:
+        _state = _normalize_state(read_json(FINGERPRINT_PATH, {}))
+        _loaded = True
 
 
-def _save() -> None:
-    os.makedirs(os.path.dirname(FINGERPRINT_PATH), exist_ok=True)
-    with open(FINGERPRINT_PATH, "w", encoding="utf-8") as f:
-        json.dump(_state, f, indent=2, ensure_ascii=False, sort_keys=True)
+def _save():
+    atomic_json(FINGERPRINT_PATH, _state)
 
 
 # ----- fingerprinting -----
@@ -65,10 +101,16 @@ def _detect_encoding(content_type: str, body: bytes) -> str:
 
 
 def _looks_xml(content_type: str, body: bytes) -> bool:
-    if content_type and ("xml" in content_type.lower() or "rss" in content_type.lower()):
+    if content_type and (
+        "xml" in content_type.lower() or "rss" in content_type.lower()
+    ):
         return True
     head = body[:512].lstrip()
-    return head.startswith(b"<?xml") or head.startswith(b"<rss") or head.startswith(b"<feed")
+    return (
+        head.startswith(b"<?xml")
+        or head.startswith(b"<rss")
+        or head.startswith(b"<feed")
+    )
 
 
 def _xml_fingerprint(body: bytes) -> dict:
@@ -135,7 +177,11 @@ def _html_fingerprint(body: bytes) -> dict:
 
 
 def _fingerprint(content_type: str, body: bytes) -> dict:
-    fp = _xml_fingerprint(body) if _looks_xml(content_type, body) else _html_fingerprint(body)
+    fp = (
+        _xml_fingerprint(body)
+        if _looks_xml(content_type, body)
+        else _html_fingerprint(body)
+    )
     fp["body_sha256"] = hashlib.sha256(body).hexdigest()
     fp["encoding"] = _detect_encoding(content_type, body)
     fp["content_type"] = (content_type or "").split(";")[0].strip().lower()
@@ -145,8 +191,18 @@ def _fingerprint(content_type: str, body: bytes) -> dict:
 
 def _structural_keys(fp: dict) -> dict:
     # subset of fingerprint that defines "schema" — body_sha256/size/encoding excluded
-    keys = ("format", "root_tag", "root_attrs", "first_entry_tag", "first_entry_children",
-            "first_entry_attrs", "top_tags", "anchor_classes", "content_type", "parse_error")
+    keys = (
+        "format",
+        "root_tag",
+        "root_attrs",
+        "first_entry_tag",
+        "first_entry_children",
+        "first_entry_attrs",
+        "top_tags",
+        "anchor_classes",
+        "content_type",
+        "parse_error",
+    )
     return {k: fp[k] for k in keys if k in fp}
 
 
@@ -162,11 +218,13 @@ def record_fetch(url: str, body: bytes, content_type: str = "") -> None:
     rec["last_success_iso"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
     # append entry_count to rolling history
     hist = rec.get("history", [])
-    hist.append({
-        "ts": rec["last_success_iso"],
-        "entry_count": fp.get("entry_count", 0),
-        "structural_sha": _struct_hash(fp),
-    })
+    hist.append(
+        {
+            "ts": rec["last_success_iso"],
+            "entry_count": fp.get("entry_count", 0),
+            "structural_sha": _struct_hash(fp),
+        }
+    )
     rec["history"] = hist[-HISTORY_DEPTH:]
 
 
@@ -176,7 +234,9 @@ def _struct_hash(fp: dict) -> str:
 
 
 def _avg_entry_count(rec: dict) -> Optional[float]:
-    hist = [h["entry_count"] for h in rec.get("history", [])[:-1] if h.get("entry_count")]
+    hist = [
+        h["entry_count"] for h in rec.get("history", [])[:-1] if h.get("entry_count")
+    ]
     if len(hist) < 2:
         return None
     return sum(hist) / len(hist)
@@ -203,13 +263,11 @@ def finalize(prev_state_path: Optional[str] = None) -> dict:
     prev_state_path lets the caller pin "previous" to the pre-run snapshot for diffing.
     """
     _load()
-    prev_state = {}
-    if prev_state_path and os.path.exists(prev_state_path):
-        try:
-            with open(prev_state_path, "r", encoding="utf-8") as f:
-                prev_state = json.load(f)
-        except Exception:
-            prev_state = {}
+    prev_state = (
+        _normalize_state(read_json(prev_state_path, {}))
+        if prev_state_path
+        else {"feeds": {}}
+    )
 
     now = datetime.datetime.now(datetime.timezone.utc)
     drift_findings = []
@@ -234,7 +292,8 @@ def finalize(prev_state_path: Optional[str] = None) -> dict:
 
         prev_fp = (
             prev_state.get("feeds", {}).get(url, {}).get("current_fingerprint")
-            if prev_state else None
+            if prev_state
+            else None
         )
         diffs = _diff_fingerprint(prev_fp, curr_fp)
         if diffs:
@@ -244,11 +303,13 @@ def finalize(prev_state_path: Optional[str] = None) -> dict:
         avg = _avg_entry_count(rec)
         ec = curr_fp.get("entry_count", 0)
         if avg is not None and avg >= 5 and ec < avg * ENTRY_FLOOR_RATIO:
-            floor_findings.append({
-                "url": url,
-                "current": ec,
-                "rolling_avg": round(avg, 1),
-            })
+            floor_findings.append(
+                {
+                    "url": url,
+                    "current": ec,
+                    "rolling_avg": round(avg, 1),
+                }
+            )
 
     _save()
     _write_report(drift_findings, silent_findings, floor_findings)
@@ -277,22 +338,24 @@ def _write_report(drift, silent, floor) -> None:
                 lines.append(f"- **{c['field']}**: `{c['before']}` -> `{c['after']}`")
             lines.append("")
     if silent:
-        lines.append("## Silent feeds (>{} days since last success)".format(SILENT_THRESHOLD_DAYS))
+        lines.append(
+            "## Silent feeds (>{} days since last success)".format(
+                SILENT_THRESHOLD_DAYS
+            )
+        )
         for s in silent:
             lines.append(f"- `{s['url']}` — {s['age_days']}d silent")
         lines.append("")
     if floor:
         lines.append("## Entry-count floor breaches")
         for f in floor:
-            lines.append(f"- `{f['url']}` — {f['current']} entries (rolling avg {f['rolling_avg']})")
+            lines.append(
+                f"- `{f['url']}` — {f['current']} entries (rolling avg {f['rolling_avg']})"
+            )
         lines.append("")
-    with open(DRIFT_REPORT_PATH, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines) + "\n")
+    atomic_bytes(DRIFT_REPORT_PATH, ("\n".join(lines) + "\n").encode("utf-8"))
 
 
-def snapshot_previous(dest_path: str) -> None:
-    """Copy current fingerprints.json -> dest so finalize() can diff against pre-run state."""
+def snapshot_previous(dest_path):
     if os.path.exists(FINGERPRINT_PATH):
-        os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-        with open(FINGERPRINT_PATH, "rb") as src, open(dest_path, "wb") as dst:
-            dst.write(src.read())
+        atomic_json(dest_path, _normalize_state(read_json(FINGERPRINT_PATH, {})))
