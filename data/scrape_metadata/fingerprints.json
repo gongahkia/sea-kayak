@@ -5,11 +5,6 @@
         {
           "entry_count": 9,
           "structural_sha": "78ec8f94a678bbe0",
-          "ts": "2026-10-17T02:43:55.644551+00:00"
-        },
-        {
-          "entry_count": 9,
-          "structural_sha": "78ec8f94a678bbe0",
           "ts": "2026-10-18T02:46:07.404367+00:00"
         },
         {
@@ -36,9 +31,14 @@
           "ts": "2026-10-23T19:39:45.236034+00:00",
           "entry_count": 9,
           "structural_sha": "78ec8f94a678bbe0"
+        },
+        {
+          "ts": "2026-10-24T18:28:17.334683+00:00",
+          "entry_count": 9,
+          "structural_sha": "78ec8f94a678bbe0"
         }
       ],
-      "last_success_iso": "2026-10-23T19:39:45.236034+00:00",
+      "last_success_iso": "2026-10-24T18:28:17.334683+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -69,11 +69,6 @@
         {
           "entry_count": 10,
           "structural_sha": "78ec8f94a678bbe0",
-          "ts": "2026-10-17T02:43:57.945306+00:00"
-        },
-        {
-          "entry_count": 10,
-          "structural_sha": "78ec8f94a678bbe0",
           "ts": "2026-10-18T02:46:08.148627+00:00"
         },
         {
@@ -100,9 +95,14 @@
           "ts": "2026-10-23T19:39:45.661072+00:00",
           "entry_count": 10,
           "structural_sha": "78ec8f94a678bbe0"
+        },
+        {
+          "ts": "2026-10-24T18:28:18.144393+00:00",
+          "entry_count": 10,
+          "structural_sha": "78ec8f94a678bbe0"
         }
       ],
-      "last_success_iso": "2026-10-23T19:39:45.661072+00:00",
+      "last_success_iso": "2026-10-24T18:28:18.144393+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -122,19 +122,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "730363f382471fe492b02a91efb7d4b9e8df06154bb25a4796f45b0fac0ddea5",
+        "body_sha256": "bc4611a726ee438e6c82d71c350ee462dedb22b2c26d518b0e3234a4146db179",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
-        "size_bytes": 346564
+        "size_bytes": 346565
       }
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "a67add66c9e9ca56",
-          "ts": "2026-10-17T02:43:57.733746+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "a67add66c9e9ca56",
@@ -164,9 +159,14 @@
           "ts": "2026-10-23T19:39:45.307983+00:00",
           "entry_count": 10,
           "structural_sha": "a67add66c9e9ca56"
+        },
+        {
+          "ts": "2026-10-24T18:28:17.730062+00:00",
+          "entry_count": 10,
+          "structural_sha": "a67add66c9e9ca56"
         }
       ],
-      "last_success_iso": "2026-10-23T19:39:45.307983+00:00",
+      "last_success_iso": "2026-10-24T18:28:17.730062+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -577,11 +577,6 @@
         {
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
-          "ts": "2026-10-16T02:52:45.772766+00:00"
-        },
-        {
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d",
           "ts": "2026-10-17T02:43:59.855949+00:00"
         },
         {
@@ -608,9 +603,14 @@
           "ts": "2026-10-23T19:39:46.953358+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-10-24T18:28:19.488070+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-10-23T19:39:46.953358+00:00",
+      "last_success_iso": "2026-10-24T18:28:19.488070+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -629,7 +629,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "7ce3158fdbb76671ecb2d9777ea6fcca3899c32325abf7cf0647ec992ddae070",
+        "body_sha256": "4d41d95c02f0ccbbb696db007b19381bd189f3034f864925a9101c96b9ebb874",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 6893
@@ -637,11 +637,6 @@
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "2a223ec51570e3b6",
-          "ts": "2026-10-16T02:52:47.436173+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "2a223ec51570e3b6",
@@ -671,9 +666,14 @@
           "ts": "2026-10-23T19:39:48.324457+00:00",
           "entry_count": 10,
           "structural_sha": "2a223ec51570e3b6"
+        },
+        {
+          "ts": "2026-10-24T18:28:21.193724+00:00",
+          "entry_count": 10,
+          "structural_sha": "2a223ec51570e3b6"
         }
       ],
-      "last_success_iso": "2026-10-23T19:39:48.324457+00:00",
+      "last_success_iso": "2026-10-24T18:28:21.193724+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -694,7 +694,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "9457ccd50941f06a81dcde8389bf82e5c2dd48112595622888594114bfb616ec",
+        "body_sha256": "52471a9531b04f667b82d377841c18bcb7b56d7e0ca1e64cb02da6be43e505a7",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 7472
@@ -702,11 +702,6 @@
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d",
-          "ts": "2026-10-16T02:52:45.183118+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
@@ -736,9 +731,14 @@
           "ts": "2026-10-23T19:39:46.237506+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-10-24T18:28:18.743434+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-10-23T19:39:46.237506+00:00",
+      "last_success_iso": "2026-10-24T18:28:18.743434+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -757,7 +757,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "417a70b0bc0b2ff35194bbf68ee081888fc11a774e88a80d3d1d92b0f569179a",
+        "body_sha256": "822964bc3682de59d37db7153f33cc09134175106a247ab32fbf4c61fc03e1b4",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 5851
@@ -765,11 +765,6 @@
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/notices-and-directions": {
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d",
-          "ts": "2026-10-16T02:52:45.489653+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d",
@@ -799,9 +794,14 @@
           "ts": "2026-10-23T19:39:46.578049+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-10-24T18:28:19.103050+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-10-23T19:39:46.578049+00:00",
+      "last_success_iso": "2026-10-24T18:28:19.103050+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -820,7 +820,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "20559b3cfdd93f40c6aedbc4b09ab16f1050488f2e527d9db7a09c7b11d3782e",
+        "body_sha256": "67b782956f889b6a1e8a223e51f584770bd084894128b896f7210d5f37cff35e",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 5922
