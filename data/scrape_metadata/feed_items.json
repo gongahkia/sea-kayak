@@ -4,6 +4,13 @@
     "https://blog.nus.edu.sg/lawresearch/feed/": {
       "items": [
         {
+          "url": "https://blog.nus.edu.sg/lawresearch/2026/10/26/from-the-voc-to-vc-the-governance-value-of-limited-life/",
+          "title": "From the VOC to VC: The Governance Value of Limited Life",
+          "description": "Mortality is mandatory for you and me—but optional for corporations, which are endowed by law with the awesome power of perpetual existence. But this is merely a default rule; a corporation can easil…",
+          "published": "2026-10-26T00:55:00+00:00",
+          "citation": ""
+        },
+        {
           "url": "https://blog.nus.edu.sg/lawresearch/2026/10/19/land-law-chris-bevan-5th-edn-oup-2026/",
           "title": "Land Law (Chris Bevan, 5th edn, OUP, 2026)",
           "description": "My book published in April 2026 with Oxford University Press marks the 5th edition of my sole-authored text detailing land law and policy as it pertains chiefly to England and Wales but with resonanc…",
@@ -58,16 +65,9 @@
           "description": "The recent consultations for the clearing of forests in Maju and Gillman Barracks might seem to be a turning point for the Singaporean planning regime, when in reality it is yet another test of the l…",
           "published": "2026-08-17T00:55:00+00:00",
           "citation": ""
-        },
-        {
-          "url": "https://blog.nus.edu.sg/lawresearch/2026/08/10/adverse-possession-the-significance-of-the-type-and-character-of-land-and-minor-or-trivial-acts-of-possession/",
-          "title": "Adverse Possession, the Significance of the “Type” and “Character” of Land, and Minor or Trivial Acts of Possession",
-          "description": "My article, published in December 2025 in the Conveyancer & Property Lawyer forms part of my wider research agenda exploring contemporary issues in modern land registration systems and land law more…",
-          "published": "2026-08-10T00:55:00+00:00",
-          "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-25T18:38:00.054926+00:00"
+      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "items": [
@@ -142,7 +142,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-25T18:38:00.054926+00:00"
+      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
     },
     "https://lawgazette.com.sg/feed/": {
       "items": [
@@ -156,7 +156,7 @@
         {
           "url": "https://lawgazette.com.sg/feature/therapeutic-justice-in-practice-reflections-from-the-bar/",
           "title": "Therapeutic Justice in Practice: Reflections from the Bar",
-          "description": "I. The Shift to Therapeutic Justice-minded lawyering Family law practice has shifted from an adversarial model to a paradigm that prioritises amicable means of dispute resolution wherever possible, p…",
+          "description": "I. The Shift to Therapeutic Justice-minded Lawyering Family law practice has shifted from an adversarial model to a paradigm that prioritises amicable means of dispute resolution wherever possible, p…",
           "published": "2026-10-15T06:00:00+00:00",
           "citation": ""
         },
@@ -217,7 +217,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-25T18:38:00.054926+00:00"
+      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "items": [],
@@ -268,10 +268,17 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-25T18:38:00.054926+00:00"
+      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries": {
       "items": [
+        {
+          "url": "https://www.wongpartnership.com/frontend/web/upload/2026/10/14/MPAAmendmentBill_CybersecurityandNewMaritimeTechnology1791959132.pdf",
+          "title": "MPA Amendment Bill: Cybersecurity and New Maritime Technology",
+          "description": "",
+          "published": "2026-10-26T02:30:00+00:00",
+          "citation": ""
+        },
         {
           "url": "https://www.allenandgledhill.com/sg/publication/articles/33545/health-sciences-authority-amendment-and-other-matters-bill-passed-in-parliament",
           "title": "Health Sciences Authority publishes Best Practices Guide for Medical Device Cybersecurity",
@@ -306,23 +313,9 @@
           "description": "",
           "published": "2026-10-20T02:30:00+00:00",
           "citation": ""
-        },
-        {
-          "url": "https://www.allenandgledhill.com/sg/publication/articles/33552/mas-publishes-revised-notices-on-related-party-transaction-requirements-for-banks-and-its-response-to-consultation-feedback",
-          "title": "MAS publishes revised notices on related party transaction requirements for banks and its response to consultation feedback",
-          "description": "",
-          "published": "2026-10-20T02:30:00+00:00",
-          "citation": ""
-        },
-        {
-          "url": "https://www.wongpartnership.com/frontend/web/upload/2026/10/09/Singapore-MongoliaCarbonCredits_ProjectApplicationsOpenfrom30October20261791539530.pdf",
-          "title": "Singapore-Mongolia Carbon Credits: Project applications open from 30 October 2026",
-          "description": "",
-          "published": "2026-10-20T02:30:00+00:00",
-          "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-25T18:38:00.054926+00:00"
+      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "items": [],
@@ -2211,6 +2204,55 @@
       "title": "MAS responds to feedback on proposed changes to group capital framework for designated financial holding companies (licensed insurer)",
       "description": "",
       "published": "2026-10-22T02:30:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://lawgazette.com.sg/feature/the-deal-room-as-a-data-export/",
+      "title": "The Deal Room as a Data Export",
+      "description": "What Singapore Lawyers Should Know When Advising on the Acquisition of a PRC Business A Singapore buyer may encounter PRC data regulation before it acquires a single share. Uploading target records t…",
+      "published": "2026-10-15T07:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://lawgazette.com.sg/feature/therapeutic-justice-in-practice-reflections-from-the-bar/",
+      "title": "Therapeutic Justice in Practice: Reflections from the Bar",
+      "description": "I. The Shift to Therapeutic Justice-minded lawyering Family law practice has shifted from an adversarial model to a paradigm that prioritises amicable means of dispute resolution wherever possible, p…",
+      "published": "2026-10-15T06:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://lawgazette.com.sg/practice/ethics-in-practice/epieikeia-in-the-age-of-algorithms-reflections-on-advocacy-ai-and-the-soul-of-the-profession/",
+      "title": "Epieikeia in the Age of Algorithms: Reflections on Advocacy, AI, and the Soul of the Profession",
+      "description": "I. The Question Beneath the Question I spent a day at TechLaw.Fest 2026 wandering the exhibition halls. The booths were impressive. Autonomous platforms drafted pleadings while I watched. Predictive…",
+      "published": "2026-10-13T07:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://lawgazette.com.sg/practice/the-young-lawyer/on-work-too-much-too-little-and-whether-it-even-matters/",
+      "title": "On Work: Too Much, Too Little, and Whether It Even Matters",
+      "description": "Editor’s note: this is the first of a bimonthly column, in which our author will explore what it means to practice well. Perhaps you’re a young, or young-at-heart, practitioner, and you’ve been in pr…",
+      "published": "2026-10-13T06:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://lawgazette.com.sg/practice/practice-matters/electronic-archiving-destruction-of-physical-documents-and-requests-for-electronic-copies/",
+      "title": "Electronic Archiving, Destruction of Physical Documents, and Requests for Electronic Copies",
+      "description": "The Advisory Committee (“AC”), a committee of the Professional Conduct Council, provides guidance to legal practitioners on their ethical obligations. Legal practitioners may submit a written enquiry…",
+      "published": "2026-10-13T05:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://lawgazette.com.sg/practice/tech-talk/where-the-machine-stops-technology-and-justice-in-singapore/",
+      "title": "Where the Machine Stops: Technology and Justice in Singapore",
+      "description": "It grows harder each day to begin a presentation or article on technology, especially AI, without sounding like AI. That rapid ubiquity of AI, and indeed, of technology, makes it difficult to see how…",
+      "published": "2026-10-13T04:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://lawgazette.com.sg/news/events/the-54th-singapore-malaysia-bench-bar-games-2026/",
+      "title": "The 54th Singapore-Malaysia Bench & Bar Games 2026",
+      "description": "Three days, 21 events and a scoreboard that could not have been closer. The 54th Singapore-Malaysia Bench & Bar Games, held from 28 to 30 August 2026, began with Malaysia taking an early lead on Frid…",
+      "published": "2026-10-13T03:00:00+00:00",
       "citation": ""
     }
   ]
