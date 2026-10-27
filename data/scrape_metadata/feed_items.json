@@ -67,7 +67,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
+      "last_success_utc": "2026-10-27T20:19:13.789934+00:00"
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "items": [
@@ -142,7 +142,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
+      "last_success_utc": "2026-10-27T20:19:13.789934+00:00"
     },
     "https://lawgazette.com.sg/feed/": {
       "items": [
@@ -196,6 +196,13 @@
           "citation": ""
         },
         {
+          "url": "https://lawgazette.com.sg/members/fiat-justitia/fiat-justitia-the-aims-of-the-law-society/",
+          "title": "Fiat Justitia: The Aims of the Law Society",
+          "description": "Michael Hwang, ‘The Aims of the Law Society’ President’s Message, Law Society Annual Report 2009, at 12–13 We all know that the Society has a three-fold function – the 3 ‘R’s … regulatory, representa…",
+          "published": "2026-10-12T07:00:00+00:00",
+          "citation": ""
+        },
+        {
           "url": "https://lawgazette.com.sg/feature/young-independent-counsel-developing-the-advocate-assisting-the-court/",
           "title": "Young Independent Counsel: Developing the Advocate, Assisting the Court",
           "description": "If you have ever wondered what the Young Independent Counsel (YIC) scheme is about, Justice Kristy Tan and Justice Mohamed Faizal, the two Supreme Court Judges who oversee the scheme, answer some que…",
@@ -208,16 +215,9 @@
           "description": "Introduction The ageing population in Singapore means that we are likely to see an ever-increasing number of cases that involve a loss of mental capacity, and lawyers may encounter such cases in many…",
           "published": "2026-09-15T05:00:00+00:00",
           "citation": ""
-        },
-        {
-          "url": "https://lawgazette.com.sg/practice/global-news/six-decades-a-new-chapter/",
-          "title": "Six Decades, A New Chapter",
-          "description": "Singapore–Japan Relations and the Legal Profession From Professional Exchange to Strategic Partnership (A reflection for SJ60) 1. Introduction In Japanese culture, turning 60 marks the beginning of a…",
-          "published": "2026-09-15T02:00:00+00:00",
-          "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
+      "last_success_utc": "2026-10-27T20:19:13.789934+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "items": [],
@@ -268,10 +268,17 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
+      "last_success_utc": "2026-10-27T20:19:13.789934+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries": {
       "items": [
+        {
+          "url": "https://shorturl.at/Rej4d",
+          "title": "[SAL Ann Rev]: Banking Law",
+          "description": "",
+          "published": "2026-10-27T02:30:00+00:00",
+          "citation": ""
+        },
         {
           "url": "https://www.wongpartnership.com/frontend/web/upload/2026/10/14/MPAAmendmentBill_CybersecurityandNewMaritimeTechnology1791959132.pdf",
           "title": "MPA Amendment Bill: Cybersecurity and New Maritime Technology",
@@ -306,16 +313,9 @@
           "description": "",
           "published": "2026-10-22T02:30:00+00:00",
           "citation": ""
-        },
-        {
-          "url": "https://shorturl.at/5S1Py",
-          "title": "[SAL Ann Rev]: Conflict of Laws",
-          "description": "",
-          "published": "2026-10-20T02:30:00+00:00",
-          "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-26T20:48:56.480252+00:00"
+      "last_success_utc": "2026-10-27T20:19:13.789934+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "items": [],
@@ -2253,6 +2253,20 @@
       "title": "The 54th Singapore-Malaysia Bench & Bar Games 2026",
       "description": "Three days, 21 events and a scoreboard that could not have been closer. The 54th Singapore-Malaysia Bench & Bar Games, held from 28 to 30 August 2026, began with Malaysia taking an early lead on Frid…",
       "published": "2026-10-13T03:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://blog.nus.edu.sg/lawresearch/2026/10/26/from-the-voc-to-vc-the-governance-value-of-limited-life/",
+      "title": "From the VOC to VC: The Governance Value of Limited Life",
+      "description": "Mortality is mandatory for you and me—but optional for corporations, which are endowed by law with the awesome power of perpetual existence. But this is merely a default rule; a corporation can easil…",
+      "published": "2026-10-26T00:55:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://www.wongpartnership.com/frontend/web/upload/2026/10/14/MPAAmendmentBill_CybersecurityandNewMaritimeTechnology1791959132.pdf",
+      "title": "MPA Amendment Bill: Cybersecurity and New Maritime Technology",
+      "description": "",
+      "published": "2026-10-26T02:30:00+00:00",
       "citation": ""
     }
   ]
