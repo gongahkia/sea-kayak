@@ -67,7 +67,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-28T20:41:34.271947+00:00"
+      "last_success_utc": "2026-10-29T20:44:52.803909+00:00"
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "items": [
@@ -142,7 +142,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-28T20:41:34.271947+00:00"
+      "last_success_utc": "2026-10-29T20:44:52.803909+00:00"
     },
     "https://lawgazette.com.sg/feed/": {
       "items": [
@@ -217,7 +217,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-28T20:41:34.271947+00:00"
+      "last_success_utc": "2026-10-29T20:44:52.803909+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "items": [],
@@ -268,10 +268,17 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-28T20:41:34.271947+00:00"
+      "last_success_utc": "2026-10-29T20:44:52.803909+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries": {
       "items": [
+        {
+          "url": "https://shorturl.at/VwNd9",
+          "title": "Civil Litigation Update (Oct 2026) - Singapore and China: Enforcement of money judgments",
+          "description": "",
+          "published": "2026-10-29T02:30:00+00:00",
+          "citation": ""
+        },
         {
           "url": "https://shorturl.at/Rej4d",
           "title": "[SAL Ann Rev]: Banking Law",
@@ -306,16 +313,9 @@
           "description": "",
           "published": "2026-10-22T02:30:00+00:00",
           "citation": ""
-        },
-        {
-          "url": "https://www.allenandgledhill.com/sg/publication/articles/33551/mas-responds-to-feedback-on-proposed-changes-to-group-capital-framework-for-designated-financial-holding-companies-licensed-insurer",
-          "title": "MAS responds to feedback on proposed changes to group capital framework for designated financial holding companies (licensed insurer)",
-          "description": "",
-          "published": "2026-10-22T02:30:00+00:00",
-          "citation": ""
         }
       ],
-      "last_success_utc": "2026-10-28T20:41:34.271947+00:00"
+      "last_success_utc": "2026-10-29T20:44:52.803909+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "items": [],
