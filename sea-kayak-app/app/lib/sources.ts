@@ -8,6 +8,7 @@ export type RouteItem = {
 
 const TITLE_PREFIX_SOURCE: Record<string, string> = {
   "SAL Prac": "SAL Practitioner",
+  "SAL Ann Rev": "SAL Annual Review",
   SAcLJ: "SAcLJ",
   "Asian JM": "Asian JM",
 }
@@ -62,6 +63,19 @@ export function getSource(url: string, title: string = ""): string {
     return sourceFromTitle(title)
   } catch {
     return sourceFromTitle(title)
+  }
+}
+
+export function getSourceLabel(url: string, title: string = ""): string {
+  const source = getSource(url, title)
+  if (source) return source
+  if (/^\s*ADV:/i.test(title)) return "Advertisement"
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "")
+    if (["shorturl.at", "tinyurl.com", "bit.ly", "t.co"].includes(host)) return "Linked source"
+    return host || "Legal source"
+  } catch {
+    return "Legal source"
   }
 }
 

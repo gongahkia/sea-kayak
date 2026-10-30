@@ -1,12 +1,19 @@
 "use client"
 
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useMemo, type RefObject } from "react"
+import { createFleet, drawKayaker } from "../lib/kayaks"
+import { createFleetBodies, getFleetClipBottom, resizeFleetBodies, stepFleet, type FleetBody } from "../lib/fleet-motion"
 
 type WeatherCategory = "clear" | "cloudy" | "rain" | "storm"
 
 interface WaveBackgroundProps {
   sgtHour: number
   weatherCategory: WeatherCategory
+  readArticles: string[]
+  shorelineRef: RefObject<HTMLCanvasElement | null>
+  aboutTextRef: RefObject<HTMLDivElement | null>
+  controlsRef: RefObject<HTMLDivElement | null>
+  previewRef: RefObject<HTMLDivElement | null>
 }
 
 function lerp(a: number, b: number, t: number): number {
@@ -110,10 +117,11 @@ function spawnCrest(w: number, h: number): Crest {
   }
 }
 
-export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgroundProps) {
+export default function WaveBackground({ sgtHour, weatherCategory, readArticles, shorelineRef, aboutTextRef, controlsRef, previewRef }: WaveBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const stateRef = useRef({ sgtHour, weatherCategory })
-  stateRef.current = { sgtHour, weatherCategory }
+  const fleet = useMemo(() => createFleet(readArticles), [readArticles])
+  const stateRef = useRef({ sgtHour, weatherCategory, fleet })
+  stateRef.current = { sgtHour, weatherCategory, fleet }
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -123,6 +131,12 @@ export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgro
 
     let animId: number
     let time = 0
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
+    let previousFrame = 0
+    let bodies: FleetBody[] = []
+    let previousFleet = stateRef.current.fleet
+    let previousWidth = 0
+    let previousHeight = 0
 
     const resize = () => {
       const dpr = window.devicePixelRatio || 1
@@ -163,7 +177,9 @@ export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgro
     })
 
     const draw = (timestamp: number) => {
-      time += 0.008
+      const elapsed = previousFrame ? Math.min((timestamp - previousFrame) / 1000, 0.05) : 0
+      previousFrame = timestamp
+      if (!motionQuery.matches) time += elapsed * 0.5
       const { sgtHour: hour, weatherCategory: weather } = stateRef.current
       const w = window.innerWidth
       const h = window.innerHeight
@@ -233,6 +249,44 @@ export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgro
         }
       }
 
+      const currentFleet = stateRef.current.fleet
+      const resized = previousWidth !== w || previousHeight !== h
+      if (resized || currentFleet !== previousFleet) {
+        if (previousWidth && previousHeight && resized) {
+          resizeFleetBodies(bodies, w / previousWidth, h / previousHeight)
+        }
+        bodies = createFleetBodies(currentFleet, w, h, bodies)
+        previousFleet = currentFleet
+        previousWidth = w
+        previousHeight = h
+      }
+      stepFleet(bodies, motionQuery.matches ? 0 : elapsed, w, h)
+      const shoreTop = shorelineRef.current?.getBoundingClientRect().top ?? Infinity
+      const textTop = aboutTextRef.current?.getBoundingClientRect().top ?? Infinity
+      const waterBottom = getFleetClipBottom(h, shoreTop, textTop)
+      if (waterBottom > 0) {
+        ctx.save()
+        ctx.beginPath()
+        ctx.rect(0, 0, w, waterBottom)
+        ctx.clip()
+        const masks = [...(controlsRef.current?.querySelectorAll<HTMLElement>("#paddle, #island, #info, p, [role='alert'], [role='status']") ?? [])]
+        const preview = previewRef.current
+        if (preview && Number(getComputedStyle(preview).opacity) > 0) masks.push(preview)
+        // masks cover boats without changing their positions or collision boundaries.
+        for (const element of masks) {
+          const rect = element.getBoundingClientRect()
+          if (!rect.width || !rect.height) continue
+          ctx.beginPath()
+          ctx.rect(0, 0, w, h)
+          ctx.rect(rect.left - 4, rect.top - 4, rect.width + 8, rect.height + 8)
+          ctx.clip("evenodd")
+        }
+        currentFleet.forEach((kayak, index) => {
+          drawKayaker(ctx, kayak, w, bodies[index], time)
+        })
+        ctx.restore()
+      }
+
       // Rain ripples (top-down droplet impacts)
       if (weather === "rain" || weather === "storm") {
         const isNightish = hour >= 19 || hour < 6.5
@@ -287,11 +341,13 @@ export default function WaveBackground({ sgtHour, weatherCategory }: WaveBackgro
       window.removeEventListener("resize", resize)
       cancelAnimationFrame(animId)
     }
-  }, [])
+  }, [shorelineRef, aboutTextRef, controlsRef, previewRef])
 
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
+      data-kayak-count={fleet.length}
       style={{
         position: "fixed",
         top: 0,

@@ -1,16 +1,16 @@
 "use client"
 
-import { useRef, useEffect } from "react"
+import { useEffect, type RefObject } from "react"
 
 type WeatherCategory = "clear" | "cloudy" | "rain" | "storm"
 
 interface BeachSceneProps {
   isNight: boolean
   weatherCategory: WeatherCategory
+  canvasRef: RefObject<HTMLCanvasElement | null>
 }
 
-export default function BeachScene({ isNight, weatherCategory }: BeachSceneProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
+export default function BeachScene({ isNight, weatherCategory, canvasRef }: BeachSceneProps) {
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -277,11 +277,13 @@ export default function BeachScene({ isNight, weatherCategory }: BeachSceneProps
     draw()
     window.addEventListener("resize", draw)
     return () => window.removeEventListener("resize", draw)
-  }, [isNight, weatherCategory])
+  }, [isNight, weatherCategory, canvasRef])
 
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
+      data-shoreline
       style={{
         position: "absolute",
         bottom: 0,

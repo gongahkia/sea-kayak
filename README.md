@@ -32,6 +32,8 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
 
 [RSS feeds and official listings](#coverage) are scraped daily at [SGT 12am](#architecture).
 
+Opening articles adds varied kayakers to the ocean, using your last seven days of reading history (up to 80 kayakers). Kayakers bounce apart; text, controls, and the shoreline mask boats behind them without pushing them around. Crowded fleets extend above the viewport.
+
 > [!IMPORTANT]
 > Read the [legal disclaimer](#legal-disclaimer) before using `Sea Kayak`.
 

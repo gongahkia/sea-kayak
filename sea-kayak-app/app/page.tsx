@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useMemo } from "react"
 import { motion } from "framer-motion"
 import "./globals.css"
 import WaveBackground from "./components/WaveBackground"
 import BeachScene from "./components/BeachScene"
-import { getSource, normalizeRouteData, type RouteItem } from "./lib/sources"
+import { getSourceLabel, normalizeRouteData, type RouteItem } from "./lib/sources"
 import { useSgtAndWeather } from "./lib/weather"
 import { normalizeSeen, pickWeighted, type SeenMap } from "./lib/reading"
 import { requestJson } from "./lib/request"
@@ -28,8 +28,14 @@ export default function Home() {
   const seenRef = useRef<SeenMap>({})
   const rerollRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const infoSectionRef = useRef<HTMLDivElement>(null)
+  const shorelineRef = useRef<HTMLCanvasElement>(null)
+  const aboutTextRef = useRef<HTMLDivElement>(null)
+  const controlsRef = useRef<HTMLDivElement>(null)
+  const previewRef = useRef<HTMLDivElement>(null)
 
   const { sgtHour, weatherCategory, isNight } = useSgtAndWeather()
+  const readArticles = useMemo(() => Object.keys(seen), [seen])
+  const sourceLabel = current ? getSourceLabel(current.url, current.title) : ""
 
   useEffect(() => {
     const initialSeen = loadSeen()
@@ -116,10 +122,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-y-auto overflow-x-hidden snap-y snap-mandatory">
-      <WaveBackground sgtHour={sgtHour} weatherCategory={weatherCategory} />
+      <WaveBackground sgtHour={sgtHour} weatherCategory={weatherCategory} readArticles={readArticles} shorelineRef={shorelineRef} aboutTextRef={aboutTextRef} controlsRef={controlsRef} previewRef={previewRef} />
 
       <section className="min-h-screen flex items-center justify-center snap-start px-4 relative z-10">
-        <div className="flex flex-col items-center gap-4 md:gap-8 relative w-full max-w-md">
+        <div ref={controlsRef} className="flex flex-col items-center gap-4 md:gap-8 relative w-full max-w-md">
           <div className="relative group w-full md:w-[500px]">
             <a
               href={current?.url}
@@ -147,24 +153,20 @@ export default function Home() {
                 <div className={shadowClass}></div>
               </div>
             </a>
-            {current?.title && (
-              <div className="hidden md:block absolute left-1/2 bottom-full mb-4 -translate-x-1/2 w-72 xl:left-full xl:ml-4 xl:top-1/2 xl:bottom-auto xl:mb-0 xl:translate-x-0 xl:-translate-y-1/2 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-150 pointer-events-none z-20">
+            {current && (
+              <div ref={previewRef} className="hidden md:block absolute left-1/2 bottom-full mb-4 -translate-x-1/2 w-72 xl:left-full xl:ml-4 xl:top-1/2 xl:bottom-auto xl:mb-0 xl:translate-x-0 xl:-translate-y-1/2 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-150 pointer-events-none z-20">
                 <div className="relative bg-white text-slate-900 rounded-xl shadow-lg border border-slate-200 px-4 py-3 before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-[6px] before:w-3 before:h-3 before:bg-white before:border-r before:border-b before:border-slate-200 before:rotate-45 xl:before:top-1/2 xl:before:bottom-auto xl:before:-translate-y-1/2 xl:before:-left-[6px] xl:before:translate-x-0 xl:before:border-l xl:before:border-r-0">
-                  {(getSource(current.url, current.title) || current.citation) && (
-                    <div className="flex flex-wrap gap-1.5 mb-1.5">
-                      {getSource(current.url, current.title) && (
-                        <span className="text-[0.65rem] font-semibold uppercase tracking-wide bg-slate-700 text-white rounded px-2 py-0.5">
-                          {getSource(current.url, current.title)}
-                        </span>
-                      )}
-                      {current.citation && (
-                        <span className="text-[0.65rem] font-mono font-semibold uppercase tracking-wide bg-slate-900 text-white rounded px-2 py-0.5">
-                          {current.citation}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                  <p className="text-sm font-semibold leading-snug">{current.title}</p>
+                  <div className="flex flex-wrap gap-1.5 mb-1.5" data-source-banner>
+                    <span className="text-[0.65rem] font-semibold uppercase tracking-wide bg-slate-700 text-white rounded px-2 py-0.5 break-all">
+                      {sourceLabel}
+                    </span>
+                    {current.citation && (
+                      <span className="text-[0.65rem] font-mono font-semibold uppercase tracking-wide bg-slate-900 text-white rounded px-2 py-0.5">
+                        {current.citation}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm font-semibold leading-snug">{current.title || "Open article"}</p>
                   {current.description && (
                     <p className="text-xs mt-1 text-slate-600 leading-snug line-clamp-3">
                       {current.description}
@@ -226,7 +228,7 @@ export default function Home() {
         className={`min-h-screen flex flex-col items-center justify-center ${textClass} relative snap-start px-4 py-16 z-10`}
         style={{ textShadow }}
       >
-        <div className="max-w-2xl text-center space-y-4 md:space-y-6 w-full px-4">
+        <div ref={aboutTextRef} className="max-w-2xl text-center space-y-4 md:space-y-6 w-full px-4">
           <p className="text-base md:text-lg leading-relaxed">
             The internet was supposed to make our lives easier.
             <br />
@@ -252,7 +254,7 @@ export default function Home() {
           </p>
         </div>
 
-        <BeachScene isNight={isNight} weatherCategory={weatherCategory} />
+        <BeachScene isNight={isNight} weatherCategory={weatherCategory} canvasRef={shorelineRef} />
 
         <div className={`absolute bottom-4 md:bottom-8 text-sm text-center w-full px-4 z-10 ${isNight ? "text-white" : "text-sky-900"}`}>
           <p className="text-xs md:text-sm">

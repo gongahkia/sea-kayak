@@ -49,3 +49,5 @@ data/scrape_metadata/fingerprints.prev.json
 
 sea-kayak-app/public/routes.json
 sea-kayak-app/public/routes.json.*.tmp
+.playwright-cli/
+AGENTS.md

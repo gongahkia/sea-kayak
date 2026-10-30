@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { normalizeRouteData, getSource } from '../sea-kayak-app/app/lib/sources.ts';
+import { readFile } from 'node:fs/promises';
+import { normalizeRouteData, getSource, getSourceLabel } from '../sea-kayak-app/app/lib/sources.ts';
 
 test('route ingestion tolerates malformed values and accepts only usable HTTP(S) articles', () => {
   const valid = { url: 'https://example.test/news', title: 'Synthetic news', description: 'Literal <script> text', published: '', citation: '' };
@@ -34,4 +35,18 @@ test('new legal sources have labels without matching lookalike hosts', () => {
     assert.equal(getSource(`https://${host}/article`), label);
     assert.equal(getSource(`https://${host}.example.test/article`), '');
   }
+});
+
+test('every article has a banner, including annual reviews, advertisements and shortened links', () => {
+  assert.equal(getSourceLabel('https://shorturl.at/abc', '[SAL Ann Rev]: Conflict of Laws'), 'SAL Annual Review');
+  assert.equal(getSourceLabel('https://tinyurl.com/abc', 'ADV: Make your CPD hours count'), 'Advertisement');
+  assert.equal(getSourceLabel('https://shorturl.at/abc', 'Unrecognised title'), 'Linked source');
+  assert.equal(getSourceLabel('https://new-publisher.example/news', 'News'), 'new-publisher.example');
+  assert.equal(getSourceLabel('invalid', ''), 'Legal source');
+});
+
+test('every article in the checked-in snapshot has a source banner', async () => {
+  const items = normalizeRouteData(JSON.parse(await readFile(new URL('../data/routes.json', import.meta.url), 'utf8')));
+  assert.ok(items.length > 0);
+  for (const item of items) assert.ok(getSourceLabel(item.url, item.title).trim(), item.url);
 });
