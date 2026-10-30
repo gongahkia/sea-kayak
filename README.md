@@ -30,7 +30,7 @@ With this frustration nagging at me, I created `Sea Kayak` to make it easier to 
 
 Use the live website [**here**](https://sea-kayak.vercel.app/).
 
-[RSS Feeds](#coverage) are scraped daily at [SGT 12am](#architecture).
+[RSS feeds and official listings](#coverage) are scraped daily at [SGT 12am](#architecture).
 
 > [!IMPORTANT]
 > Read the [legal disclaimer](#legal-disclaimer) before using `Sea Kayak`.
@@ -53,23 +53,29 @@ Use the live website [**here**](https://sea-kayak.vercel.app/).
     * [singaporelawwatch.sg/Portals/0/RSS/Headlines.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml)
     * [singaporelawwatch.sg/Portals/0/RSS/Judgments.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Judgments.xml)
     * [singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml)
-    * [singaporelawwatch.sg/Portals/0/RSS/Notices.xml](https://www.singaporelawwatch.sg/Portals/0/RSS/Notices.xml)
     * [singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education](https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education)
     * [singaporelawwatch.sg/Results/rss/category/426/judgments-1](https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1)
     * [singaporelawwatch.sg/Results/rss/category/426/notices-and-directions](https://www.singaporelawwatch.sg/Results/rss/category/426/notices-and-directions)
     * [singaporelawwatch.sg/Results/rss/category/426/commentaries](https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries)
-* [sso.agc.gov.sg/RSS/](https://sso.agc.gov.sg/RSS/NewLegislation.aspx)
+* [sso.agc.gov.sg/What's-New/New-Legislation/RSS](https://sso.agc.gov.sg/What's-New/New-Legislation/RSS)
 * [mlaw.gov.sg/feed.xml](https://www.mlaw.gov.sg/feed.xml)
 * [blog.nus.edu.sg/lawresearch/feed/](https://blog.nus.edu.sg/lawresearch/feed/)
+* [smulexicon.com/feed/](https://smulexicon.com/feed/)
 * [singaporeinternationalarbitration.wordpress.com/feed/](https://singaporeinternationalarbitration.wordpress.com/feed/)
 * [lawgazette.com.sg/feed/](https://lawgazette.com.sg/feed/)
 * [lawgazette.com.sg/category/notices/disciplinary-tribunal-reports/feed/](https://lawgazette.com.sg/category/notices/disciplinary-tribunal-reports/feed/)
 * [hungryhippo.huey.xyz/individual-site/law.nus.edu.sg/trail](https://hungryhippo.huey.xyz/individual-site/law.nus.edu.sg/trail)
-* [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-journal](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-journal)
-* [hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/](https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/)
 * [lexology.com/email/rss.aspx?tagType=5&tagRef=155&tagTitle=%20Singapore&extrajr=&extrawr=](https://www.lexology.com/email/rss.aspx?tagType=5&tagRef=155&tagTitle=%20Singapore&extrajr=&extrawr=)
 
-### Local RSS Feeds
+### Official Publication, Court and Regulator Listings
+
+* [SAL Practitioner subject-area listings](https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner)
+* [Singapore Academy of Law Journal current issue](https://journalsonline.academypublishing.org.sg/Journals/Singapore-Academy-of-Law-Journal/Current-Issue)
+* [SG Courts judgments](https://www.elitigation.sg/gd)
+* [PDPC enforcement decisions and voluntary undertakings](https://www.pdpc.gov.sg/organisations/regulations-decisions/enforcement-decisions) (public listing API)
+* [CCS public register](https://www.ccs.gov.sg/case-register/public-register/) (category listings)
+
+### Local RSS Feeds (Legacy; Disabled)
 
 * [lawgazette.com.sg/feed](https://lawgazette.com.sg/feed)
 * [singaporeinternationalarbitration.com/feed](https://singaporeinternationalarbitration.com/feed)

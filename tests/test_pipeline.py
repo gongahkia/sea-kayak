@@ -172,7 +172,7 @@ class PipelineIntegrity(unittest.TestCase):
             replace = persistence.os.replace
 
             def fail_publication(source, target):
-                if Path(target) == data / "routes.json":
+                if Path(target).resolve() == (data / "routes.json").resolve():
                     raise OSError("synthetic publication failure")
                 return replace(source, target)
 

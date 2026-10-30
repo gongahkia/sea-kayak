@@ -13,6 +13,7 @@ from superfeed import (
     parse_feed_response,
 )
 from feed_http import fetch_public_feed
+from legal_sources import parse_source
 from retry import retry, classify_exception, TerminalError, RetryableError
 
 # Suppress warning when parsing XML with HTML parser (intentional for mixed content)
@@ -26,6 +27,9 @@ _HEADERS = {
 
 
 def parse_document(response, original_url):
+    items = parse_source(response, original_url)
+    if items is not None:
+        return items
     body = response.content.lstrip()
     if body.startswith((b"<?xml", b"<rss", b"<feed")):
         return parse_feed_response(response, original_url)

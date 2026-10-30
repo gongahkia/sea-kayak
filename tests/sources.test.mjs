@@ -21,3 +21,17 @@ test('source attribution requires a hostname boundary', () => {
   assert.equal(getSource('https://lexology.com/news'), 'Lexology');
   assert.equal(getSource('https://www.lawgazette.com.sg/news'), 'Law Gazette');
 });
+
+test('new legal sources have labels without matching lookalike hosts', () => {
+  for (const [host, label] of [
+    ['smulexicon.com', 'SMU Lexicon'],
+    ['www.elitigation.sg', 'SG Courts'],
+    ['www.judiciary.gov.sg', 'SG Courts'],
+    ['www.pdpc.gov.sg', 'PDPC'],
+    ['www.ccs.gov.sg', 'CCS'],
+    ['www.cccs.gov.sg', 'CCS'],
+  ]) {
+    assert.equal(getSource(`https://${host}/article`), label);
+    assert.equal(getSource(`https://${host}.example.test/article`), '');
+  }
+});

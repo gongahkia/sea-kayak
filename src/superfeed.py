@@ -5,6 +5,7 @@ import io
 import datetime
 import json
 import re
+import xml.etree.ElementTree as ET
 import feedparser
 import requests
 from bs4 import BeautifulSoup
@@ -24,10 +25,10 @@ _HEADERS = {
 
 DESC_MAX = 200  # chars
 
-# matches SG court neutral citations: [YYYY] SGCA/SGHC/SGHCR/SGFC/SGDC/SGMC,
-# with optional bracketed division suffix like (A), (I), (Appeal), and trailing number
+# matches Singapore court and PDPC neutral citations, with optional division suffix
+# like (A), (I), (Appeal), and trailing number
 _CITATION_RE = re.compile(
-    r"\[(?:19|20)\d{2}\]\s+SG(?:CA|HC|HCR|FC|DC|MC|HCF)(?:\s*\([A-Za-z]+\))?\s+\d+",
+    r"\[(?:19|20)\d{2}\]\s+SG(?:CA|HC|HCR|FC|DC|MC|HCF|YC|PDPC)(?:\s*\([A-Za-z]+\))?\s+\d+",
 )
 
 
@@ -78,7 +79,18 @@ def parse_feed_response(response, base_url):
     headers = {key.lower(): value for key, value in response.headers.items()}
     headers["content-location"] = final_url
     feed = feedparser.parse(io.BytesIO(response.content), response_headers=headers)
-    if feed.get("bozo") or not feed.get("version"):
+    if feed.get("bozo"):
+        # text/xml without a charset can trigger an ASCII-to-UTF-8 warning.
+        # accept that warning only after independently checking the complete XML.
+        if not isinstance(
+            feed.get("bozo_exception"), feedparser.CharacterEncodingOverride
+        ):
+            raise RetryableError("Response is not a complete RSS or Atom document")
+        try:
+            ET.fromstring(response.content)
+        except (ET.ParseError, ValueError) as error:
+            raise RetryableError("Response is not a complete XML document") from error
+    if not feed.get("version"):
         raise RetryableError("Response is not a complete RSS or Atom document")
     if len(feed.entries) > 5000:
         raise TerminalError("Feed exceeds the entry-count limit")
@@ -87,7 +99,17 @@ def parse_feed_response(response, base_url):
         link = entry.get("link")
         if not isinstance(link, str):
             continue
-        link = urljoin(final_url, link)
+        if any(ord(char) < 32 or ord(char) == 127 for char in link):
+            continue
+        try:
+            parts = urlsplit(urljoin(final_url, link))
+            # SLW publishes PDF paths containing literal spaces.
+            link = parts._replace(
+                path=parts.path.replace(" ", "%20"),
+                query=parts.query.replace(" ", "%20"),
+            ).geturl()
+        except ValueError:
+            continue
         if _url_identity(link) is None:
             continue
         title = entry.get("title") or ""

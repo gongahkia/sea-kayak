@@ -25,33 +25,55 @@ RSS_URL_ARRAY = [
     "https://www.singaporelawwatch.sg/Portals/0/RSS/SuperFeed.xml",
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Judgments.xml",
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml",
-    "https://www.singaporelawwatch.sg/Portals/0/RSS/Notices.xml",
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml",
     "https://www.mlaw.gov.sg/feed.xml",
-    "https://sso.agc.gov.sg/RSS/NewLegislation.aspx",
+    "https://sso.agc.gov.sg/What's-New/New-Legislation/RSS",
     "https://blog.nus.edu.sg/lawresearch/feed/",
+    "https://smulexicon.com/feed/",
     "https://singaporeinternationalarbitration.wordpress.com/feed/",
     "https://lawgazette.com.sg/category/notices/disciplinary-tribunal-reports/feed/",
     "https://lawgazette.com.sg/feed/",
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1",
     "https://www.singaporelawwatch.sg/Results/rss/category/426/notices-and-directions",
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Advocacy-and-Procedure",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Construction-and-Infrastructure",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Corporate",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Crime",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Employment-Law",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Family-and-Personal-Law",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Fintech",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Insolvency-and-Restructuring",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-practitioner/?area=Transportation",
-    "https://hungryhippo.huey.xyz/individual-site/academypublishing.org.sg/sal-journal",
     "https://www.lexology.com/email/rss.aspx?tagType=5&tagRef=155&tagTitle=%20Singapore&extrajr=&extrawr=",
     "https://hungryhippo.huey.xyz/individual-site/law.nus.edu.sg/trail",
+    "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education",
 ]
-UNSTRUCT_URL_ARRAY = [
-    "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education"
-]
+UNSTRUCT_URL_ARRAY = (
+    [
+        "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/"
+        + area
+        for area in (
+            "Advocacy-and-Procedure",
+            "Construction-and-Infrastructure",
+            "Corporate",
+            "Crime",
+            "Employment-Law",
+            "Family-and-Personal-Law",
+            "Technology",
+            "Insolvency-and-Restructuring",
+            "Transportation",
+        )
+    ]
+    + [
+        "https://journalsonline.academypublishing.org.sg/Journals/Singapore-Academy-of-Law-Journal/Current-Issue",
+        "https://www.elitigation.sg/gd",
+        "https://www.pdpc.gov.sg/api/listing-api?listingtype=enforcement_decisions&itemsperpage=20&pathname=/organisations/regulations-decisions/enforcement-decisions&sort=latest&page=1",
+    ]
+    + [
+        "https://www.ccs.gov.sg/case-register/public-register/" + category + "/"
+        for category in (
+            "agreements-and-collaborations",
+            "dominance-and-conduct",
+            "mergers-and-acquisitions",
+            "consumer-protection--fair-trading-",
+            "commitments-and-remedies",
+            "government-advisories",
+            "market-studies",
+        )
+    ]
+)
 LOCAL_RSS_ARRAY = [
     "https://www.lawgazette.com.sg/feed",
     "https://www.singaporeinternationalarbitration.com/feed",
