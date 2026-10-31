@@ -94,7 +94,9 @@ export async function fetchPublicFeed(value: string, options: FetchOptions = {})
             yield prefix;
             for (;;) { const part = await iterator.next(); if (part.done) break; yield part.value as Buffer; }
           }
-          await pipeline(body(), limiter, wrapped ? createInflate() : createInflateRaw(), sink, { signal: controller.signal });
+          const decoder = wrapped ? createInflate() : createInflateRaw();
+          await pipeline(body(), limiter, decoder, sink, { signal: controller.signal });
+          if (decoder.bytesWritten !== encoded) throw new RetryableError("Unexpected trailing compressed feed bytes");
         } else if (encoding === "gzip") {
           await pipeline(response, limiter, createGunzip(), sink, { signal: controller.signal });
         } else {

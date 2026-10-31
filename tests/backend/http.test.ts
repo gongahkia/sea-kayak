@@ -44,6 +44,7 @@ const server = createServer(async (request, response) => {
     headers["content-encoding"] = "deflate";
     body = path.includes("raw") ? deflateRawSync(BODY) : deflateSync(BODY);
     if (path.includes("truncated")) body = body.subarray(0, -5);
+    if (path.includes("trailing")) body = Buffer.concat([body, Buffer.from("trailing")]);
   }
   if (path === "/unsupported") headers["content-encoding"] = "br";
   if (path !== "/stream-large") headers["content-length"] = String(body.length);
@@ -79,7 +80,7 @@ for (const path of ["/headers", "/body"]) {
 for (const path of ["/large", "/stream-large", "/gzip-large", "/unsupported"]) {
   test(`${path} is rejected by encoded/decoded byte and encoding limits`, async () => { await assert.rejects(fetchPublicFeed(base + path), TerminalError); });
 }
-for (const path of ["/gzip-truncated", "/deflate-truncated", "/deflate-raw-truncated"]) {
+for (const path of ["/gzip-truncated", "/deflate-truncated", "/deflate-raw-truncated", "/deflate-trailing", "/deflate-raw-trailing"]) {
   test(`${path} cannot pass as a complete document`, async () => { await assert.rejects(fetchPublicFeed(base + path), RetryableError); });
 }
 test("native statuses stop terminal errors and bound transient retries", async () => {

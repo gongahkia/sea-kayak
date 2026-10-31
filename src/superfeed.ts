@@ -6,6 +6,13 @@ import type { FeedResponse, NewsItem } from "./types.ts";
 
 const XML_BASE = "{http://www.w3.org/XML/1998/namespace}base";
 
+function summaryText(node?: XmlNode): string {
+  if (!node?.children.length) return xmlText(node);
+  const escape = (value: string) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+  const markup = (node: XmlNode): string => `<${node.name}>${node.content.map(part => typeof part === "string" ? escape(part) : markup(part)).join("")}</${node.name}>`;
+  return node.content.map(part => typeof part === "string" ? escape(part) : markup(part)).join("");
+}
+
 export function parseFeedResponse(response: FeedResponse, baseUrl: string): NewsItem[] {
   const root = parseXml(response.content, response.headers["content-type"]);
   if (!["rss", "feed", "RDF"].includes(root.name)) throw new RetryableError("Response is not a complete RSS or Atom document");
@@ -35,10 +42,10 @@ export function parseFeedResponse(response: FeedResponse, baseUrl: string): News
     try { link = new URL(link, bases.get(linkNode ?? entry)).href; } catch { continue; }
     if (!urlIdentity(link)) continue;
     const title = xmlText(child("title")).trim();
-    const description = cleanDescription(xmlText(child("summary") ?? child("description")));
+    const description = cleanDescription(summaryText(child("summary")) || summaryText(child("description")) || summaryText(child("content")));
     items.push({
       url: link, title, description,
-      published: publishedIso(xmlText(child("published") ?? child("pubDate") ?? child("date") ?? child("updated"))),
+      published: publishedIso(xmlText(child("published") ?? child("pubDate") ?? child("date"))) || publishedIso(xmlText(child("updated"))),
       citation: extractCitation(link, title, description),
     });
   }

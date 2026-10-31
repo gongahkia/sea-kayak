@@ -76,6 +76,9 @@ export function normalizeItems(value: unknown): NewsItem[] {
 }
 
 export function publishedIso(value: string): string {
+  // Feedparser treats timezone-free publication times as UTC, irrespective of host TZ.
+  if (/^\d{4}-\d{2}-\d{2}[Tt ][\d:.]+$/.test(value)) value += "Z";
+  else if (/\d{1,2}:\d{2}(?::\d{2})?$/.test(value.trim()) && !/[+-]\d{2}:\d{2}$/.test(value.trim())) value += " GMT";
   const timestamp = Date.parse(value);
-  return Number.isFinite(timestamp) ? utcIso(new Date(timestamp)) : "";
+  return Number.isFinite(timestamp) ? utcIso(new Date(Math.floor(timestamp / 1000) * 1000)) : "";
 }

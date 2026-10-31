@@ -196,5 +196,77 @@
         "citation": "[2026] SAL Prac 22"
       }
     ]
+  },
+  {
+    "parser": "rss",
+    "body": "<rss version=\"2.0\"><channel><item><title>News</title><link>https://example.test/news</link><pubDate>30 Oct 2026 00:01:00</pubDate></item></channel></rss>",
+    "url": "https://example.test/feed",
+    "final_url": "https://example.test/feed",
+    "headers": {
+      "content-type": "application/xml"
+    },
+    "expected": [
+      {
+        "url": "https://example.test/news",
+        "title": "News",
+        "description": "",
+        "published": "2026-10-30T00:01:00+00:00",
+        "citation": ""
+      }
+    ]
+  },
+  {
+    "parser": "rss",
+    "body": "<feed xmlns=\"http://www.w3.org/2005/Atom\"><entry><title>Legal news</title><link href=\"https://example.test/news\"/><published>2026-10-30T12:32:25+00:00</published><content type=\"html\">&lt;p&gt;First &lt;b&gt;bold&lt;/b&gt; last&lt;/p&gt;</content></entry></feed>",
+    "url": "https://example.test/feed",
+    "final_url": "https://example.test/feed",
+    "headers": {
+      "content-type": "application/xml"
+    },
+    "expected": [
+      {
+        "url": "https://example.test/news",
+        "title": "Legal news",
+        "description": "First bold last",
+        "published": "2026-10-30T12:32:25+00:00",
+        "citation": ""
+      }
+    ]
+  },
+  {
+    "parser": "rss",
+    "body": "<feed xmlns=\"http://www.w3.org/2005/Atom\"><entry><title>News</title><link href=\"https://example.test/news\"/><summary type=\"xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><p>First</p><p>Second</p></div></summary><updated>2026-10-30T00:01:00Z</updated></entry></feed>",
+    "url": "https://example.test/feed",
+    "final_url": "https://example.test/feed",
+    "headers": {
+      "content-type": "application/xml"
+    },
+    "expected": [
+      {
+        "url": "https://example.test/news",
+        "title": "News",
+        "description": "First Second",
+        "published": "2026-10-30T00:01:00+00:00",
+        "citation": ""
+      }
+    ]
+  },
+  {
+    "parser": "rss",
+    "body": "<rss version=\"2.0\"><channel><item><title>News</title><link>https://example.test/news</link><description><![CDATA[<p>First <b>bold</b> last</p>]]></description><pubDate>bad date</pubDate><updated>2026-10-30T00:01:00Z</updated></item></channel></rss>",
+    "url": "https://example.test/feed",
+    "final_url": "https://example.test/feed",
+    "headers": {
+      "content-type": "application/xml"
+    },
+    "expected": [
+      {
+        "url": "https://example.test/news",
+        "title": "News",
+        "description": "First bold last",
+        "published": "2026-10-30T00:01:00+00:00",
+        "citation": ""
+      }
+    ]
   }
 ]

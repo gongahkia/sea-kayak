@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { join } from "node:path";
-import * as cheerio from "cheerio";
+import { Parser } from "htmlparser2";
 import { atomicBytes, atomicJson, readJson } from "./persistence.ts";
 import { parseXml, descendants, detectEncoding } from "./xml.ts";
 import { isRecord, utcIso } from "./types.ts";
@@ -62,12 +62,22 @@ export function fingerprint(body: Buffer, contentType = ""): Fingerprint {
       };
     } catch (error) { fp = { format: "xml", parse_error: String(error) }; }
   } else {
-    const $ = cheerio.load(new TextDecoder(detectEncoding(body, contentType)).decode(body), {}, false), anchors = $("a[href]");
-    fp = {
-      format: "html", top_tags: [...new Set($.root().children().toArray().map(node => node.tagName))].sort(),
-      anchor_count: anchors.length, entry_count: anchors.length,
-      anchor_classes: [...new Set(anchors.slice(0, 100).toArray().flatMap(node => ($(node).attr("class") ?? "").split(/\s+/).filter(Boolean)))].sort().slice(0, 50),
-    };
+    const topTags = new Set<string>(), classes = new Set<string>();
+    let depth = 0, anchors = 0, attributes: Record<string, string> = {};
+    const parser = new Parser({
+      onopentagname() { attributes = {}; },
+      // Python's HTMLParser keeps the last occurrence of duplicate attributes.
+      onattribute(name, value) { attributes[name] = value; },
+      onopentag(name) {
+        if (depth++ === 0) topTags.add(name);
+        if (name === "a" && "href" in attributes) {
+          if (anchors++ < 100) for (const name of (attributes.class ?? "").split(/\s+/).filter(Boolean)) classes.add(name);
+        }
+      },
+      onclosetag() { depth--; },
+    });
+    parser.end(new TextDecoder(detectEncoding(body, contentType)).decode(body));
+    fp = { format: "html", top_tags: [...topTags].sort(), anchor_count: anchors, entry_count: anchors, anchor_classes: [...classes].sort().slice(0, 50) };
   }
   return { ...fp, body_sha256: sha(body), encoding: detectEncoding(body, contentType), content_type: contentType.split(";")[0].trim().toLowerCase(), size_bytes: body.length };
 }
