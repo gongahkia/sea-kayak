@@ -21,21 +21,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.12'
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: |
-          pip install --require-hashes -r requirements.lock
+        run: npm ci --omit=dev
 
       - name: Run Orchestration Script
-        working-directory: ./src
-        run: |
-            echo "Running orchestration script."
-            python main.py
-            echo "Finished running orchestration script."
+        run: npm start
 
       - name: Upload scrape metadata artifacts
         if: always()

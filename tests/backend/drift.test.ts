@@ -67,3 +67,14 @@ test("daily collate still runs at midnight Singapore with serialized executions"
     for (const month of ["01", "07"]) assert.equal(new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Singapore", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(`2026-${month}-01T16:00:00Z`)), "00:00");
   }
 });
+
+test("CI and scheduled ingestion execute the TypeScript backend with locked Node dependencies", async () => {
+  const ci = parse(await readFile(new globalThis.URL("../../.github/workflows/ci.yml", import.meta.url), "utf8"));
+  const collate = parse(await readFile(new globalThis.URL("../../.github/workflows/collate.yml", import.meta.url), "utf8"));
+  const steps = ci.jobs.backend.steps;
+  assert.ok(steps.some((step: { uses?: string; with?: Record<string, string> }) => step.uses === "actions/setup-node@v4" && step.with?.["node-version"] === "24"));
+  assert.deepEqual(steps.filter((step: { run?: string }) => step.run).map((step: { run: string }) => step.run), ["npm ci", "npm run check"]);
+  const commands = collate.jobs["scrape-to-local"].steps.map((step: { run?: string }) => step.run);
+  assert.ok(commands.includes("npm ci --omit=dev"));
+  assert.ok(commands.includes("npm start"));
+});
