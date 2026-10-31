@@ -1,4 +1,5 @@
 /** A single absolute deadline includes redirects, headers, and decoded body bytes. */
+import { publicFeedLookup } from "./feed_dns.ts";
 import http from "node:http";
 import https from "node:https";
 import { Transform, Writable } from "node:stream";
@@ -38,7 +39,7 @@ export async function fetchPublicFeed(value: string, options: FetchOptions = {})
     let url = validateUrl(value);
     for (let redirects = 0; ; redirects++) {
       const response = await new Promise<http.IncomingMessage>((resolve, reject) => {
-        const request = (url.protocol === "https:" ? https : http).get(url, { headers, signal: controller.signal }, resolve);
+        const request = (url.protocol === "https:" ? https : http).get(url, { headers, signal: controller.signal, lookup: publicFeedLookup(controller.signal) }, resolve);
         request.on("error", reject);
       });
       // A redirect body is never needed. Destroy it rather than draining unbounded bytes.
