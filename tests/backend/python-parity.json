@@ -1,0 +1,200 @@
+[
+  {
+    "parser": "rss",
+    "body": "<rss><channel>",
+    "url": "https://example.test/feed",
+    "final_url": "https://example.test/feed",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "error": "RetryableError"
+  },
+  {
+    "parser": "rss",
+    "body": "<rss version=\"2.0\"><channel><title>法院</title><item><title>Broken</title></rss>",
+    "url": "https://example.test/feed",
+    "final_url": "https://example.test/feed",
+    "headers": {
+      "content-type": "text/xml"
+    },
+    "error": "RetryableError"
+  },
+  {
+    "parser": "rss",
+    "body": "<rss version=\"2.0\"><channel><title>News</title>\n        <item><title>Invalid host</title><link>https://bad host.test/news</link></item>\n        <item><title>Script</title><link>javascript:alert(1)</link></item>\n        </channel></rss>",
+    "url": "https://example.test/feed",
+    "final_url": "https://example.test/feed",
+    "headers": {
+      "content-type": "application/rss+xml"
+    },
+    "expected": []
+  },
+  {
+    "parser": "rss",
+    "body": "<?xml version=\"1.0\"?><rss version=\"2.0\"><channel>\n        <title>Legal news</title><link>https://example.test/</link><description>News</description>\n        <item><title>法院 — Judgment</title><link>https://example.test/2026 SGHC 226.pdf</link>\n        <pubDate>Fri, 30 Oct 2026 00:00:00 +0800</pubDate></item></channel></rss>",
+    "url": "https://example.test/feed",
+    "final_url": "https://example.test/feed",
+    "headers": {
+      "content-type": "text/xml"
+    },
+    "expected": [
+      {
+        "url": "https://example.test/2026%20SGHC%20226.pdf",
+        "title": "法院 — Judgment",
+        "description": "",
+        "published": "2026-10-29T16:00:00+00:00",
+        "citation": ""
+      }
+    ]
+  },
+  {
+    "parser": "html",
+    "body": "<a href=\"https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/\"><h2>All mergers</h2></a>\n        <a href=\"https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/proposed-acquisition/\"><p>9 October 2026</p>\n        <div><p>9 October 2026</p><h2>Proposed Acquisition</h2></div></a>\n        <a href=\"/case-register/public-register/market-studies/study/\"><h2>Other</h2></a>\n        <a href=\"https://evil.test/case-register/public-register/mergers-and-acquisitions/fake/\"><p>9 October 2026</p><h2>Fake</h2></a>",
+    "url": "https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/",
+    "final_url": "https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "expected": [
+      {
+        "url": "https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/proposed-acquisition/",
+        "title": "Proposed Acquisition",
+        "description": "",
+        "published": "2026-10-08T16:00:00+00:00",
+        "citation": ""
+      }
+    ]
+  },
+  {
+    "parser": "html",
+    "body": "<a href=\"/gd/Home/Index\">Search</a><div class=\"gd-card-body\">\n        <a href=\"/gd/s/2026_SGYC_8\">Public Prosecutor v YLT</a>\n        <a class=\"citation-num-link\" href=\"#\">[2026] SGYC 8 |</a>\n        <a class=\"decision-date-link\" href=\"#\">Decision Date: 29 Oct 2026 |</a>\n        </div>",
+    "url": "https://www.elitigation.sg/gd",
+    "final_url": "https://www.elitigation.sg/gd",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "expected": [
+      {
+        "url": "https://www.elitigation.sg/gd/s/2026_SGYC_8",
+        "title": "Public Prosecutor v YLT",
+        "description": "",
+        "published": "2026-10-28T16:00:00+00:00",
+        "citation": "[2026] SGYC 8"
+      }
+    ]
+  },
+  {
+    "parser": "html",
+    "body": "<nav><a href=\"/help\">Help</a></nav>",
+    "url": "https://www.elitigation.sg/gd",
+    "final_url": "https://www.elitigation.sg/gd",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "error": "RetryableError"
+  },
+  {
+    "parser": "html",
+    "body": "<h1>Maintenance</h1>",
+    "url": "https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/",
+    "final_url": "https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "error": "RetryableError"
+  },
+  {
+    "parser": "html",
+    "body": "{\"data\": []}",
+    "url": "https://www.pdpc.gov.sg/api/listing-api",
+    "final_url": "https://www.pdpc.gov.sg/api/listing-api",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "error": "RetryableError"
+  },
+  {
+    "parser": "html",
+    "body": "{\"results\": []}",
+    "url": "https://www.pdpc.gov.sg/api/listing-api",
+    "final_url": "https://www.pdpc.gov.sg/api/listing-api",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "error": "RetryableError"
+  },
+  {
+    "parser": "html",
+    "body": "<html>Loading</html>",
+    "url": "https://www.pdpc.gov.sg/api/listing-api",
+    "final_url": "https://www.pdpc.gov.sg/api/listing-api",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "error": "RetryableError"
+  },
+  {
+    "parser": "html",
+    "body": "{\"data\": [{\"href\": \"/organisations/regulations-decisions/enforcement-decisions/case\", \"title\": \"Breach of Protection\", \"date\": \"26 Oct 2026\"}]}",
+    "url": "https://www.pdpc.gov.sg/api/listing-api?listingtype=enforcement_decisions&itemsperpage=20&pathname=/organisations/regulations-decisions/enforcement-decisions&sort=latest&page=1",
+    "final_url": "https://www.pdpc.gov.sg/api/listing-api?listingtype=enforcement_decisions&itemsperpage=20&pathname=/organisations/regulations-decisions/enforcement-decisions&sort=latest&page=1",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "expected": [
+      {
+        "url": "https://www.pdpc.gov.sg/organisations/regulations-decisions/enforcement-decisions/case",
+        "title": "Breach of Protection",
+        "description": "",
+        "published": "2026-10-25T16:00:00+00:00",
+        "citation": ""
+      }
+    ]
+  },
+  {
+    "parser": "html",
+    "body": "<html><body>Loading enforcement decisions...</body></html>",
+    "url": "https://www.pdpc.gov.sg/api/listing-api?listingtype=enforcement_decisions&itemsperpage=20&pathname=/organisations/regulations-decisions/enforcement-decisions&sort=latest&page=1",
+    "final_url": "https://www.pdpc.gov.sg/api/listing-api?listingtype=enforcement_decisions&itemsperpage=20&pathname=/organisations/regulations-decisions/enforcement-decisions&sort=latest&page=1",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "error": "RetryableError"
+  },
+  {
+    "parser": "html",
+    "body": "{\"totalItems\": 2, \"data\": [{\"href\": \"/organisations/regulations-decisions/enforcement-decisions/case\", \"title\": \"Breach of Protection\", \"date\": \"26 Oct 2026\"}, {\"href\": \"https://evil.test/organisations/regulations-decisions/enforcement-decisions/fake\", \"title\": \"Fake\", \"date\": \"26 Oct 2026\"}, {\"href\": \"/privacy\", \"title\": \"Privacy\", \"date\": \"26 Oct 2026\"}, null]}",
+    "url": "https://www.pdpc.gov.sg/api/listing-api?listingtype=enforcement_decisions&itemsperpage=20&pathname=/organisations/regulations-decisions/enforcement-decisions&sort=latest&page=1",
+    "final_url": "https://www.pdpc.gov.sg/api/listing-api?listingtype=enforcement_decisions&itemsperpage=20&pathname=/organisations/regulations-decisions/enforcement-decisions&sort=latest&page=1",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "expected": [
+      {
+        "url": "https://www.pdpc.gov.sg/organisations/regulations-decisions/enforcement-decisions/case",
+        "title": "Breach of Protection",
+        "description": "",
+        "published": "2026-10-25T16:00:00+00:00",
+        "citation": ""
+      }
+    ]
+  },
+  {
+    "parser": "html",
+    "body": "<nav><a href=\"/privacy\">Privacy</a></nav><div class=\"artListItem\">\n        <h4 class=\"eFirstListHead\">3 August 2026</h4>\n        <p><b>Sentencing <i>principles</i></b></p><p class=\"small\">An Author</p>\n        <p>[2026] SAL Prac 22</p><ul class=\"downloadLinks\">\n        <a href=\"http://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Crime/ctl/eFirstSALPDFJournalView/mid/1/ArticleId/2/Citation/JournalsOnlinePDF\">Text (PDF)</a>\n        <a href=\"http://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Crime/ctl/eFirstSALPDFJournalView/mid/1/ArticleId/2/Citation/HtmlDocument\">Text (HTML)</a><a href=\"/abstract\">View Abstract</a>\n        </ul></div>",
+    "url": "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Crime",
+    "final_url": "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Crime",
+    "headers": {
+      "content-type": "text/html; charset=utf-8"
+    },
+    "expected": [
+      {
+        "url": "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Crime/ctl/eFirstSALPDFJournalView/mid/1/ArticleId/2/Citation/JournalsOnlinePDF",
+        "title": "Sentencing principles",
+        "description": "",
+        "published": "2026-08-02T16:00:00+00:00",
+        "citation": "[2026] SAL Prac 22"
+      }
+    ]
+  }
+]
