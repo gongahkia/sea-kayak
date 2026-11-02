@@ -3,11 +3,6 @@
     "https://blog.nus.edu.sg/lawresearch/feed/": {
       "history": [
         {
-          "ts": "2026-10-26T20:49:22.502739+00:00",
-          "entry_count": 9,
-          "structural_sha": "78ec8f94a678bbe0"
-        },
-        {
           "ts": "2026-10-27T20:19:42.128958+00:00",
           "entry_count": 9,
           "structural_sha": "78ec8f94a678bbe0"
@@ -36,9 +31,14 @@
           "ts": "2026-11-01T19:59:05.529+00:00",
           "entry_count": 9,
           "structural_sha": "78ec8f94a678bbe0"
+        },
+        {
+          "ts": "2026-11-02T23:15:34.046+00:00",
+          "entry_count": 9,
+          "structural_sha": "78ec8f94a678bbe0"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:05.529+00:00",
+      "last_success_iso": "2026-11-02T23:15:34.046+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -58,19 +58,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 9,
-        "body_sha256": "16394071411e31e6f90d7239f23a3ddd9515e09c77c52142145693f38b625a36",
+        "body_sha256": "d0cbc5e02a926bd37664918e2bef4197ad870f82b0d69fb3f2c83a14482ad31c",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
-        "size_bytes": 82589
+        "size_bytes": 83823
       }
     },
     "https://lawgazette.com.sg/feed/": {
       "history": [
-        {
-          "ts": "2026-10-26T20:49:23.001747+00:00",
-          "entry_count": 10,
-          "structural_sha": "78ec8f94a678bbe0"
-        },
         {
           "ts": "2026-10-27T20:19:42.757112+00:00",
           "entry_count": 10,
@@ -100,9 +95,14 @@
           "ts": "2026-11-01T19:59:06.074+00:00",
           "entry_count": 10,
           "structural_sha": "78ec8f94a678bbe0"
+        },
+        {
+          "ts": "2026-11-02T23:15:33.812+00:00",
+          "entry_count": 10,
+          "structural_sha": "78ec8f94a678bbe0"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:06.074+00:00",
+      "last_success_iso": "2026-11-02T23:15:33.812+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -122,19 +122,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "fde90967e13b3a8c1d09a7dffc5377f06ee161b00fcd7ad2e49e7b6f764be67c",
+        "body_sha256": "3d01553d4df9e5d57c37be962666a657428314b748760b9c3d3cab12876e6c51",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
-        "size_bytes": 370041
+        "size_bytes": 370040
       }
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "history": [
-        {
-          "ts": "2026-10-26T20:49:22.604122+00:00",
-          "entry_count": 10,
-          "structural_sha": "a67add66c9e9ca56"
-        },
         {
           "ts": "2026-10-27T20:19:42.294292+00:00",
           "entry_count": 10,
@@ -164,9 +159,14 @@
           "ts": "2026-11-01T19:59:05.215+00:00",
           "entry_count": 10,
           "structural_sha": "a67add66c9e9ca56"
+        },
+        {
+          "ts": "2026-11-02T23:15:33.641+00:00",
+          "entry_count": 10,
+          "structural_sha": "a67add66c9e9ca56"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:05.215+00:00",
+      "last_success_iso": "2026-11-02T23:15:33.641+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -189,19 +189,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "45874315fd6de11e3f92962423109f4c771bf4a1fbdca661130e62ad700aa316",
+        "body_sha256": "ce7ecce0c84d85af4e9aa75686339df1c2154db9330ef4adb821b5abc14e43c8",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
-        "size_bytes": 22263
+        "size_bytes": 22116
       }
     },
     "https://www.mlaw.gov.sg/feed.xml": {
       "history": [
-        {
-          "entry_count": 10,
-          "structural_sha": "a4a24201ab4ec4f9",
-          "ts": "2026-10-19T02:58:37.832335+00:00"
-        },
         {
           "entry_count": 10,
           "structural_sha": "a4a24201ab4ec4f9",
@@ -231,9 +226,14 @@
           "ts": "2026-11-01T19:59:04.926+00:00",
           "entry_count": 10,
           "structural_sha": "e01db2bdcf56f8b7"
+        },
+        {
+          "ts": "2026-11-02T23:15:33.635+00:00",
+          "entry_count": 10,
+          "structural_sha": "a4a24201ab4ec4f9"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:04.926+00:00",
+      "last_success_iso": "2026-11-02T23:15:33.635+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "feed",
@@ -246,24 +246,21 @@
           "id",
           "link",
           "published",
+          "summary",
+          "thumbnail",
           "title",
           "updated"
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "77991c56ad43e6bcf7e3f27d22a0fa07f0e497a9aee15e4a175dab110b8010ca",
+        "body_sha256": "a0774d80b1966f3af6448a6d80bdf402681877c3efde5cec2148a95ac8279b52",
         "encoding": "utf-8",
         "content_type": "text/xml",
-        "size_bytes": 114816
+        "size_bytes": 175895
       }
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml": {
       "history": [
-        {
-          "entry_count": 142,
-          "structural_sha": "9f567f1678e04caf",
-          "ts": "2026-10-19T02:58:36.968704+00:00"
-        },
         {
           "entry_count": 140,
           "structural_sha": "9f567f1678e04caf",
@@ -293,9 +290,14 @@
           "ts": "2026-11-01T19:59:04.795+00:00",
           "entry_count": 140,
           "structural_sha": "9f567f1678e04caf"
+        },
+        {
+          "ts": "2026-11-02T23:15:33.398+00:00",
+          "entry_count": 138,
+          "structural_sha": "9f567f1678e04caf"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:04.795+00:00",
+      "last_success_iso": "2026-11-02T23:15:33.398+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -313,20 +315,15 @@
           "title"
         ],
         "first_entry_attrs": [],
-        "entry_count": 140,
-        "body_sha256": "9e02048c7cb7ce314d1f9d92138158221c41cd08c576cf0bc78d13e91938592b",
+        "entry_count": 138,
+        "body_sha256": "bc67ecfede9fb89f4e367f54156be04e86511eebb142284c4ae929b59a689699",
         "encoding": "utf-8",
         "content_type": "text/xml",
-        "size_bytes": 122922
+        "size_bytes": 121139
       }
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml": {
       "history": [
-        {
-          "entry_count": 140,
-          "structural_sha": "9f567f1678e04caf",
-          "ts": "2026-10-19T02:58:37.563518+00:00"
-        },
         {
           "entry_count": 132,
           "structural_sha": "9f567f1678e04caf",
@@ -356,9 +353,14 @@
           "ts": "2026-11-01T19:59:04.824+00:00",
           "entry_count": 142,
           "structural_sha": "9f567f1678e04caf"
+        },
+        {
+          "ts": "2026-11-02T23:15:33.371+00:00",
+          "entry_count": 128,
+          "structural_sha": "9f567f1678e04caf"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:04.824+00:00",
+      "last_success_iso": "2026-11-02T23:15:33.371+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -376,20 +378,15 @@
           "title"
         ],
         "first_entry_attrs": [],
-        "entry_count": 142,
-        "body_sha256": "1d3568aa6f3151ba3e3e22fe41feb481b1ec440090b187035e9588e5a8a3e638",
+        "entry_count": 128,
+        "body_sha256": "3357c2a322580a21848a3624f6c1eaf61454b11c9ab797b7b818f30b9ad39956",
         "encoding": "utf-8",
         "content_type": "text/xml",
-        "size_bytes": 124070
+        "size_bytes": 110040
       }
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Judgments.xml": {
       "history": [
-        {
-          "entry_count": 119,
-          "structural_sha": "9f567f1678e04caf",
-          "ts": "2026-10-19T02:58:36.836150+00:00"
-        },
         {
           "entry_count": 117,
           "structural_sha": "9f567f1678e04caf",
@@ -419,9 +416,14 @@
           "ts": "2026-11-01T19:59:05.237+00:00",
           "entry_count": 115,
           "structural_sha": "9f567f1678e04caf"
+        },
+        {
+          "ts": "2026-11-02T23:15:33.326+00:00",
+          "entry_count": 114,
+          "structural_sha": "9f567f1678e04caf"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:05.237+00:00",
+      "last_success_iso": "2026-11-02T23:15:33.326+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -439,11 +441,11 @@
           "title"
         ],
         "first_entry_attrs": [],
-        "entry_count": 115,
-        "body_sha256": "dd92153dd3fd566370fa2225a9e9c336c88207b4d44bced5d8ebe820b9511cca",
+        "entry_count": 114,
+        "body_sha256": "4360b2074df1c84b5eb3ed8bf8339be2d7aed54b8456596536fded7505ca8eb8",
         "encoding": "utf-8",
         "content_type": "text/xml",
-        "size_bytes": 55375
+        "size_bytes": 54871
       }
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Notices.xml": {
@@ -510,11 +512,6 @@
     "https://www.singaporelawwatch.sg/Portals/0/RSS/SuperFeed.xml": {
       "history": [
         {
-          "entry_count": 9,
-          "structural_sha": "9f567f1678e04caf",
-          "ts": "2026-10-19T02:58:36.723675+00:00"
-        },
-        {
           "entry_count": 11,
           "structural_sha": "9f567f1678e04caf",
           "ts": "2026-10-20T03:08:18.518879+00:00"
@@ -543,9 +540,14 @@
           "ts": "2026-11-01T19:59:04.752+00:00",
           "entry_count": 25,
           "structural_sha": "9f567f1678e04caf"
+        },
+        {
+          "ts": "2026-11-02T23:15:33.339+00:00",
+          "entry_count": 25,
+          "structural_sha": "9f567f1678e04caf"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:04.752+00:00",
+      "last_success_iso": "2026-11-02T23:15:33.339+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -564,19 +566,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 25,
-        "body_sha256": "6f2b6344397e13fca2888d4c0fbbaea7dfcff3007f897c978e5632bd8e672c18",
+        "body_sha256": "859121a8faa048e0881c7f7917630d7aeb9d4a67fafe0a6ab86277239aec0d7d",
         "encoding": "utf-8",
         "content_type": "text/xml",
-        "size_bytes": 15444
+        "size_bytes": 14117
       }
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries": {
       "history": [
-        {
-          "ts": "2026-10-26T20:49:24.577083+00:00",
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d"
-        },
         {
           "ts": "2026-10-27T20:19:44.042671+00:00",
           "entry_count": 10,
@@ -606,9 +603,14 @@
           "ts": "2026-11-01T19:59:06.126+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-11-02T23:15:34.318+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:06.126+00:00",
+      "last_success_iso": "2026-11-02T23:15:34.318+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -627,19 +629,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "b9151299737da606456d7b5e765b26efa3cfd77d591935681800bcb834204f4b",
+        "body_sha256": "7f0572aea21c8918a348c1e5755230cbdf1f6075ba40853bb0b4ab470b522c92",
         "encoding": "utf-8",
         "content_type": "application/xml",
-        "size_bytes": 6366
+        "size_bytes": 6313
       }
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "history": [
-        {
-          "ts": "2026-10-26T20:49:26.047115+00:00",
-          "entry_count": 10,
-          "structural_sha": "2a223ec51570e3b6"
-        },
         {
           "ts": "2026-10-27T20:19:45.959900+00:00",
           "entry_count": 10,
@@ -669,9 +666,14 @@
           "ts": "2026-11-01T19:59:06.558+00:00",
           "entry_count": 10,
           "structural_sha": "2a223ec51570e3b6"
+        },
+        {
+          "ts": "2026-11-02T23:15:34.909+00:00",
+          "entry_count": 10,
+          "structural_sha": "2a223ec51570e3b6"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:06.558+00:00",
+      "last_success_iso": "2026-11-02T23:15:34.909+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -692,7 +694,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "847f6afbc0b01b286406edf91c41cc8b195f1a87d67a177588ea7083de71cae3",
+        "body_sha256": "48fa45cf7996521fdc59acbcfec135fa91e392d8bd800962db86460b445f0505",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 7425
@@ -700,11 +702,6 @@
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "history": [
-        {
-          "ts": "2026-10-26T20:49:23.533899+00:00",
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d"
-        },
         {
           "ts": "2026-10-27T20:19:43.267540+00:00",
           "entry_count": 10,
@@ -734,9 +731,14 @@
           "ts": "2026-11-01T19:59:05.898+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-11-02T23:15:34.278+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:05.898+00:00",
+      "last_success_iso": "2026-11-02T23:15:34.278+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -755,19 +757,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "6baa64c07db5783fda8827618ccea709b065c68ee4f5d3a0267b20a4e272cbc5",
+        "body_sha256": "9dc583efbdbe1b2ad0971044e87eb95ab4400581442bd52a064bda1b7773b27b",
         "encoding": "utf-8",
         "content_type": "application/xml",
-        "size_bytes": 5868
+        "size_bytes": 5822
       }
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/notices-and-directions": {
       "history": [
-        {
-          "ts": "2026-10-26T20:49:24.251446+00:00",
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d"
-        },
         {
           "ts": "2026-10-27T20:19:43.667916+00:00",
           "entry_count": 10,
@@ -797,9 +794,14 @@
           "ts": "2026-11-01T19:59:05.832+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-11-02T23:15:34.187+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:05.832+00:00",
+      "last_success_iso": "2026-11-02T23:15:34.187+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -818,10 +820,10 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "a8091882f75fe570b20d5313e9a3ce1ac1e8914dc1f739a93ec1828adc918fb0",
+        "body_sha256": "100f3120cece03c8344bd0f788cc8e58a512f1f552c2ff87d6a36ef910967295",
         "encoding": "utf-8",
         "content_type": "application/xml",
-        "size_bytes": 5922
+        "size_bytes": 5676
       }
     },
     "https://smulexicon.com/feed/": {
@@ -840,9 +842,14 @@
           "ts": "2026-11-01T19:59:05.095+00:00",
           "entry_count": 10,
           "structural_sha": "6804b41562dd936f"
+        },
+        {
+          "ts": "2026-11-02T23:15:33.561+00:00",
+          "entry_count": 10,
+          "structural_sha": "6804b41562dd936f"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:05.095+00:00",
+      "last_success_iso": "2026-11-02T23:15:33.561+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -863,10 +870,10 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "100f5d811fc0645a18716cbebcf78957a787f52c71e0e9736decf368621088a2",
+        "body_sha256": "c784b0a1c8bdaef488860bf4cbe3fb1e3dd519927b9dea36bfb0d78c3151c457",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
-        "size_bytes": 286337
+        "size_bytes": 286338
       }
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Advocacy-and-Procedure": {
@@ -885,9 +892,14 @@
           "ts": "2026-11-01T19:59:06.752+00:00",
           "entry_count": 79,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:35.190+00:00",
+          "entry_count": 79,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:06.752+00:00",
+      "last_success_iso": "2026-11-02T23:15:35.190+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -904,7 +916,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "a696294cbf47186eee16f2f8c6357eacc26256845810e4c13911cb375169fb0b",
+        "body_sha256": "5ae15260dda0ede9ed117f865bd57ac283b2d662b53cfc1aa427f84202b9f1e9",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 77570
@@ -926,9 +938,14 @@
           "ts": "2026-11-01T19:59:07.069+00:00",
           "entry_count": 80,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:35.393+00:00",
+          "entry_count": 80,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:07.069+00:00",
+      "last_success_iso": "2026-11-02T23:15:35.393+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -945,7 +962,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "665cbe883bd72df52bd6cc7ad592fb97f385b9c0da3fb607d1d5c7d7cc06855e",
+        "body_sha256": "6b6582266e0b1183e9ca8b4f488a9b3020c9546b66629cd93dba84cc4335dcab",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 81286
@@ -967,9 +984,14 @@
           "ts": "2026-11-01T19:59:07.093+00:00",
           "entry_count": 77,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:35.979+00:00",
+          "entry_count": 77,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:07.093+00:00",
+      "last_success_iso": "2026-11-02T23:15:35.979+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -986,7 +1008,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "4b560b97cb06c7259d55035138ee948796655591da242ad2ef640f8ac9034af5",
+        "body_sha256": "6baa51dfcb4f0044d5cc0b4a1bd4ccc0201cddf362ecd8c54c118e990941891f",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 77181
@@ -1008,9 +1030,14 @@
           "ts": "2026-11-01T19:59:08.162+00:00",
           "entry_count": 79,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:35.779+00:00",
+          "entry_count": 79,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:08.162+00:00",
+      "last_success_iso": "2026-11-02T23:15:35.779+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1027,7 +1054,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "348873a8b3f4ef9673ec45e8b14bdbf2ddfe5be816ee1e1d334bed7c48af3c40",
+        "body_sha256": "a86ba2f964241eb4f7d04ee8be0188aa955d4f72fa5e33160a144a5fa1bee372",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 79183
@@ -1049,9 +1076,14 @@
           "ts": "2026-11-01T19:59:07.449+00:00",
           "entry_count": 78,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:35.898+00:00",
+          "entry_count": 78,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:07.449+00:00",
+      "last_success_iso": "2026-11-02T23:15:35.898+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1068,7 +1100,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "3659fe9be2944f7fa99332948a276ad66285f1cabc8f3f636671219e2fa56445",
+        "body_sha256": "8a8356b7f1afae2013c9e9b88082ccc064cb9660d6f2c0150fdf70467e6750d9",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 81301
@@ -1090,9 +1122,14 @@
           "ts": "2026-11-01T19:59:07.536+00:00",
           "entry_count": 80,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:36.386+00:00",
+          "entry_count": 80,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:07.536+00:00",
+      "last_success_iso": "2026-11-02T23:15:36.386+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1109,7 +1146,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "79fa61f36c0df1a4bd82c17c371ff8dd40448aebbea9eca59674c15acd8ee031",
+        "body_sha256": "be0b8ef100c276b15924f1892436b65cd9c474cb1b25fe421f11f1fa933f2e0b",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 78520
@@ -1131,9 +1168,14 @@
           "ts": "2026-11-01T19:59:07.963+00:00",
           "entry_count": 79,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:36.657+00:00",
+          "entry_count": 79,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:07.963+00:00",
+      "last_success_iso": "2026-11-02T23:15:36.657+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1150,7 +1192,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "e614c6ae08af9bfd3ee3583e89038ffaae978af305d4618b4a6c183774fac7a0",
+        "body_sha256": "9b22cfe323db1cf0acdcfe19974eb11328bd3fe612b7d1783d2ecef67ea4360d",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 76660
@@ -1172,9 +1214,14 @@
           "ts": "2026-11-01T19:59:07.982+00:00",
           "entry_count": 80,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:36.589+00:00",
+          "entry_count": 80,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:07.982+00:00",
+      "last_success_iso": "2026-11-02T23:15:36.589+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1191,7 +1238,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "b6e2574549f710425097d3f0aaebce3af7ecb67880630c0e2fb085c50d1380c2",
+        "body_sha256": "6c83690cbb34e744abf1ead98b2a6d60cda441200d448561fda2597c59b611f4",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 82238
@@ -1213,9 +1260,14 @@
           "ts": "2026-11-01T19:59:08.449+00:00",
           "entry_count": 79,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-02T23:15:37.410+00:00",
+          "entry_count": 79,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:08.449+00:00",
+      "last_success_iso": "2026-11-02T23:15:37.410+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1232,7 +1284,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "a281c0944954778f969ffd754841cd20fea2db5fc0ab9f701518e52ca7db7612",
+        "body_sha256": "4a2ce6bd425ef7833f0763d553cf32e111370d23169a0a4bedc9f8d3dd0b9309",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 82673
@@ -1254,9 +1306,14 @@
           "ts": "2026-11-01T19:59:08.401+00:00",
           "entry_count": 76,
           "structural_sha": "ad6ff892c0dfed3a"
+        },
+        {
+          "ts": "2026-11-02T23:15:37.298+00:00",
+          "entry_count": 76,
+          "structural_sha": "ad6ff892c0dfed3a"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:08.401+00:00",
+      "last_success_iso": "2026-11-02T23:15:37.298+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1272,7 +1329,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "8260a0a9201a3d8f7125653faf3a16d5251515c459b584ef2b4d326c99b4f96a",
+        "body_sha256": "f8e92b6706440082ba44f62cc09c74bf6fa5c26dff5a4b2aaa5e39ff9b56667d",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 75424
@@ -1294,16 +1351,21 @@
           "ts": "2026-11-01T19:59:08.627+00:00",
           "entry_count": 76,
           "structural_sha": "554659896daa3b9b"
+        },
+        {
+          "ts": "2026-11-02T23:15:37.938+00:00",
+          "entry_count": 82,
+          "structural_sha": "554659896daa3b9b"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:08.627+00:00",
+      "last_success_iso": "2026-11-02T23:15:37.938+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
           "html"
         ],
-        "anchor_count": 76,
-        "entry_count": 76,
+        "anchor_count": 82,
+        "entry_count": 82,
         "anchor_classes": [
           "case-num-link",
           "citation-num-link",
@@ -1313,10 +1375,10 @@
           "h5",
           "heading"
         ],
-        "body_sha256": "3068d8f74178bda33364b1104da276c3fcd818691f45846964bf05fd2889084b",
+        "body_sha256": "957d802894ddb99b1ce7390beb9337a0a1dc8298776c3f1c55676ed085c8b58d",
         "encoding": "utf-8",
         "content_type": "text/html",
-        "size_bytes": 50882
+        "size_bytes": 52297
       }
     },
     "https://www.ccs.gov.sg/case-register/public-register/agreements-and-collaborations/": {
@@ -1335,9 +1397,14 @@
           "ts": "2026-11-01T19:59:08.865+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-02T23:15:38.779+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:08.865+00:00",
+      "last_success_iso": "2026-11-02T23:15:38.779+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1419,9 +1486,14 @@
           "ts": "2026-11-01T19:59:09.248+00:00",
           "entry_count": 47,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-02T23:15:38.812+00:00",
+          "entry_count": 47,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:09.248+00:00",
+      "last_success_iso": "2026-11-02T23:15:38.812+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1503,9 +1575,14 @@
           "ts": "2026-11-01T19:59:09.411+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-02T23:15:39.325+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:09.411+00:00",
+      "last_success_iso": "2026-11-02T23:15:39.325+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1587,9 +1664,14 @@
           "ts": "2026-11-01T19:59:09.540+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-02T23:15:40.072+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:09.540+00:00",
+      "last_success_iso": "2026-11-02T23:15:40.072+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1671,9 +1753,14 @@
           "ts": "2026-11-01T19:59:09.989+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-02T23:15:40.107+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:09.989+00:00",
+      "last_success_iso": "2026-11-02T23:15:40.107+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1755,9 +1842,14 @@
           "ts": "2026-11-01T19:59:10.145+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-02T23:15:40.699+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:10.145+00:00",
+      "last_success_iso": "2026-11-02T23:15:40.699+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1839,9 +1931,14 @@
           "ts": "2026-11-01T19:59:10.270+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-02T23:15:40.722+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:10.270+00:00",
+      "last_success_iso": "2026-11-02T23:15:40.722+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1918,9 +2015,14 @@
           "ts": "2026-11-01T19:59:06.515+00:00",
           "entry_count": 30,
           "structural_sha": "1c2b477f697793af"
+        },
+        {
+          "ts": "2026-11-02T23:15:34.906+00:00",
+          "entry_count": 30,
+          "structural_sha": "1c2b477f697793af"
         }
       ],
-      "last_success_iso": "2026-11-01T19:59:06.515+00:00",
+      "last_success_iso": "2026-11-02T23:15:34.906+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -1939,10 +2041,10 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 30,
-        "body_sha256": "979a225d7a6a424603827e70db94206abc0ac21306c4b05ce0e553f68e628129",
+        "body_sha256": "35890be0fd41631cc0ec9c5854569485b868a03cf2cb322f991b18b7b4ef85c4",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
-        "size_bytes": 26573
+        "size_bytes": 26550
       }
     }
   }
