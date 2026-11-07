@@ -67,7 +67,7 @@
           "citation": "[2026] SGHC 231"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Judgments.xml": {
       "items": [
@@ -898,7 +898,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml": {
       "items": [
@@ -1862,10 +1862,45 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml": {
       "items": [
+        {
+          "url": "https://www.singaporelawwatch.sg/Headlines/Man-who-tortured-19-year-old-sister-to-death-in-Clementi-gets-life-sentence-for-murder",
+          "title": "Man who tortured 19-year-old sister to death in Clementi gets life sentence for murder",
+          "description": "Huang Bocan starved and beat his 19-year-old sister for more than two months in 2021.",
+          "published": "2026-11-06T00:01:00+00:00",
+          "citation": ""
+        },
+        {
+          "url": "https://www.singaporelawwatch.sg/Headlines/ChatGPT-creator-OpenAI-loses-bid-to-block-Singapore-start-ups-GemGPT-trademark",
+          "title": "ChatGPT creator OpenAI loses bid to block Singapore start-up’s GemGPT trademark",
+          "description": "OpenAI argued that the name “GemGPT” conflicted with its earlier registered trademarks, including ChatGPT and numbered GPT marks like “GPT-3”.",
+          "published": "2026-11-06T00:01:00+00:00",
+          "citation": ""
+        },
+        {
+          "url": "https://www.singaporelawwatch.sg/Headlines/1189-years-jail-for-man-who-imported-over-4300-vape-pods-highest-sentence-to-date-for-such-offence",
+          "title": "1½ years’ jail for man who imported over 4,300 vape pods, highest sentence to date for such offence",
+          "description": "The sentence is the highest to date for the importation of non-etomidate vaporiser pods under the Tobacco and Vaporisers Control Act, the Health Sciences Authority said.",
+          "published": "2026-11-06T00:01:00+00:00",
+          "citation": ""
+        },
+        {
+          "url": "https://events.sal.sg/event/ECCSALMootingCompetition2027/register",
+          "title": "ADV: ECC-SAL International Mooting Competition 2027",
+          "description": "Put your advocacy skills to the test at the 15th ECC-SAL International Mooting Competition 2027. Open to lawyers with 1-4 years PQE, the competition offers advocacy training, professional recognition…",
+          "published": "2026-11-06T00:01:00+00:00",
+          "citation": ""
+        },
+        {
+          "url": "https://wills.sal.sg/",
+          "title": "ADV: Join over 200 law firms in getting on our Wills Registry. Waiver of deposit fees till 31 Mar 2027.",
+          "description": "Join the SAL Wills Registry as a participating law firm and help your clients securely deposit digital copies of their Wills, making them easier for families to locate when needed. Deposit fees are f…",
+          "published": "2026-11-06T00:01:00+00:00",
+          "citation": ""
+        },
         {
           "url": "https://www.singaporelawwatch.sg/Headlines/Rena-Lees-historic-election-to-worlds-top-court-a-milestone-for-Singapore-say-observers",
           "title": "Rena Lee’s historic election to world’s top court a milestone for Singapore, say observers",
@@ -2031,13 +2066,6 @@
           "url": "https://events.sal.sg/event/GlobalRuleofLawConference2026/programme",
           "title": "ADV: Global Rule of Law Conference - An Exclusive Fireside Chat with Chief Justices",
           "description": "Hear directly from seven Chief Justices as they come together for a rare and candid conversation on the challenges confronting judicial leaders today. Moderated by Chief Justice Sundaresh Menon (Supr…",
-          "published": "2026-10-31T00:01:00+00:00",
-          "citation": ""
-        },
-        {
-          "url": "https://wills.sal.sg/",
-          "title": "ADV: Join over 200 law firms in getting on our Wills Registry. Waiver of deposit fees till 31 Mar 27",
-          "description": "Become a participating law firm of the SAL Wills Registry and offer clients a secure way to deposit their Wills, ensuring it is safely stored and can be located and accessed by authorised persons whe…",
           "published": "2026-10-31T00:01:00+00:00",
           "citation": ""
         },
@@ -2600,37 +2628,9 @@
           "description": "Following its successful launch, Parents, Children and Guardians is now available . Authored by Professor Leong Wai Kum, the book offers an integrated exploration of Singapore family law governing th…",
           "published": "2026-10-07T00:01:00+00:00",
           "citation": ""
-        },
-        {
-          "url": "https://www.singaporelawwatch.sg/Headlines/Singapore-to-join-international-agreement-on-neutrality-of-the-Panama-Canal",
-          "title": "Singapore to join international agreement on neutrality of the Panama Canal",
-          "description": "Move signals nation's commitment to maritime safety, says President Tharman.",
-          "published": "2026-10-06T00:01:00+00:00",
-          "citation": ""
-        },
-        {
-          "url": "https://www.singaporelawwatch.sg/Headlines/House-to-discuss-claims-that-civil-servants-disproportionately-bought-homes-near-unannounced-MRT-stops",
-          "title": "House to discuss claims that civil servants disproportionately bought homes near unannounced MRT stops",
-          "description": "Nine MPs have raised questions to the Government on the claims; questions raised on rising retrentchments and delay in the construction of the North-South Corridor as well.",
-          "published": "2026-10-06T00:01:00+00:00",
-          "citation": ""
-        },
-        {
-          "url": "https://www.singaporelawwatch.sg/Headlines/Driver-in-2024-Tampines-crash-that-killed-2-including-17-year-old-student-gets-jail-lifetime-ban",
-          "title": "Driver in 2024 Tampines crash that killed 2, including 17-year-old student, gets jail, lifetime ban",
-          "description": "Innocent lives were lost and families irreversibly affected by what he did: Judge",
-          "published": "2026-10-06T00:01:00+00:00",
-          "citation": ""
-        },
-        {
-          "url": "https://www.singaporelawwatch.sg/Headlines/Mandate-safeguards-for-consumers-who-buy-prepaid-packages-amid-surge-in-losses-says-CASE",
-          "title": "Mandate safeguards for consumers who buy prepaid packages amid surge in losses, says CASE",
-          "description": "Between Sept 10 and 30, the Consumers Association of Singapore said it received 1,610 complaints involving prepayment losses of close to $3.82 million following the closure of fitness businesses.",
-          "published": "2026-10-06T00:01:00+00:00",
-          "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.mlaw.gov.sg/feed.xml": {
       "items": [
@@ -2705,7 +2705,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://blog.nus.edu.sg/lawresearch/feed/": {
       "items": [
@@ -2773,7 +2773,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://smulexicon.com/feed/": {
       "items": [
@@ -2848,7 +2848,7 @@
           "citation": "[2025] SGCA 28"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "items": [
@@ -2923,7 +2923,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://lawgazette.com.sg/feed/": {
       "items": [
@@ -2998,10 +2998,31 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "items": [
+        {
+          "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGCA%2044.pdf",
+          "title": "Lev Panfilov v Public Prosecutor and another appeal [2026] SGCA 44",
+          "description": "",
+          "published": "2026-11-06T02:30:00+00:00",
+          "citation": "[2026] SGCA 44"
+        },
+        {
+          "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC%20232.pdf",
+          "title": "Public Prosecutor v Huang Bocan [2026] SGHC 232",
+          "description": "",
+          "published": "2026-11-06T02:30:00+00:00",
+          "citation": "[2026] SGHC 232"
+        },
+        {
+          "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC%20231.pdf",
+          "title": "Pak Juin Tern Denzel (suing as administrator of the estate of Lim Huey Yih, deceased) v Leow Quek Shiong (as private trustee in bankruptcy of Lim Huey Ching) and another [2026] SGHC 231",
+          "description": "",
+          "published": "2026-11-06T02:30:00+00:00",
+          "citation": "[2026] SGHC 231"
+        },
         {
           "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC%20229.pdf",
           "title": "Chuang Shaw Cheng v Senfu Realty (Pte) Ltd [2026] SGHC 229",
@@ -3010,7 +3031,7 @@
           "citation": "[2026] SGHC 229"
         },
         {
-          "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC(I)%2025.pdf",
+          "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC(I)%2025%20(revised).pdf",
           "title": "Kupetz, Jonathan and others v Terraform Labs Pte Ltd and others [2026] SGHC(I) 25",
           "description": "",
           "published": "2026-11-05T02:30:00+00:00",
@@ -3050,30 +3071,9 @@
           "description": "",
           "published": "2026-11-02T02:30:00+00:00",
           "citation": "[2026] SGHC 219"
-        },
-        {
-          "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHCF%2035.pdf",
-          "title": "YBC v YBD [2026] SGHCF 35",
-          "description": "",
-          "published": "2026-11-02T02:30:00+00:00",
-          "citation": "[2026] SGHCF 35"
-        },
-        {
-          "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC%20226.pdf",
-          "title": "Sun Hongmin v Wo Wei Dong and others [2026] SGHC 226",
-          "description": "",
-          "published": "2026-10-30T02:30:00+00:00",
-          "citation": "[2026] SGHC 226"
-        },
-        {
-          "url": "http://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHCR%2042.pdf",
-          "title": "Meng Qinghong v Neo Bing Hao Colin [2026] SGHCR 42",
-          "description": "",
-          "published": "2026-10-30T02:30:00+00:00",
-          "citation": "[2026] SGHCR 42"
         }
       ],
-      "last_success_utc": "2026-11-05T21:41:51.127+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/notices-and-directions": {
       "items": [
@@ -3148,10 +3148,24 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-05T21:41:51.127+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries": {
       "items": [
+        {
+          "url": "https://journalsonline.academypublishing.org.sg/Journals/Asian-Journal-on-Mediation/Current-Issue/ctl/eFirstPublicAbstractView/mid/634/ArticleId/2285?Citation=%5b2026%5d+Asian+JM+24",
+          "title": "[AJM]: Keeping Voice Visible in Community Mediation",
+          "description": "",
+          "published": "2026-11-06T02:30:00+00:00",
+          "citation": ""
+        },
+        {
+          "url": "https://www.allenandgledhill.com/sg/perspectives/articles/34669/sgkh-mas-consults-on-targeted-updates-to-corporate-governance-requirements-for-banks-insurers-and-designated-financial-holding-companies",
+          "title": "MAS consults on targeted updates to corporate governance requirements for banks, insurers, and designated financial holding companies",
+          "description": "",
+          "published": "2026-11-06T02:30:00+00:00",
+          "citation": ""
+        },
         {
           "url": "http://www.singaporelawwatch.sg/Portals/0/Commentaries/RajahTann/2611-01_Corporate%20Law%20Changes%20from%2020%20Oct%202026.pdf",
           "title": "Corporate law changes from 20 Oct 2026: Streamlined processes and stronger safeguards",
@@ -3207,23 +3221,9 @@
           "description": "",
           "published": "2026-11-02T02:30:00+00:00",
           "citation": ""
-        },
-        {
-          "url": "https://www.wongpartnership.com/frontend/web/upload/2026/10/20/MASEnhancesSafeguardsforProspectingActivitiesatPublicPlacesandTelemarketing1792463918.pdf",
-          "title": "MAS enhances safeguards for prospecting activities at public places and telemarketing",
-          "description": "",
-          "published": "2026-11-02T02:30:00+00:00",
-          "citation": ""
-        },
-        {
-          "url": "https://www.wongpartnership.com/frontend/web/upload/2026/10/19/BeyondtheBoilerplates-Issue11792384125.pdf",
-          "title": "Beyond the Boilerplates – Issue 1",
-          "description": "",
-          "published": "2026-10-30T02:30:00+00:00",
-          "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-05T21:41:51.127+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.lexology.com/email/rss.aspx?tagType=5&tagRef=155&tagTitle=%20Singapore&extrajr=&extrawr=": {
       "items": [
@@ -3438,7 +3438,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "items": [
@@ -3478,13 +3478,6 @@
           "citation": ""
         },
         {
-          "url": "https://law.nus.edu.sg/ewbclb/events/distinguished-visitor-lecture-coded-power-how-to-end-digital-despotism-and-reclaim-control-over-our-data/",
-          "title": "5 Nov: Distinguished Visitor Lecture: Coded Power: How to End Digital Despotism and Reclaim Control over Our Data, NUS EW Barker Centre for Law & Business (1 public CPD point)",
-          "description": "",
-          "published": "2026-10-13T02:30:00+00:00",
-          "citation": ""
-        },
-        {
           "url": "https://store.lawnet.com/jlp-cross-examination-experts-april-2027.html",
           "title": "19 & 20 Apr 2027: JLP - Cross Examination & Experts (April 2027), SAL (14.5 public CPD points TBC inclusive of 2 public MEC points) [LIFTED accreditation eligible]",
           "description": "",
@@ -3511,9 +3504,16 @@
           "description": "",
           "published": "2026-09-17T02:30:00+00:00",
           "citation": ""
+        },
+        {
+          "url": "https://store.lawnet.com/ai-workshop-for-legal-professionals-14-january-2027.html",
+          "title": "14 Jan 27: AI Workshop for Legal Professionals, SAL (2.5 public CPD points) [LIFTED accreditation eligible]",
+          "description": "",
+          "published": "2026-09-17T02:30:00+00:00",
+          "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-05T21:41:51.127+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Advocacy-and-Procedure": {
       "items": [
@@ -3588,7 +3588,7 @@
           "citation": "[2023] SAL Prac 4"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Construction-and-Infrastructure": {
       "items": [
@@ -3663,7 +3663,7 @@
           "citation": "[2023] SAL Prac 21"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Corporate": {
       "items": [
@@ -3738,7 +3738,7 @@
           "citation": "[2018] SAL Prac 7"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Crime": {
       "items": [
@@ -3813,7 +3813,7 @@
           "citation": "[2023] SAL Prac 11"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Employment-Law": {
       "items": [
@@ -3888,7 +3888,7 @@
           "citation": "[2023] SAL Prac 1"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Family-and-Personal-Law": {
       "items": [
@@ -3963,7 +3963,7 @@
           "citation": "[2025] SAL Prac 28"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Technology": {
       "items": [
@@ -4038,7 +4038,7 @@
           "citation": "[2024] SAL Prac 21"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Insolvency-and-Restructuring": {
       "items": [
@@ -4113,7 +4113,7 @@
           "citation": "[2023] SAL Prac 22"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Transportation": {
       "items": [
@@ -4188,7 +4188,7 @@
           "citation": "[2022] SAL Prac 17"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/Singapore-Academy-of-Law-Journal/Current-Issue": {
       "items": [
@@ -4263,7 +4263,7 @@
           "citation": "(2026) 38 SAcLJ 675"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.elitigation.sg/gd": {
       "items": [
@@ -4338,7 +4338,7 @@
           "citation": "[2026] SGFC 145"
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/agreements-and-collaborations/": {
       "items": [
@@ -4413,7 +4413,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/dominance-and-conduct/": {
       "items": [
@@ -4467,7 +4467,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/": {
       "items": [
@@ -4542,7 +4542,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/consumer-protection--fair-trading-/": {
       "items": [
@@ -4617,7 +4617,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/commitments-and-remedies/": {
       "items": [
@@ -4692,7 +4692,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/government-advisories/": {
       "items": [
@@ -4767,7 +4767,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/market-studies/": {
       "items": [
@@ -4793,7 +4793,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-06T21:10:15.801+00:00"
+      "last_success_utc": "2026-11-07T19:45:00.505+00:00"
     }
   },
   "legacy": [
@@ -10585,6 +10585,104 @@
       "description": "",
       "published": "2026-11-04T16:00:00+00:00",
       "citation": "[2026] SGCA 44"
+    },
+    {
+      "url": "https://www.singaporelawwatch.sg/Headlines/Man-who-tortured-19-year-old-sister-to-death-in-Clementi-gets-life-sentence-for-murder",
+      "title": "Man who tortured 19-year-old sister to death in Clementi gets life sentence for murder",
+      "description": "Huang Bocan starved and beat his 19-year-old sister for more than two months in 2021.",
+      "published": "2026-11-06T00:01:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://www.singaporelawwatch.sg/Headlines/ChatGPT-creator-OpenAI-loses-bid-to-block-Singapore-start-ups-GemGPT-trademark",
+      "title": "ChatGPT creator OpenAI loses bid to block Singapore start-up’s GemGPT trademark",
+      "description": "OpenAI argued that the name “GemGPT” conflicted with its earlier registered trademarks, including ChatGPT and numbered GPT marks like “GPT-3”.",
+      "published": "2026-11-06T00:01:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://www.singaporelawwatch.sg/Headlines/1189-years-jail-for-man-who-imported-over-4300-vape-pods-highest-sentence-to-date-for-such-offence",
+      "title": "1½ years’ jail for man who imported over 4,300 vape pods, highest sentence to date for such offence",
+      "description": "The sentence is the highest to date for the importation of non-etomidate vaporiser pods under the Tobacco and Vaporisers Control Act, the Health Sciences Authority said.",
+      "published": "2026-11-06T00:01:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://events.sal.sg/event/ECCSALMootingCompetition2027/register",
+      "title": "ADV: ECC-SAL International Mooting Competition 2027",
+      "description": "Put your advocacy skills to the test at the 15th ECC-SAL International Mooting Competition 2027. Open to lawyers with 1-4 years PQE, the competition offers advocacy training, professional recognition…",
+      "published": "2026-11-06T00:01:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://www.allenandgledhill.com/sg/perspectives/articles/34669/sgkh-mas-consults-on-targeted-updates-to-corporate-governance-requirements-for-banks-insurers-and-designated-financial-holding-companies",
+      "title": "MAS consults on targeted updates to corporate governance requirements for banks, insurers, and designated financial holding companies",
+      "description": "The proposed changes build on an established and well-functioning corporate governance framework by strengthening safeguards in specific areas where risks and practices have evolved while streamlinin…",
+      "published": "2026-11-06T10:30:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGCA%2044.pdf",
+      "title": "Lev Panfilov v Public Prosecutor and another appeal [2026] SGCA 44",
+      "description": "Criminal Law — Offences | Decision Date: 05 Nov 2026",
+      "published": "2026-11-06T10:30:00+00:00",
+      "citation": "[2026] SGCA 44"
+    },
+    {
+      "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC%20232.pdf",
+      "title": "Public Prosecutor v Huang Bocan [2026] SGHC 232",
+      "description": "Criminal Law — Sentencing | Decision Date: 05 Nov 2026",
+      "published": "2026-11-06T10:30:00+00:00",
+      "citation": "[2026] SGHC 232"
+    },
+    {
+      "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC%20231.pdf",
+      "title": "Pak Juin Tern Denzel (suing as administrator of the estate of Lim Huey Yih, deceased) v Leow Quek Shiong (as private trustee in bankruptcy of Lim Huey Ching) and another [2026] SGHC 231",
+      "description": "Trusts — Constructive trusts ; Trusts — Resulting trusts | Decision Date: 05 Nov 2026",
+      "published": "2026-11-06T10:30:00+00:00",
+      "citation": "[2026] SGHC 231"
+    },
+    {
+      "url": "https://www.singaporelawwatch.sg/Portals/0/Docs/Judgments/2026/2026%20SGHC%20228%20(revised).pdf",
+      "title": "Tok Yong Fa v Loy Lim Ebenezer [2026] SGHC 228",
+      "description": "Contract — Breach ; Contract — Discharge | Decision Date: 02 Nov 2026",
+      "published": "2026-11-03T10:30:00+00:00",
+      "citation": "[2026] SGHC 228"
+    },
+    {
+      "url": "https://www.mlaw.gov.sg/speech-by-senior-parliamentary-secretary-mr-eric-chua-at-10th-ims/",
+      "title": "Speech by Senior Parliamentary Secretary, Ministry of Law &amp; Ministry of Social and Family Development, Mr Eric Chua at 10th International Mediation Summit",
+      "description": "4 November 2026 Posted in Speeches",
+      "published": "2026-11-04T00:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://www.lexology.com/library/detail.aspx?g=f719b88a-9f09-448b-a790-932ffcc454e8",
+      "title": "Singapore: MAS Introduces Anti-Scam Measures for Retail Brokers",
+      "description": "",
+      "published": "2026-11-06T00:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://www.lexology.com/library/detail.aspx?g=3b6fe481-d431-4d87-9f66-3aac40097b94",
+      "title": "Updata: Your quarterly data, privacy and cybersecurity update",
+      "description": "",
+      "published": "2026-11-05T00:00:00+00:00",
+      "citation": ""
+    },
+    {
+      "url": "https://www.elitigation.sg/gd/s/2026_SGHCF_36",
+      "title": "YJY v YJZ",
+      "description": "",
+      "published": "2026-11-05T16:00:00+00:00",
+      "citation": "[2026] SGHCF 36"
+    },
+    {
+      "url": "https://www.elitigation.sg/gd/s/2026_SGHC_230",
+      "title": "PUBLIC PROSECUTOR v ABLE WANG ZIYI",
+      "description": "",
+      "published": "2026-11-05T16:00:00+00:00",
+      "citation": "[2026] SGHC 230"
     }
   ]
 }
