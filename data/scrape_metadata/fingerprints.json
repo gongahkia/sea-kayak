@@ -3,11 +3,6 @@
     "https://blog.nus.edu.sg/lawresearch/feed/": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:34.046+00:00",
-          "entry_count": 9,
-          "structural_sha": "78ec8f94a678bbe0"
-        },
-        {
           "ts": "2026-11-03T21:23:12.531+00:00",
           "entry_count": 9,
           "structural_sha": "78ec8f94a678bbe0"
@@ -36,9 +31,14 @@
           "ts": "2026-11-08T20:03:31.062+00:00",
           "entry_count": 9,
           "structural_sha": "78ec8f94a678bbe0"
+        },
+        {
+          "ts": "2026-11-09T23:54:35.980+00:00",
+          "entry_count": 9,
+          "structural_sha": "78ec8f94a678bbe0"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:31.062+00:00",
+      "last_success_iso": "2026-11-09T23:54:35.980+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -66,11 +66,6 @@
     },
     "https://lawgazette.com.sg/feed/": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:33.812+00:00",
-          "entry_count": 10,
-          "structural_sha": "78ec8f94a678bbe0"
-        },
         {
           "ts": "2026-11-03T21:23:11.883+00:00",
           "entry_count": 10,
@@ -100,9 +95,14 @@
           "ts": "2026-11-08T20:03:30.864+00:00",
           "entry_count": 10,
           "structural_sha": "78ec8f94a678bbe0"
+        },
+        {
+          "ts": "2026-11-09T23:54:35.517+00:00",
+          "entry_count": 10,
+          "structural_sha": "78ec8f94a678bbe0"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:30.864+00:00",
+      "last_success_iso": "2026-11-09T23:54:35.517+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -122,7 +122,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "3d01553d4df9e5d57c37be962666a657428314b748760b9c3d3cab12876e6c51",
+        "body_sha256": "7e7bacfe1a48b1a433f9a91c2038dd571c8f1e4b765acf07fade42370032a48c",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
         "size_bytes": 370040
@@ -130,11 +130,6 @@
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:33.641+00:00",
-          "entry_count": 10,
-          "structural_sha": "a67add66c9e9ca56"
-        },
         {
           "ts": "2026-11-03T21:23:11.684+00:00",
           "entry_count": 10,
@@ -164,9 +159,14 @@
           "ts": "2026-11-08T20:03:30.711+00:00",
           "entry_count": 10,
           "structural_sha": "a67add66c9e9ca56"
+        },
+        {
+          "ts": "2026-11-09T23:54:35.367+00:00",
+          "entry_count": 10,
+          "structural_sha": "a67add66c9e9ca56"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:30.711+00:00",
+      "last_success_iso": "2026-11-09T23:54:35.367+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -189,19 +189,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "ce7ecce0c84d85af4e9aa75686339df1c2154db9330ef4adb821b5abc14e43c8",
+        "body_sha256": "45874315fd6de11e3f92962423109f4c771bf4a1fbdca661130e62ad700aa316",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
-        "size_bytes": 22116
+        "size_bytes": 22263
       }
     },
     "https://www.mlaw.gov.sg/feed.xml": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:33.635+00:00",
-          "entry_count": 10,
-          "structural_sha": "a4a24201ab4ec4f9"
-        },
         {
           "ts": "2026-11-03T21:23:11.650+00:00",
           "entry_count": 10,
@@ -231,9 +226,14 @@
           "ts": "2026-11-08T20:03:30.636+00:00",
           "entry_count": 10,
           "structural_sha": "a4a24201ab4ec4f9"
+        },
+        {
+          "ts": "2026-11-09T23:54:35.059+00:00",
+          "entry_count": 10,
+          "structural_sha": "a4a24201ab4ec4f9"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:30.636+00:00",
+      "last_success_iso": "2026-11-09T23:54:35.059+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "feed",
@@ -261,11 +261,6 @@
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:33.398+00:00",
-          "entry_count": 138,
-          "structural_sha": "9f567f1678e04caf"
-        },
         {
           "ts": "2026-11-03T21:23:11.624+00:00",
           "entry_count": 137,
@@ -295,9 +290,14 @@
           "ts": "2026-11-08T20:03:30.590+00:00",
           "entry_count": 138,
           "structural_sha": "9f567f1678e04caf"
+        },
+        {
+          "ts": "2026-11-09T23:54:35.224+00:00",
+          "entry_count": 138,
+          "structural_sha": "9f567f1678e04caf"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:30.590+00:00",
+      "last_success_iso": "2026-11-09T23:54:35.224+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -324,11 +324,6 @@
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:33.371+00:00",
-          "entry_count": 128,
-          "structural_sha": "9f567f1678e04caf"
-        },
         {
           "ts": "2026-11-03T21:23:11.594+00:00",
           "entry_count": 135,
@@ -358,9 +353,14 @@
           "ts": "2026-11-08T20:03:30.372+00:00",
           "entry_count": 140,
           "structural_sha": "9f567f1678e04caf"
+        },
+        {
+          "ts": "2026-11-09T23:54:34.938+00:00",
+          "entry_count": 140,
+          "structural_sha": "9f567f1678e04caf"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:30.372+00:00",
+      "last_success_iso": "2026-11-09T23:54:34.938+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -387,11 +387,6 @@
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Judgments.xml": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:33.326+00:00",
-          "entry_count": 114,
-          "structural_sha": "9f567f1678e04caf"
-        },
         {
           "ts": "2026-11-03T21:23:11.558+00:00",
           "entry_count": 115,
@@ -421,9 +416,14 @@
           "ts": "2026-11-08T20:03:30.323+00:00",
           "entry_count": 119,
           "structural_sha": "9f567f1678e04caf"
+        },
+        {
+          "ts": "2026-11-09T23:54:35.125+00:00",
+          "entry_count": 119,
+          "structural_sha": "9f567f1678e04caf"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:30.323+00:00",
+      "last_success_iso": "2026-11-09T23:54:35.125+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -512,11 +512,6 @@
     "https://www.singaporelawwatch.sg/Portals/0/RSS/SuperFeed.xml": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:33.339+00:00",
-          "entry_count": 25,
-          "structural_sha": "9f567f1678e04caf"
-        },
-        {
           "ts": "2026-11-03T21:23:11.534+00:00",
           "entry_count": 12,
           "structural_sha": "9f567f1678e04caf"
@@ -545,9 +540,14 @@
           "ts": "2026-11-08T20:03:30.332+00:00",
           "entry_count": 9,
           "structural_sha": "9f567f1678e04caf"
+        },
+        {
+          "ts": "2026-11-09T23:54:34.892+00:00",
+          "entry_count": 9,
+          "structural_sha": "9f567f1678e04caf"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:30.332+00:00",
+      "last_success_iso": "2026-11-09T23:54:34.892+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -574,11 +574,6 @@
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries": {
       "history": [
-        {
-          "ts": "2026-11-01T19:59:06.126+00:00",
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d"
-        },
         {
           "ts": "2026-11-02T23:15:34.318+00:00",
           "entry_count": 10,
@@ -608,9 +603,14 @@
           "ts": "2026-11-08T20:03:31.307+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-11-09T23:54:36.293+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:31.307+00:00",
+      "last_success_iso": "2026-11-09T23:54:36.293+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -629,7 +629,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "7d20a87887809ddfafc768d19bd6082b189c742d3981b1e10842f9186c474319",
+        "body_sha256": "caa0391c4de5521895169d1177ca378581b824d5592ca911fd14450846633726",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 7132
@@ -637,11 +637,6 @@
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "history": [
-        {
-          "ts": "2026-11-01T19:59:06.558+00:00",
-          "entry_count": 10,
-          "structural_sha": "2a223ec51570e3b6"
-        },
         {
           "ts": "2026-11-02T23:15:34.909+00:00",
           "entry_count": 10,
@@ -671,9 +666,14 @@
           "ts": "2026-11-08T20:03:31.570+00:00",
           "entry_count": 10,
           "structural_sha": "2a223ec51570e3b6"
+        },
+        {
+          "ts": "2026-11-09T23:54:36.613+00:00",
+          "entry_count": 10,
+          "structural_sha": "2a223ec51570e3b6"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:31.570+00:00",
+      "last_success_iso": "2026-11-09T23:54:36.613+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -694,7 +694,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "59b79b5a793251ab47ff6e5a9a1de99cbdf82b8fe315aa2122a6ff05a29fb10e",
+        "body_sha256": "6159696d5d91fae17bcc030254805ca18e72d415c5d18f4712284e7b0dd2d9a1",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 7235
@@ -702,11 +702,6 @@
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "history": [
-        {
-          "ts": "2026-11-01T19:59:05.898+00:00",
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d"
-        },
         {
           "ts": "2026-11-02T23:15:34.278+00:00",
           "entry_count": 10,
@@ -736,9 +731,14 @@
           "ts": "2026-11-08T20:03:31.318+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-11-09T23:54:36.040+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:31.318+00:00",
+      "last_success_iso": "2026-11-09T23:54:36.040+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -757,7 +757,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "7c5473c78af48ebbd9bc4fb0809e589a2ca32af668da6775861a225c69aa3c9e",
+        "body_sha256": "be569a20f636d4bffc362c1e1e006108bfee75cf54ffffd7724b251bb86232d9",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 5910
@@ -765,11 +765,6 @@
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/notices-and-directions": {
       "history": [
-        {
-          "ts": "2026-11-01T19:59:05.832+00:00",
-          "entry_count": 10,
-          "structural_sha": "bd6cd2ca86d26e4d"
-        },
         {
           "ts": "2026-11-02T23:15:34.187+00:00",
           "entry_count": 10,
@@ -799,9 +794,14 @@
           "ts": "2026-11-08T20:03:31.110+00:00",
           "entry_count": 10,
           "structural_sha": "bd6cd2ca86d26e4d"
+        },
+        {
+          "ts": "2026-11-09T23:54:36.299+00:00",
+          "entry_count": 10,
+          "structural_sha": "bd6cd2ca86d26e4d"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:31.110+00:00",
+      "last_success_iso": "2026-11-09T23:54:36.299+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -820,7 +820,7 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "b4964e68c03eea3566f2236e6e563ab446873e6aceca5c346deebbc505f4d81e",
+        "body_sha256": "1eef33cac519428f89383620fe9c7ebaa76dd122c85db411c5823889ec673d52",
         "encoding": "utf-8",
         "content_type": "application/xml",
         "size_bytes": 5835
@@ -828,11 +828,6 @@
     },
     "https://smulexicon.com/feed/": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:33.561+00:00",
-          "entry_count": 10,
-          "structural_sha": "6804b41562dd936f"
-        },
         {
           "ts": "2026-11-03T21:23:11.701+00:00",
           "entry_count": 10,
@@ -862,9 +857,14 @@
           "ts": "2026-11-08T20:03:30.726+00:00",
           "entry_count": 10,
           "structural_sha": "6804b41562dd936f"
+        },
+        {
+          "ts": "2026-11-09T23:54:35.311+00:00",
+          "entry_count": 10,
+          "structural_sha": "6804b41562dd936f"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:30.726+00:00",
+      "last_success_iso": "2026-11-09T23:54:35.311+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
@@ -885,19 +885,14 @@
         ],
         "first_entry_attrs": [],
         "entry_count": 10,
-        "body_sha256": "c784b0a1c8bdaef488860bf4cbe3fb1e3dd519927b9dea36bfb0d78c3151c457",
+        "body_sha256": "100f5d811fc0645a18716cbebcf78957a787f52c71e0e9736decf368621088a2",
         "encoding": "utf-8",
         "content_type": "application/rss+xml",
-        "size_bytes": 286338
+        "size_bytes": 286337
       }
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Advocacy-and-Procedure": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:35.190+00:00",
-          "entry_count": 79,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:13.407+00:00",
           "entry_count": 79,
@@ -927,9 +922,14 @@
           "ts": "2026-11-08T20:03:32.217+00:00",
           "entry_count": 79,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:37.080+00:00",
+          "entry_count": 79,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:32.217+00:00",
+      "last_success_iso": "2026-11-09T23:54:37.080+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -946,7 +946,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "6bf6d2e5c928869bc45ccdac7f1d72397fe2a24ca9238f11fee4e71831ceb714",
+        "body_sha256": "c73afb2f274295782e10f80e33001cd723cac85d8999bfb7be96dd0909f1f336",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 77570
@@ -954,11 +954,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Construction-and-Infrastructure": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:35.393+00:00",
-          "entry_count": 80,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:13.482+00:00",
           "entry_count": 80,
@@ -988,9 +983,14 @@
           "ts": "2026-11-08T20:03:32.186+00:00",
           "entry_count": 80,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:37.714+00:00",
+          "entry_count": 80,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:32.186+00:00",
+      "last_success_iso": "2026-11-09T23:54:37.714+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1007,7 +1007,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "7d3a0fec481ce5718ea74b0b3e51347be374c9def5604d894135014eda9a1bd1",
+        "body_sha256": "a7e819bdac530acbe7a84b036cb49339b964125bac8f547c620ad3951db2487a",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 81286
@@ -1015,11 +1015,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Corporate": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:35.979+00:00",
-          "entry_count": 77,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:13.523+00:00",
           "entry_count": 77,
@@ -1049,9 +1044,14 @@
           "ts": "2026-11-08T20:03:32.750+00:00",
           "entry_count": 77,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:37.244+00:00",
+          "entry_count": 77,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:32.750+00:00",
+      "last_success_iso": "2026-11-09T23:54:37.244+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1068,7 +1068,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "393aa2ee29142ab9c9877974eba6ebc15d87c899ecb97a307f7664107bd6c0ce",
+        "body_sha256": "677815b9ced229a23a46e28024da4539202b161b621eb5076913a8716b2c4a4c",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 77181
@@ -1076,11 +1076,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Crime": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:35.779+00:00",
-          "entry_count": 79,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:14.755+00:00",
           "entry_count": 79,
@@ -1110,9 +1105,14 @@
           "ts": "2026-11-08T20:03:32.790+00:00",
           "entry_count": 79,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:37.513+00:00",
+          "entry_count": 79,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:32.790+00:00",
+      "last_success_iso": "2026-11-09T23:54:37.513+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1129,7 +1129,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "282ab30ea5b8419c6215f22cf1de30ee2b21d616c9b56f7b117f0aa339fdf951",
+        "body_sha256": "35d9a113225482ea2b7d0ab7e28a5fe4d421301827b68218c663e212946c642c",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 79183
@@ -1137,11 +1137,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Employment-Law": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:35.898+00:00",
-          "entry_count": 78,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:13.935+00:00",
           "entry_count": 78,
@@ -1171,9 +1166,14 @@
           "ts": "2026-11-08T20:03:32.870+00:00",
           "entry_count": 78,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:37.688+00:00",
+          "entry_count": 78,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:32.870+00:00",
+      "last_success_iso": "2026-11-09T23:54:37.688+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1190,7 +1190,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "351445bc28fdc327c5daf419f3c7d0d681ba882f7b203ddc9e1c1fc0fbabfed5",
+        "body_sha256": "1f7b9c3006053ed355fc3f16413bba77d98a274105fc823b04abe7d143a81b63",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 81301
@@ -1198,11 +1198,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Family-and-Personal-Law": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:36.386+00:00",
-          "entry_count": 80,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:13.985+00:00",
           "entry_count": 80,
@@ -1232,9 +1227,14 @@
           "ts": "2026-11-08T20:03:33.353+00:00",
           "entry_count": 80,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:38.105+00:00",
+          "entry_count": 80,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:33.353+00:00",
+      "last_success_iso": "2026-11-09T23:54:38.105+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1251,7 +1251,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "408545ed9e5f350934d43cc42631b423a567357ac58e5cb05e939c6bbd6573fb",
+        "body_sha256": "d2dab189852bb6f592962153e06ac1b0fe27666cc9d5f0475749276464dacc33",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 78822
@@ -1259,11 +1259,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Technology": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:36.657+00:00",
-          "entry_count": 79,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:14.684+00:00",
           "entry_count": 79,
@@ -1293,9 +1288,14 @@
           "ts": "2026-11-08T20:03:33.373+00:00",
           "entry_count": 79,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:38.554+00:00",
+          "entry_count": 79,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:33.373+00:00",
+      "last_success_iso": "2026-11-09T23:54:38.554+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1312,7 +1312,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "811d84cc91333249e2aaa6bc1b5193b9eac88d3bd81ebf8e964b0c0b589fe692",
+        "body_sha256": "9d92dc273400936c2ccf6d88123b6560afe1df3d9475891f29f799363b772c95",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 76660
@@ -1320,11 +1320,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Insolvency-and-Restructuring": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:36.589+00:00",
-          "entry_count": 80,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:14.444+00:00",
           "entry_count": 80,
@@ -1354,9 +1349,14 @@
           "ts": "2026-11-08T20:03:33.426+00:00",
           "entry_count": 80,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:38.213+00:00",
+          "entry_count": 80,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:33.426+00:00",
+      "last_success_iso": "2026-11-09T23:54:38.213+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1373,7 +1373,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "618c283db651a470bf886527334b54e1b73bca10f5ccb17add2bc02317a70ee1",
+        "body_sha256": "41ae36c00c8bebf7116d17c2e00d6c724d7959f6029ede51bed38c8af214fb8b",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 82238
@@ -1381,11 +1381,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Transportation": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:37.410+00:00",
-          "entry_count": 79,
-          "structural_sha": "66ba42355d66e7ed"
-        },
         {
           "ts": "2026-11-03T21:23:14.737+00:00",
           "entry_count": 79,
@@ -1415,9 +1410,14 @@
           "ts": "2026-11-08T20:03:33.942+00:00",
           "entry_count": 79,
           "structural_sha": "66ba42355d66e7ed"
+        },
+        {
+          "ts": "2026-11-09T23:54:38.634+00:00",
+          "entry_count": 79,
+          "structural_sha": "66ba42355d66e7ed"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:33.942+00:00",
+      "last_success_iso": "2026-11-09T23:54:38.634+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1434,7 +1434,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "c1f92e5806a9966f6543937353330aecb47f0cc5b3e27ec857ffcb4010b63426",
+        "body_sha256": "84875b376bd9c385e9d60d61137531a7d7d75290f6540dfff981c4e03ac35498",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 82673
@@ -1442,11 +1442,6 @@
     },
     "https://journalsonline.academypublishing.org.sg/Journals/Singapore-Academy-of-Law-Journal/Current-Issue": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:37.298+00:00",
-          "entry_count": 76,
-          "structural_sha": "ad6ff892c0dfed3a"
-        },
         {
           "ts": "2026-11-03T21:23:14.886+00:00",
           "entry_count": 76,
@@ -1476,9 +1471,14 @@
           "ts": "2026-11-08T20:03:33.930+00:00",
           "entry_count": 76,
           "structural_sha": "ad6ff892c0dfed3a"
+        },
+        {
+          "ts": "2026-11-09T23:54:38.856+00:00",
+          "entry_count": 76,
+          "structural_sha": "ad6ff892c0dfed3a"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:33.930+00:00",
+      "last_success_iso": "2026-11-09T23:54:38.856+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1494,7 +1494,7 @@
           "sal-link",
           "visible-xs"
         ],
-        "body_sha256": "74af15488c496a603c036f3d7a8548da7569e97772a926a00053a3be65a622f0",
+        "body_sha256": "4e8fa75dd6d5f2798a665b735cef1fae6a07ccbd8f930510336470fd9d008b31",
         "encoding": "utf-8",
         "content_type": "text/html",
         "size_bytes": 75424
@@ -1502,11 +1502,6 @@
     },
     "https://www.elitigation.sg/gd": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:37.938+00:00",
-          "entry_count": 82,
-          "structural_sha": "554659896daa3b9b"
-        },
         {
           "ts": "2026-11-03T21:23:15.062+00:00",
           "entry_count": 82,
@@ -1536,9 +1531,14 @@
           "ts": "2026-11-08T20:03:34.448+00:00",
           "entry_count": 84,
           "structural_sha": "554659896daa3b9b"
+        },
+        {
+          "ts": "2026-11-09T23:54:38.984+00:00",
+          "entry_count": 84,
+          "structural_sha": "554659896daa3b9b"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:34.448+00:00",
+      "last_success_iso": "2026-11-09T23:54:38.984+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1563,11 +1563,6 @@
     },
     "https://www.ccs.gov.sg/case-register/public-register/agreements-and-collaborations/": {
       "history": [
-        {
-          "ts": "2026-11-02T23:15:38.779+00:00",
-          "entry_count": 50,
-          "structural_sha": "b0b9316860a5b75f"
-        },
         {
           "ts": "2026-11-03T21:23:16.593+00:00",
           "entry_count": 50,
@@ -1597,9 +1592,14 @@
           "ts": "2026-11-08T20:03:35.354+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-09T23:54:39.551+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:35.354+00:00",
+      "last_success_iso": "2026-11-09T23:54:39.551+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1668,11 +1668,6 @@
     "https://www.ccs.gov.sg/case-register/public-register/dominance-and-conduct/": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:38.812+00:00",
-          "entry_count": 47,
-          "structural_sha": "b0b9316860a5b75f"
-        },
-        {
           "ts": "2026-11-03T21:23:16.614+00:00",
           "entry_count": 47,
           "structural_sha": "b0b9316860a5b75f"
@@ -1701,9 +1696,14 @@
           "ts": "2026-11-08T20:03:34.664+00:00",
           "entry_count": 47,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-09T23:54:40.371+00:00",
+          "entry_count": 47,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:34.664+00:00",
+      "last_success_iso": "2026-11-09T23:54:40.371+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1772,11 +1772,6 @@
     "https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:39.325+00:00",
-          "entry_count": 50,
-          "structural_sha": "b0b9316860a5b75f"
-        },
-        {
           "ts": "2026-11-03T21:23:15.830+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
@@ -1805,9 +1800,14 @@
           "ts": "2026-11-08T20:03:35.791+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-09T23:54:39.820+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:35.791+00:00",
+      "last_success_iso": "2026-11-09T23:54:39.820+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1876,11 +1876,6 @@
     "https://www.ccs.gov.sg/case-register/public-register/consumer-protection--fair-trading-/": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:40.072+00:00",
-          "entry_count": 50,
-          "structural_sha": "b0b9316860a5b75f"
-        },
-        {
           "ts": "2026-11-03T21:23:16.640+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
@@ -1909,9 +1904,14 @@
           "ts": "2026-11-08T20:03:35.297+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-09T23:54:40.280+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:35.297+00:00",
+      "last_success_iso": "2026-11-09T23:54:40.280+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -1980,11 +1980,6 @@
     "https://www.ccs.gov.sg/case-register/public-register/commitments-and-remedies/": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:40.107+00:00",
-          "entry_count": 50,
-          "structural_sha": "b0b9316860a5b75f"
-        },
-        {
           "ts": "2026-11-03T21:23:18.174+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
@@ -2013,9 +2008,14 @@
           "ts": "2026-11-08T20:03:35.964+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-09T23:54:40.978+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:35.964+00:00",
+      "last_success_iso": "2026-11-09T23:54:40.978+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -2084,11 +2084,6 @@
     "https://www.ccs.gov.sg/case-register/public-register/government-advisories/": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:40.699+00:00",
-          "entry_count": 50,
-          "structural_sha": "b0b9316860a5b75f"
-        },
-        {
           "ts": "2026-11-03T21:23:18.237+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
@@ -2117,9 +2112,14 @@
           "ts": "2026-11-08T20:03:36.646+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-09T23:54:41.770+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:36.646+00:00",
+      "last_success_iso": "2026-11-09T23:54:41.770+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -2188,11 +2188,6 @@
     "https://www.ccs.gov.sg/case-register/public-register/market-studies/": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:40.722+00:00",
-          "entry_count": 50,
-          "structural_sha": "b0b9316860a5b75f"
-        },
-        {
           "ts": "2026-11-03T21:23:18.293+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
@@ -2221,9 +2216,14 @@
           "ts": "2026-11-08T20:03:37.095+00:00",
           "entry_count": 50,
           "structural_sha": "b0b9316860a5b75f"
+        },
+        {
+          "ts": "2026-11-09T23:54:41.849+00:00",
+          "entry_count": 50,
+          "structural_sha": "b0b9316860a5b75f"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:37.095+00:00",
+      "last_success_iso": "2026-11-09T23:54:41.849+00:00",
       "current_fingerprint": {
         "format": "html",
         "top_tags": [
@@ -2292,11 +2292,6 @@
     "https://www.lexology.com/email/rss.aspx?tagType=5&tagRef=155&tagTitle=%20Singapore&extrajr=&extrawr=": {
       "history": [
         {
-          "ts": "2026-11-02T23:15:34.906+00:00",
-          "entry_count": 30,
-          "structural_sha": "1c2b477f697793af"
-        },
-        {
           "ts": "2026-11-03T21:23:13.060+00:00",
           "entry_count": 30,
           "structural_sha": "1c2b477f697793af"
@@ -2325,9 +2320,14 @@
           "ts": "2026-11-08T20:03:32.236+00:00",
           "entry_count": 30,
           "structural_sha": "1c2b477f697793af"
+        },
+        {
+          "ts": "2026-11-09T23:54:36.741+00:00",
+          "entry_count": 30,
+          "structural_sha": "1c2b477f697793af"
         }
       ],
-      "last_success_iso": "2026-11-08T20:03:32.236+00:00",
+      "last_success_iso": "2026-11-09T23:54:36.741+00:00",
       "current_fingerprint": {
         "format": "xml",
         "root_tag": "rss",
