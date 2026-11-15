@@ -102,7 +102,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Judgments.xml": {
       "items": [
@@ -926,7 +926,7 @@
           "citation": "[2026] SGHCR 34"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Commentaries.xml": {
       "items": [
@@ -1911,7 +1911,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.singaporelawwatch.sg/Portals/0/RSS/Headlines.xml": {
       "items": [
@@ -2609,7 +2609,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.mlaw.gov.sg/feed.xml": {
       "items": [
@@ -2684,7 +2684,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://blog.nus.edu.sg/lawresearch/feed/": {
       "items": [
@@ -2752,7 +2752,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://smulexicon.com/feed/": {
       "items": [
@@ -2827,7 +2827,7 @@
           "citation": "[2025] SGCA 28"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://singaporeinternationalarbitration.wordpress.com/feed/": {
       "items": [
@@ -2902,7 +2902,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://lawgazette.com.sg/feed/": {
       "items": [
@@ -2977,7 +2977,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/judgments-1": {
       "items": [
@@ -3052,7 +3052,7 @@
           "citation": "[2026] SGHC(A) 26"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/notices-and-directions": {
       "items": [
@@ -3127,7 +3127,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/commentaries": {
       "items": [
@@ -3202,7 +3202,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.lexology.com/email/rss.aspx?tagType=5&tagRef=155&tagTitle=%20Singapore&extrajr=&extrawr=": {
       "items": [
@@ -3265,6 +3265,13 @@
         {
           "url": "https://www.lexology.com/library/detail.aspx?g=14b69515-a61f-4fbc-a139-4c7ba07aab97",
           "title": "澳大利亚可再生能源并购格局：主要趋势与发展动态",
+          "description": "",
+          "published": "2026-11-10T00:00:00+00:00",
+          "citation": ""
+        },
+        {
+          "url": "https://www.lexology.com/library/detail.aspx?g=873a8239-acde-4671-8cce-aebdab9db2b1",
+          "title": "KUESKI v KUSHKI: Spot the Difference, Mind the Confusion",
           "description": "",
           "published": "2026-11-10T00:00:00+00:00",
           "citation": ""
@@ -3408,16 +3415,9 @@
           "description": "",
           "published": "2026-10-30T00:00:00+00:00",
           "citation": ""
-        },
-        {
-          "url": "https://www.lexology.com/library/detail.aspx?g=d1061179-4fc0-42c8-b697-d9e4aaa3879e",
-          "title": "Singapore issues new AI Risk Management Guidelines for financial institutions",
-          "description": "",
-          "published": "2026-10-30T00:00:00+00:00",
-          "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.singaporelawwatch.sg/Results/rss/category/426/continuing-legal-education": {
       "items": [
@@ -3492,7 +3492,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Advocacy-and-Procedure": {
       "items": [
@@ -3567,7 +3567,7 @@
           "citation": "[2023] SAL Prac 4"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Construction-and-Infrastructure": {
       "items": [
@@ -3642,7 +3642,7 @@
           "citation": "[2023] SAL Prac 21"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Corporate": {
       "items": [
@@ -3717,7 +3717,7 @@
           "citation": "[2018] SAL Prac 7"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Crime": {
       "items": [
@@ -3792,7 +3792,7 @@
           "citation": "[2023] SAL Prac 11"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Employment-Law": {
       "items": [
@@ -3867,7 +3867,7 @@
           "citation": "[2023] SAL Prac 1"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Family-and-Personal-Law": {
       "items": [
@@ -3942,7 +3942,7 @@
           "citation": "[2025] SAL Prac 28"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Technology": {
       "items": [
@@ -4017,7 +4017,7 @@
           "citation": "[2024] SAL Prac 21"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Insolvency-and-Restructuring": {
       "items": [
@@ -4092,7 +4092,7 @@
           "citation": "[2023] SAL Prac 22"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Transportation": {
       "items": [
@@ -4167,7 +4167,7 @@
           "citation": "[2022] SAL Prac 17"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://journalsonline.academypublishing.org.sg/Journals/Singapore-Academy-of-Law-Journal/Current-Issue": {
       "items": [
@@ -4242,7 +4242,7 @@
           "citation": "(2026) 38 SAcLJ 675"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.elitigation.sg/gd": {
       "items": [
@@ -4317,7 +4317,7 @@
           "citation": "[2026] SGHC(I) 25"
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/agreements-and-collaborations/": {
       "items": [
@@ -4392,7 +4392,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/dominance-and-conduct/": {
       "items": [
@@ -4446,7 +4446,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/mergers-and-acquisitions/": {
       "items": [
@@ -4521,7 +4521,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/consumer-protection--fair-trading-/": {
       "items": [
@@ -4596,7 +4596,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/commitments-and-remedies/": {
       "items": [
@@ -4671,7 +4671,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/government-advisories/": {
       "items": [
@@ -4746,7 +4746,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     },
     "https://www.ccs.gov.sg/case-register/public-register/market-studies/": {
       "items": [
@@ -4772,7 +4772,7 @@
           "citation": ""
         }
       ],
-      "last_success_utc": "2026-11-14T20:14:36.085+00:00"
+      "last_success_utc": "2026-11-15T20:39:53.320+00:00"
     }
   },
   "legacy": [
